@@ -4,7 +4,6 @@
 # npx --no -- commitlint --edit "$1"
 message="$(cat $1)"
 
-
 requiredEmojis="^(:bug:|🐛|:rotating_light:|🚨|:zap:|⚡️|:pencil2:|✏️|:recycle:|♻️|:sparkles:|✨|:wastebasket:|🗑️|:package:|📦️|:art:|🎨|:construction:|🚧|:white_check_mark:|✅|:memo:|📝|:rocket:|🚀|:arrow_up:|⬆️|:arrow_down:|⬇️|:twisted_rightwards_arrows:|🔀)"
 if ! [[ $message =~ $requiredEmojis ]];
 then
@@ -15,7 +14,7 @@ then
   echo "  🐛 - Fix a bug
   🚨 - Critical hotfix
   ⚡️ - Performance improvement
-  ✏️ - Update/Fix typo 
+  ✏️ - Update/Fix typo
   ♻️ - Refactor code
   ✨ - Introduce new features
   🗑️ - Deprecate code that needs to be cleaned up

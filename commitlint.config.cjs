@@ -1,1 +1,1 @@
-module.exports = { extends: ['./node_modules/@ballcat/commitlint-config-gitmoji'] };
+module.exports = { extends: ['@ballcat/commitlint-config-gitmoji'] };
