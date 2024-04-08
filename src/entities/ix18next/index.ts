@@ -9,11 +9,14 @@ export const resources = {
   },
   de: {
     translation: de
+  },
+  interpolation: {
+    escapeValue: false
   }
 };
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: 'de'
+  lng: 'en'
 });
 export default i18n;

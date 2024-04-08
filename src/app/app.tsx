@@ -7,7 +7,7 @@ export const BaseTemplate = () => {
   return (
     <>
       <AppShell>
-        <Text>{t('text')}</Text>
+        <Text>{t('lang.text2')}</Text>
       </AppShell>
     </>
   );
