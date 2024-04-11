@@ -14,6 +14,6 @@ export const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: 'de'
+  lng: 'en'
 });
 export default i18n;
