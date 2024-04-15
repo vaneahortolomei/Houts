@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import '@/entities/ix18next/index';
-import { BaseTemplate } from '@/app/app';
+import '../src/entities/ix18next/index.ts';
+import { BaseTemplate } from '@/templates/base';
 import { MantineProvider } from '@mantine/core';
+import '@mantine/core/styles.css';
 
 const rootElement = document.getElementById('root');
 
