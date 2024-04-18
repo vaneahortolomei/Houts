@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AppShell } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Header, Navbar, Footer } from '@/widgets';
+import { Header, Navbar, Main, Footer } from '@/widgets';
 
 export const BaseTemplate = () => {
   const [opened, { toggle }] = useDisclosure(false);
@@ -9,6 +9,7 @@ export const BaseTemplate = () => {
   return (
     <>
       <AppShell
+        withBorder={false}
         header={{ height: 60 }}
         navbar={{
           width: 300,
@@ -20,6 +21,7 @@ export const BaseTemplate = () => {
       >
         <Header opened={opened} toggle={toggle} />
         <Navbar />
+        <Main />
         <Footer />
       </AppShell>
     </>
