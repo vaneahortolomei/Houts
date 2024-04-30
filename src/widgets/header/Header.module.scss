@@ -1,0 +1,25 @@
+.header {
+    background-color: transparent;
+    position: static;
+    margin: 50px 0 0;
+    &__logo {
+        width: 138px;
+        margin-top: 5px;
+    }
+    &__links {
+        color: #222027;
+        font-size: 13px;
+        font-weight: 500;
+        &:hover {
+            color: #222027;
+        }
+
+        &[data-active] {
+            text-decoration: underline;
+        }
+    }
+    &__list {
+        gap: 100px;
+        align-items: flex-start;
+    }
+}

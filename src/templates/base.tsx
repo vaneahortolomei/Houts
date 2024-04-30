@@ -12,7 +12,7 @@ export const BaseTemplate = () => {
         withBorder={false}
         header={{ height: 60 }}
         navbar={{
-          width: 300,
+          width: 100,
           breakpoint: 'sm',
           collapsed: { desktop: true, mobile: !opened }
         }}
