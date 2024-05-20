@@ -1,7 +1,31 @@
 .about {
-    background-color: #F6F4F1;
+    background-color: $fourth-color;
     &__titles {
         flex-direction: column;
         padding-top: 100px;
+    }
+    &__text_title {
+        color: $primary-color;
+    }
+    &__text_group {
+        text-align: center;
+    }
+    &__img {
+        //max-width: 70%;
+    }
+    &__desc_wrapper {
+        justify-content: space-between;
+    }
+    &__desc {
+        flex: 0 1 200px;
+        padding-top: 100px;
+    }
+    &__img_wrapper {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        flex: 0 1 70%;
+        width: 100%;
+        height: auto;
     }
 }

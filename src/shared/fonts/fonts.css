@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Novecento';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Novecento'),
+    url(./Novecento/Novecento-WideNormal.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Novecento';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local('Novecento'),
+    url(./Novecento/Novecento-WideMedium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Novecento';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('Novecento'),
+    url(./Novecento/Novecento-WideBold.ttf) format('truetype');
+}
