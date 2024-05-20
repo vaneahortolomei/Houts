@@ -1,5 +1,6 @@
 import React from 'react';
 import '@mantine/core/styles.css';
+import '@/shared/fonts/fonts.css';
 import ReactDOM from 'react-dom/client';
 import '../src/entities/ix18next/index.ts';
 import { BaseTemplate } from '@/templates/base';
