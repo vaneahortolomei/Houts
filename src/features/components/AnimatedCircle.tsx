@@ -34,19 +34,23 @@ export const Circle = styled.div<{ animationDuration: string }>`
   height: 30px;
   border-radius: 50%;
   background-color: #a74127;
-  animation: pulse ${({ animationDuration }) => animationDuration} infinite;
   position: absolute;
   cursor: pointer;
+
+  animation: pulse ${({ animationDuration }) => animationDuration} infinite;
 
   @keyframes pulse {
     0% {
       transform: scale(1);
+      opacity: 1;
     }
     50% {
       transform: scale(1.5);
+      opacity: 0.5;
     }
     100% {
       transform: scale(1);
+      opacity: 1;
     }
   }
 
@@ -60,6 +64,34 @@ export const Circle = styled.div<{ animationDuration: string }>`
     height: 15px;
     background-color: white;
     border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(167, 65, 39, 0.5);
+    animation: wave ${({ animationDuration }) => animationDuration} infinite;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.3;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
   }
 `;
 

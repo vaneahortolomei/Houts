@@ -1,0 +1,10 @@
+.functionality {
+    &__titles {
+        padding: 100px 0;
+        flex-direction: column;
+    }
+    &__img_container {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+}

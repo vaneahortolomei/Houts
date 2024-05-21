@@ -7,33 +7,37 @@ import Bags from '@/assets/Bags.png';
 export const About = () => {
   const descriptions = [
     {
-      title: 'Luggage Pass-Through',
+      title: 'BACKSIDE: TOP POCKET',
       description:
-        'The back of the bag has two large pockets that allow a lot of space for various things including luggage pass-through strap.'
+        "The top pocket is ideal for items you need quick access to, such as your phone, passport, or keys. Its convenient location and spacious interior make it perfect for storing essentials on the go. The pocket's secure closure keeps your belongings safe, while the sleek design maintains the bag's sophisticated appearance."
     },
     {
-      title: 'Luggage 2',
-      description: 'The back of the bag has two.'
+      title: 'MINIMALIST DESIGN',
+      description:
+        "Embrace the elegance of simplicity with this bag's minimalist design. Clean lines, subtle details, and a focus on functionality make this bag a perfect choice for those who appreciate understated sophistication. The minimalist approach ensures that the bag remains timeless and versatile, suitable for any occasion."
     },
     {
-      title: 'Luggage 3',
-      description: 'The back eeee'
+      title: 'LUGGAGE STRAP',
+      description:
+        'Our bag includes a durable luggage strap, making it easy to secure to your rolling suitcase. This convenient feature boosts mobility and simplifies travel, ensuring a seamless journey wherever you go.'
     },
     {
-      title: 'Luggage 4',
-      description: 'The back dadadada'
+      title: 'BACKSIDE: BOTTOM POCKET',
+      description:
+        'The bottom pocket provides additional storage for your daily necessities. Whether you need to carry cables, a small notebook, or personal items, this pocket offers ample space and easy accessibility. The durable zipper ensures your items stay securely in place, making it a practical addition to this stylish bag.'
     },
     {
-      title: 'Luggage 5',
-      description: 'The back yyyyy'
+      title: 'FRONTSIDE: POCKET',
+      description:
+        "The frontside pocket is a versatile compartment that offers extra room for your belongings. It's perfect for storing items that you need to access frequently throughout the day for example Bag Straps. The pocket's streamlined design seamlessly integrates with the bag's overall aesthetic, adding both functionality and style."
     }
   ];
 
   const circles = [
     { top: '10%', left: '32%', animationDuration: '2s' },
-    { top: '65%', left: '30%', animationDuration: '2.2s' },
     { top: '35%', left: '72%', animationDuration: '3s' },
     { top: '52%', left: '33%', animationDuration: '2.4s' },
+    { top: '65%', left: '30%', animationDuration: '2.2s' },
     { top: '62%', left: '73%', animationDuration: '2.7s' }
   ];
 
