@@ -8,8 +8,10 @@ interface Description {
 }
 
 interface CircleData {
-  top: string;
-  left: string;
+  top?: string;
+  bottom?: string;
+  left?: string;
+  right?: string;
   animationDuration: string;
 }
 
@@ -138,7 +140,12 @@ const ImageWithDots: React.FC<Props> = ({
       {circles.map((circle, index: number) => (
         <Circle
           key={index}
-          style={{ top: circle.top, left: circle.left }}
+          style={{
+            top: circle.top,
+            left: circle.left,
+            bottom: circle.bottom,
+            right: circle.right
+          }}
           animationDuration={circle.animationDuration}
           onClick={() => handleCircleClick(index)}
         />
