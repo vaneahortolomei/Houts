@@ -135,6 +135,11 @@ export const Functionality = () => {
     order: 1
   };
 
+  const imgLuggageStyles: React.CSSProperties = {
+    width: 'auto',
+    height: 'auto'
+  };
+
   return (
     <section className={styles.functionality} id="functionality">
       <Container size="xl">
@@ -257,7 +262,7 @@ export const Functionality = () => {
           descriptions={luggageDescriptions}
           containerStyles={containerLuggageStyles}
           descriptionStyles={descriptionLuggageStyles}
-          imgStyles={imgStyles}
+          imgStyles={imgLuggageStyles}
           circles={luggageCircles}
           img={BagLug}
           imgTitle={'Luggage'}
