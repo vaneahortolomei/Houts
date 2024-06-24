@@ -1,0 +1,29 @@
+//.myVideo {
+//    position: relative;
+//
+//    &::-webkit-media-controls {
+//        display: none !important;
+//        opacity: 0;
+//        transition: opacity 0.3s;
+//    }
+//
+//    &::-moz-media-controls {
+//        display: none !important;
+//        opacity: 0;
+//        transition: opacity 0.3s;
+//    }
+//
+//    &:hover {
+//        cursor: pointer;
+//
+//        &::-webkit-media-controls {
+//            display: block !important;
+//            opacity: 1;
+//        }
+//
+//        &::-moz-media-controls {
+//            display: block !important;
+//            opacity: 1;
+//        }
+//    }
+//}
