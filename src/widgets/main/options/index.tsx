@@ -47,7 +47,7 @@ export const BagOptions = () => {
             <Group justify={'center'}>
               <Flex align="center" gap={10} w={280}>
                 <Image src={Second} w={45} h={45} />
-                <Title fw={400} fz={20}>
+                <Title fw={400} fz={20} style={{ lineHeight: '1.1' }}>
                   BAG AS YOUR PERSONAL STATEMENT
                 </Title>
               </Flex>
