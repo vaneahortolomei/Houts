@@ -6,6 +6,7 @@ import { Functionality } from '@/widgets/main/functionality';
 import { BagOptions } from '@/widgets/main/options';
 import { TeaserVideo } from '@/widgets/main/video';
 import { Reviews } from '@/widgets/main/reviews';
+import { SocialProof } from '@/widgets/main/proof';
 
 export const Main = () => {
   return (
@@ -17,6 +18,7 @@ export const Main = () => {
         <BagOptions />
         <TeaserVideo />
         <Reviews />
+        <SocialProof />
       </AppShell.Main>
     </>
   );

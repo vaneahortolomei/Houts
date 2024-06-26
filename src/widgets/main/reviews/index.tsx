@@ -97,7 +97,7 @@ export const Reviews = () => {
           align="center"
         >
           {data.map((item, index) => (
-            <Carousel.Slide>
+            <Carousel.Slide key={index}>
               <Box
                 style={{
                   backgroundColor: '#222027',
