@@ -5,6 +5,7 @@ import React from 'react';
 import { Functionality } from '@/widgets/main/functionality';
 import { BagOptions } from '@/widgets/main/options';
 import { TeaserVideo } from '@/widgets/main/video';
+import { Reviews } from '@/widgets/main/reviews';
 
 export const Main = () => {
   return (
@@ -15,6 +16,7 @@ export const Main = () => {
         <Functionality />
         <BagOptions />
         <TeaserVideo />
+        <Reviews />
       </AppShell.Main>
     </>
   );
