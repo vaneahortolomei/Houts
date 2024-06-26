@@ -14,7 +14,7 @@ import Third from '@/assets/3.svg';
 
 export const BagOptions = () => {
   return (
-    <section id="options" style={{ background: '#F6F4F1' }}>
+    <section id="options" style={{ backgroundColor: '#F6F4F1' }}>
       <Container size="xl">
         <Grid
           p={'100px 0'}
