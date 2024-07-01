@@ -7,8 +7,8 @@ export const TeaserVideo = () => {
   return (
     <section className={styles.myVideo}>
       <Box>
-        <video width="100%" height="auto" controls poster={Poster}>
-          <source src="/public/HOUTS.mp4" type="video/mp4" />
+        <video width="100%" height="auto" autoPlay loop muted poster={Poster}>
+          <source src="/src/assets/HOUTS.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </Box>

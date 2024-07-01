@@ -1,0 +1,29 @@
+.grid {
+    &__group {
+        position: relative;
+    }
+    &__link {
+        padding: 0 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 46px;
+        position: absolute;
+        bottom: -10%;
+        height: 80px;
+        background-color: #A74127;
+        font-size: 25px;
+        color: #fff;
+        transition: 0.2s;
+        &:hover {
+            background-color: #a65844;
+        }
+    }
+    &__col {
+        display: flex;
+        align-items: center;
+    }
+    &__img {
+        flex: none;
+    }
+}
