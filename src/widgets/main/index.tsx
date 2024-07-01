@@ -7,6 +7,7 @@ import { BagOptions } from '@/widgets/main/options';
 import { TeaserVideo } from '@/widgets/main/video';
 import { Reviews } from '@/widgets/main/reviews';
 import { SocialProof } from '@/widgets/main/proof';
+import { Journey } from '@/widgets/main/journey';
 
 export const Main = () => {
   return (
@@ -19,6 +20,7 @@ export const Main = () => {
         <TeaserVideo />
         <Reviews />
         <SocialProof />
+        <Journey />
       </AppShell.Main>
     </>
   );
