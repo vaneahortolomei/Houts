@@ -8,6 +8,7 @@ import { TeaserVideo } from '@/widgets/main/video';
 import { Reviews } from '@/widgets/main/reviews';
 import { SocialProof } from '@/widgets/main/proof';
 import { Journey } from '@/widgets/main/journey';
+import { Works } from '@/widgets/main/works';
 
 export const Main = () => {
   return (
@@ -21,6 +22,7 @@ export const Main = () => {
         <Reviews />
         <SocialProof />
         <Journey />
+        <Works />
       </AppShell.Main>
     </>
   );
