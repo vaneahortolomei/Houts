@@ -15,25 +15,43 @@ export const Header: React.FC<HeaderProps> = ({ opened, toggle }) => {
 
   const mainLinks = [
     { link: '#about', label: 'ABOUT HOUTS' },
-    { link: '#howItWorks', label: 'HOW IT WORKS' },
+    { link: '#works', label: 'HOW IT WORKS' },
     { link: '#functionality', label: 'FUNCTIONALITY' },
     { link: '#', label: 'Logo', image: Logo },
-    { link: '#story', label: 'OUR STORY' },
+    { link: '#journey', label: 'OUR STORY' },
     { link: '#sustainability', label: 'SUSTAINABILITY' },
     { link: '#support', label: 'SUPPORT US' }
   ];
+
+  const handleLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    index: number
+  ) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute('href')?.substring(1);
+    if (targetId) {
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+
+      setActive(index);
+    }
+  };
 
   const mainItems = mainLinks.map((item, index) => {
     if (item.image) {
       return (
         <a
+          id="#"
           href={item.link}
           key={item.label}
           className={styles.header__links}
-          onClick={(event) => {
-            event.preventDefault();
-            setActive(index);
-          }}
+          onClick={(event) => handleLinkClick(event, index)}
         >
           <img
             src={item.image}
@@ -49,10 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ opened, toggle }) => {
           key={item.label}
           className={styles.header__links}
           data-active={index === active || undefined}
-          onClick={(event) => {
-            event.preventDefault();
-            setActive(index);
-          }}
+          onClick={(event) => handleLinkClick(event, index)}
         >
           {item.label}
         </Anchor>
