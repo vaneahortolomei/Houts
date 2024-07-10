@@ -9,6 +9,7 @@ import { Reviews } from '@/widgets/main/reviews';
 import { SocialProof } from '@/widgets/main/proof';
 import { Journey } from '@/widgets/main/journey';
 import { Works } from '@/widgets/main/works';
+import { Sustainability } from '@/widgets/main/sustainability';
 
 export const Main = () => {
   return (
@@ -23,6 +24,7 @@ export const Main = () => {
         <SocialProof />
         <Journey />
         <Works />
+        <Sustainability />
       </AppShell.Main>
     </>
   );

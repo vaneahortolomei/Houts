@@ -1,0 +1,19 @@
+.link {
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 46px;
+    height: 48px;
+    background-color: #A74127;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.2s;
+    font-weight: 600;
+    &:hover {
+        background-color: #a65844;
+    }
+}
+.img {
+    object-fit: contain;
+}

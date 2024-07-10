@@ -31,9 +31,11 @@ export const BaseTemplate = () => {
             {(transitionStyles) => (
               <Button
                 leftSection={
-                  <IconArrowUp style={{ width: rem(16), height: rem(16) }} />
+                  <IconArrowUp
+                    style={{ width: rem(16), height: rem(16), color: '#fff' }}
+                  />
                 }
-                style={transitionStyles}
+                style={{ backgroundColor: '#A74127', ...transitionStyles }}
                 onClick={() => scrollTo({ y: 0 })}
               >
                 Scroll to top
