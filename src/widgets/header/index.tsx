@@ -14,13 +14,17 @@ export const Header: React.FC<HeaderProps> = ({ opened, toggle }) => {
   const [active, setActive] = useState(0);
 
   const mainLinks = [
-    { link: '#about', label: 'ABOUT HOUTS' },
-    { link: '#works', label: 'HOW IT WORKS' },
-    { link: '#functionality', label: 'FUNCTIONALITY' },
-    { link: '#', label: 'Logo', image: Logo },
-    { link: '#journey', label: 'OUR STORY' },
-    { link: '#sustainability', label: 'SUSTAINABILITY' },
-    { link: '#support', label: 'SUPPORT US' }
+    { link: 'about', label: 'ABOUT HOUTS' },
+    { link: 'works', label: 'HOW IT WORKS' },
+    { link: 'functionality', label: 'FUNCTIONALITY' },
+    { link: '', label: 'Logo', image: Logo },
+    { link: 'journey', label: 'OUR STORY' },
+    { link: 'sustainability', label: 'SUSTAINABILITY' },
+    {
+      link: 'https://www.google.com/',
+      label: 'JOIN THE WAITING LIST',
+      target: true
+    }
   ];
 
   const handleLinkClick = (
@@ -47,11 +51,9 @@ export const Header: React.FC<HeaderProps> = ({ opened, toggle }) => {
     if (item.image) {
       return (
         <a
-          id="#"
-          href={item.link}
+          href={`/${item.link}`}
           key={item.label}
           className={styles.header__links}
-          onClick={(event) => handleLinkClick(event, index)}
         >
           <img
             src={item.image}
@@ -60,10 +62,22 @@ export const Header: React.FC<HeaderProps> = ({ opened, toggle }) => {
           />
         </a>
       );
-    } else {
+    } else if (item.target) {
       return (
         <Anchor<'a'>
           href={item.link}
+          target="_blank"
+          key={item.label}
+          className={styles.header__links_target}
+          data-active={index === active || undefined}
+        >
+          {item.label}
+        </Anchor>
+      );
+    } else {
+      return (
+        <Anchor<'a'>
+          href={`#${item.link}`}
           key={item.label}
           className={styles.header__links}
           data-active={index === active || undefined}
