@@ -17,6 +17,24 @@
         &[data-active] {
             text-decoration: underline;
         }
+        &_target{
+            padding: 5px 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 46px;
+            font-weight: 600;
+            width: 140px;
+            text-align: center;
+            background-color: #A74127;
+            font-size: 12px;
+            color: #fff;
+            transition: 0.2s;
+            line-height: 1.2;
+            &:hover {
+                background-color: #a65844;
+            }
+        }
     }
     &__list {
         gap: 100px;

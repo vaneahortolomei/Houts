@@ -27,18 +27,56 @@ export const BaseTemplate = () => {
         <Main />
         <Footer />
         <Affix position={{ bottom: 20, right: 20 }}>
-          <Transition transition="slide-up" mounted={scroll.y > 0}>
+          <Transition transition="slide-up" mounted={scroll.y > 80}>
             {(transitionStyles) => (
               <Button
+                fz={12}
+                radius="xl"
                 leftSection={
                   <IconArrowUp
-                    style={{ width: rem(16), height: rem(16), color: '#fff' }}
+                    color="#fff"
+                    style={{ width: rem(16), height: rem(16) }}
                   />
                 }
-                style={{ backgroundColor: '#A74127', ...transitionStyles }}
+                styles={{
+                  label: {
+                    color: '#fff'
+                  }
+                }}
+                style={{
+                  backgroundColor: '#222027',
+                  ...transitionStyles
+                }}
                 onClick={() => scrollTo({ y: 0 })}
               >
-                Scroll to top
+                SCROLL TO TOP
+              </Button>
+            )}
+          </Transition>
+        </Affix>
+        <Affix position={{ bottom: 60, right: 20 }}>
+          <Transition transition="slide-up" mounted={scroll.y > 80}>
+            {(transitionStyles) => (
+              <Button
+                component={'a'}
+                href={'https://www.google.com'}
+                target="_blank"
+                fz={12}
+                radius="xl"
+                styles={{
+                  label: {
+                    color: '#fff',
+                    lineHeight: 1.2,
+                    whiteSpace: 'pre-wrap'
+                  }
+                }}
+                style={{
+                  backgroundColor: '#A74127',
+                  width: '140px',
+                  ...transitionStyles
+                }}
+              >
+                JOIN THE WAITING LIST
               </Button>
             )}
           </Transition>
