@@ -127,7 +127,7 @@ export const Functionality = () => {
   };
 
   const descriptionLuggageStyles: React.CSSProperties = {
-    flex: '1 1 300px',
+    flex: '0 1 700px',
     marginRight: '100px',
     marginTop: '120px',
     marginBottom: '100px',
@@ -144,7 +144,9 @@ export const Functionality = () => {
     <section className={styles.functionality} id="functionality">
       <Container size="xl">
         <Group justify="center" className={styles.functionality__titles}>
-          <Title size="50px">FUNCTIONALITY</Title>
+          <Title size="50px" fw={400}>
+            FUNCTIONALITY
+          </Title>
           <Text w={1000} fz={20} fw={500} mb={20} mt={10} ta={'center'}>
             The modular bag 2-in-1 seamlessly transitions between a backpack and
             a shoulder bag, offering unparalleled versatility for dynamic
@@ -154,9 +156,9 @@ export const Functionality = () => {
             practicality and style, making it ideal for active professionals,
             travelers, and fashion-forward individuals.
           </Text>
-          <Title size={'35px'}>
+          <Title size={'35px'} fw={400}>
             TWO BAGS IN
-            <Text span inherit fz={35} c={'#A74127'}>
+            <Text span inherit fz={35} fw={400} c={'#A74127'}>
               {' '}
               ONE
             </Text>
@@ -186,9 +188,9 @@ export const Functionality = () => {
           className={styles.functionality__titles}
           mb={20}
         >
-          <Title size={'35px'}>
+          <Title size={'35px'} fw={400}>
             NOT ENOUGH? WE GOT YOU
-            <Text span inherit fz={35} c={'#A74127'}>
+            <Text span inherit fz={35} fw={400} c={'#A74127'}>
               {' '}
               COVERED
             </Text>
@@ -217,9 +219,10 @@ export const Functionality = () => {
               mb={150}
               ta={'center'}
               style={{ alignSelf: 'end' }}
+              fw={400}
             >
               WITHOUT
-              <Text span inherit fz={20} c={'#A74127'}>
+              <Text span inherit fz={20} fw={400} c={'#A74127'}>
                 {' '}
                 EXTENSION
               </Text>
@@ -228,15 +231,15 @@ export const Functionality = () => {
               <AnimatedLine />
             </Box>
             <Box>
-              <Title fz={16} mt={40} mb={20} c={'#A74127'}>
+              <Title fz={16} mt={40} mb={20} fw={400} c={'#A74127'}>
                 EXTENSION
               </Title>
-              <Title fz={16} w={100} mb={20}>
+              <Title fz={16} w={100} fw={400} mb={20}>
                 EXPANDABLE COMPARTEMENT
               </Title>
-              <Title fz={16} w={150}>
+              <Title fz={16} w={150} fw={400}>
                 UP TO{' '}
-                <Text span inherit fz={27} c={'#A74127'}>
+                <Text span inherit fz={27} fw={600} c={'#A74127'}>
                   67%
                 </Text>{' '}
                 MORE SPACE

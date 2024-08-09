@@ -21,7 +21,7 @@ export const Header: React.FC<HeaderProps> = ({ opened, toggle }) => {
     { link: 'journey', label: 'OUR STORY' },
     { link: 'sustainability', label: 'SUSTAINABILITY' },
     {
-      link: 'https://www.google.com/',
+      link: 'https://forms.monday.com/forms/d78eb79b6a002fabefb77e0e504f2592?r=use1',
       label: 'JOIN THE WAITING LIST',
       target: true
     }

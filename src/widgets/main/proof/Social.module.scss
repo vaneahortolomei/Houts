@@ -3,16 +3,14 @@
         position: relative;
     }
     &__link {
-        padding: 0 50px;
+        padding: 0 25px;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 46px;
-        position: absolute;
-        bottom: -10%;
-        height: 80px;
+        height: 48px;
         background-color: #A74127;
-        font-size: 25px;
+        font-size: 15px;
         color: #fff;
         transition: 0.2s;
         &:hover {
@@ -22,6 +20,9 @@
     &__col {
         display: flex;
         align-items: center;
+        &_bottom {
+            flex-direction: column;
+        }
     }
     &__img {
         flex: none;

@@ -52,7 +52,7 @@ export const Journey = () => {
             pb={100}
             style={{ flexDirection: 'column' }}
           >
-            <Title size="50px" ta={'center'}>
+            <Title size="50px" ta={'center'} fw={400}>
               OUR STORY & JOURNEY
             </Title>
             <Text ta="center" w={800}>
@@ -93,7 +93,7 @@ export const Journey = () => {
                       </Text>
                     </Box>
                     <Box p={'20px 0'} w={300}>
-                      <Title fz={25} fw={300} mb={10}>
+                      <Title fz={25} fw={300} mb={10} c={'#A74127'}>
                         {item.title}
                       </Title>
                       <Text>{item.desc}</Text>

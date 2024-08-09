@@ -25,7 +25,7 @@ export const Sustainability = () => {
           pb={100}
           style={{ flexDirection: 'column' }}
         >
-          <Title size="50px" ta={'center'}>
+          <Title size="50px" ta={'center'} fw={400}>
             SUSTAINABILITY
           </Title>
           <Text ta="center" w={800}>
@@ -37,7 +37,7 @@ export const Sustainability = () => {
             <Text mb={15}>Follow our journey on:</Text>
             <Anchor
               className={styles.link}
-              href="https://mantine.dev/"
+              href="http://onetreeplanted.org"
               target="_blank"
             >
               ONETREEPLANTED.ORG
@@ -47,14 +47,14 @@ export const Sustainability = () => {
         <Flex justify={'center'} pb={50} gap={0}>
           <Flex align={'center'} direction={'column'} w={220}>
             <Image w={100} h={'auto'} src={Bag} />
-            <Text fz={20} mt={10} fw={500} c={'#A74127'}>
+            <Text fz={20} mt={10} fw={600} c={'#A74127'}>
               BAGS
             </Text>
           </Flex>
           <Image src={Arrow} w={225} h={'auto'} className={styles.img} />
           <Flex justify={'space-between'} align={'center'} direction={'column'}>
             <Image src={Tree} w={70} h={'auto'} mt={15} />
-            <Text fz={20} mt={10} fw={500} c={'#A74127'}>
+            <Text fz={20} mt={10} fw={600} c={'#A74127'}>
               ONE BAG = ONE TREE
             </Text>
           </Flex>
@@ -99,10 +99,10 @@ export const Sustainability = () => {
               </Title>
               <Text mb={20}>
                 Every year, we meticulously measure and offset 100% of our
-                carbon footprint in partnership with OneTreePlanted while
-                continuously working to reduce our emissions annually. But at
-                Houts, we believe in doing more than just breaking even with the
-                environment.
+                carbon footprint in partnership with{' '}
+                <strong>OneTreePlanted</strong> while continuously working to
+                reduce our emissions annually. But at Houts, we believe in doing
+                more than just breaking even with the environment.
               </Text>
               <Text>
                 We commit to offsetting at least 10% more carbon than we emit,

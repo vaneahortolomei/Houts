@@ -63,7 +63,9 @@ export const About = () => {
     <section className={styles.about} id="about">
       <Container size="xl">
         <Group justify="center" className={styles.about__titles}>
-          <Title size="50px">ABOUT HOUTS BAG</Title>
+          <Title size="50px" fw={400}>
+            ABOUT HOUTS BAG
+          </Title>
           <Box w={510} className={styles.about__text_group}>
             <Text fz={20} fw={500} mb={20} mt={10}>
               Your lifestyle. Limitless

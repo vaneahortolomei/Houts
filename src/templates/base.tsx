@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AppShell, Affix, Button, Transition, rem } from '@mantine/core';
+import { AppShell, Affix, Button, Transition, rem, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Header, Navbar, Main, Footer } from '@/widgets';
 import { IconArrowUp } from '@tabler/icons-react';
@@ -59,7 +59,9 @@ export const BaseTemplate = () => {
             {(transitionStyles) => (
               <Button
                 component={'a'}
-                href={'https://www.google.com'}
+                href={
+                  'https://forms.monday.com/forms/d78eb79b6a002fabefb77e0e504f2592?r=use1'
+                }
                 target="_blank"
                 fz={12}
                 radius="xl"
@@ -72,11 +74,18 @@ export const BaseTemplate = () => {
                 }}
                 style={{
                   backgroundColor: '#A74127',
-                  width: '140px',
+                  width: '152px',
                   ...transitionStyles
                 }}
               >
-                JOIN THE WAITING LIST
+                <Text
+                  fz="12px"
+                  fw="600"
+                  lineClamp={1.5}
+                  style={{ color: '#fff', width: 100, lineHeight: 1.2 }}
+                >
+                  JOIN THE WAITING LIST
+                </Text>
               </Button>
             )}
           </Transition>
