@@ -19,19 +19,19 @@ export const Footer = () => {
       id: 1,
       title: 'Facebook',
       src: Facebook,
-      href: 'https://www.facebook.com'
+      href: '#'
     },
     {
       id: 2,
       title: 'Instagram',
       src: Instagram,
-      href: 'https://www.instagram.com'
+      href: '#'
     },
     {
       id: 3,
       title: 'Linkedin',
       src: Linkedin,
-      href: 'https://www.linkedin.com'
+      href: 'https://www.linkedin.com/company/101162389/admin/dashboard/'
     }
   ];
 
@@ -51,7 +51,7 @@ export const Footer = () => {
           pb={100}
           style={{ flexDirection: 'column' }}
         >
-          <Title fz={50} c={'#fff'}>
+          <Title fz={50} c={'#fff'} fw={400}>
             FOLLOW US
           </Title>
           <Text ta={'center'} w={350} c={'#fff'}>
@@ -59,7 +59,7 @@ export const Footer = () => {
             Houts!
           </Text>
           <Flex gap="lg">
-            {socialLinks.map((item, index) => (
+            {socialLinks.map((item) => (
               <Anchor href={item.href} target="_blank" key={item.id}>
                 <Image src={item.src} w={46} h={46} title={item.title} />
               </Anchor>

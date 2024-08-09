@@ -26,17 +26,11 @@ export const BagOptions = () => {
             <Group justify={'center'}>
               <Flex align="center" gap={10}>
                 <Image src={First} w={45} h={45} />
-                <Title fw={400} fz={20}>
-                  APPLE LEATHER
-                </Title>
+                <Title fz={20}>APPLE LEATHER</Title>
               </Flex>
               <Text w={330} ta="center">
-                Our bags are crafted from
-                <Text fw={600} component={'span'} c={'#a74127'}>
-                  {' '}
-                  eco-friendly apple leather
-                </Text>
-                , offering durability and a luxurious finish while supporting
+                Our bags are crafted from eco-friendly apple leather, offering
+                durability and a luxurious finish while supporting
                 sustainability in fashion. Stylish and versatile, they are
                 perfect for conscious consumers seeking responsible fashion
                 choices without compromising on quality or aesthetics.
@@ -47,19 +41,15 @@ export const BagOptions = () => {
             <Group justify={'center'}>
               <Flex align="center" gap={10} w={280}>
                 <Image src={Second} w={45} h={45} />
-                <Title fw={400} fz={20} style={{ lineHeight: '1.1' }}>
+                <Title fz={20} style={{ lineHeight: '1.1' }}>
                   BAG AS YOUR PERSONAL STATEMENT
                 </Title>
               </Flex>
               <Text w={330} ta="center">
                 A bag that represents you: Designed to be more than just a
-                carrier for your essentials, this bag serves as a{' '}
-                <Text fw={600} component={'span'} c={'#a74127'}>
-                  {' '}
-                  personal statement
-                </Text>
-                , reflecting your unique style and identity. Perfect for making
-                a lasting impression wherever you go.
+                carrier for your essentials, this bag serves as a personal
+                statement, reflecting your unique style and identity. Perfect
+                for making a lasting impression wherever you go.
               </Text>
             </Group>
           </Grid.Col>
@@ -67,19 +57,14 @@ export const BagOptions = () => {
             <Group justify={'center'}>
               <Flex align="center" gap={10}>
                 <Image src={Third} w={45} h={45} />
-                <Title fw={400} fz={20}>
-                  TWO BAGS IN ONE
-                </Title>
+                <Title fz={20}>TWO BAGS IN ONE</Title>
               </Flex>
               <Text w={330} ta="center">
-                Design of the 2-in-1 bag enables{' '}
-                <Text fw={600} component={'span'} c={'#a74127'}>
-                  swift transformation from a shoulder bag to a backpack with
-                  ease
-                </Text>
-                . This adaptability makes it an ideal choice for those who value
-                flexibility and functionality in their everyday carry, ensuring
-                it meets a range of preferences and situations with ease.
+                Design of the 2-in-1 bag enables swift transformation from a
+                shoulder bag to a backpack with ease. This adaptability makes it
+                an ideal choice for those who value flexibility and
+                functionality in their everyday carry, ensuring it meets a range
+                of preferences and situations with ease.
               </Text>
             </Group>
           </Grid.Col>

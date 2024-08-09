@@ -23,7 +23,7 @@ export const SocialProof = () => {
             pb={100}
             style={{ flexDirection: 'column' }}
           >
-            <Title size="50px" ta={'center'}>
+            <Title size="35px" fw={400} ta={'center'}>
               SOCIAL PROOF
             </Title>
             <Text ta="center" w={800}>
@@ -50,15 +50,6 @@ export const SocialProof = () => {
                   w={'100%'}
                   h={'auto'}
                 />
-                <Anchor
-                  className={styles.grid__link}
-                  href="https://mantine.dev/"
-                  underline="never"
-                  target="_blank"
-                >
-                  {' '}
-                  MORE ABOUT
-                </Anchor>
               </Group>
             </Grid.Col>
             <Grid.Col span={6.5} className={styles.grid__col} pl={100}>
@@ -71,10 +62,25 @@ export const SocialProof = () => {
                   us! We got to show off our vegan apple leather bags for the
                   first time, and honestly, we're still riding that high.{' '}
                 </Text>
+                <Anchor
+                  className={styles.grid__link}
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:7162732165498159104"
+                  underline="never"
+                  target="_blank"
+                  fw={600}
+                >
+                  {' '}
+                  MORE ABOUT
+                </Anchor>
               </Group>
             </Grid.Col>
             <Grid.Col span={6.5} className={styles.grid__col} pr={100}>
-              <Group justify="right">
+              <Group
+                className={styles.grid__col_bottom}
+                justify="right"
+                align="end"
+                flex={1}
+              >
                 <Title c={'#A74127'} fz={20}>
                   THINCUBATOR 2024
                 </Title>
@@ -83,6 +89,15 @@ export const SocialProof = () => {
                   experience! Over two weeks, alongside 40 other young startup
                   enthusiasts, we dedicated ourselves to our projects.
                 </Text>
+                <Anchor
+                  className={styles.grid__link}
+                  href="https://www.linkedin.com/posts/plecan-alexandru_thinc-houts-veganbags-activity-7179439690796683264-qKoK?utm_source=share&utm_medium=member_desktop"
+                  underline="never"
+                  target="_blank"
+                  fw={600}
+                >
+                  MORE ABOUT
+                </Anchor>
               </Group>
             </Grid.Col>
             <Grid.Col span={5.5}>
@@ -93,14 +108,6 @@ export const SocialProof = () => {
                   w={'100%'}
                   h={'auto'}
                 />
-                <Anchor
-                  className={styles.grid__link}
-                  href="https://mantine.dev/"
-                  underline="never"
-                  target="_blank"
-                >
-                  MORE ABOUT
-                </Anchor>
               </Group>
             </Grid.Col>
           </Grid>

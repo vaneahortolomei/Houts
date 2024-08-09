@@ -128,10 +128,10 @@ const ImageWithDots: React.FC<Props> = ({
         >
           {(styles) => (
             <Box style={styles}>
-              <Title size={25} mb={20} c={'#A74127'}>
+              <Title size={25} mb={20} fw={400} c={'#A74127'}>
                 {selectedText.title}
               </Title>
-              <Text>{selectedText.description}</Text>
+              <Text fz={20}>{selectedText.description}</Text>
             </Box>
           )}
         </Transition>

@@ -7,7 +7,8 @@ import {
   Box,
   Image,
   SimpleGrid,
-  Flex
+  Flex,
+  BackgroundImage
 } from '@mantine/core';
 import styles from '@/widgets/main/works/Works.module.scss';
 import IconWorks1 from '@/assets/works/Icon-1.svg';
@@ -15,28 +16,33 @@ import IconWorks2 from '@/assets/works/Icon-2.svg';
 import IconWorks3 from '@/assets/works/Icon-3.svg';
 import IconWorks4 from '@/assets/works/Icon-4.svg';
 import IconWorks5 from '@/assets/works/Icon-5.svg';
+import Leather from '@/assets/Leather.png';
 
 export const Works = () => {
   return (
     <section id="works" style={{ backgroundColor: '#F6F4F1' }}>
-      <Container size="xl">
-        <Group
-          justify="center"
-          pt={150}
-          pb={100}
-          style={{ flexDirection: 'column' }}
-        >
-          <Title size="50px" ta={'center'}>
-            APPLE LEATHER? HOW IT WORKS?
-          </Title>
-          <Text ta="center" w={800}>
-            Our bags, crafted from USDA-certified vegan ,,apple" leather using
-            remnants from juice production, exemplify your commitment to
-            circular fashion, seam­lessly blending sustainability with timeless
-            elegance.
-          </Text>
-        </Group>
-      </Container>
+      <Box mx="auto">
+        <BackgroundImage h={455} src={Leather}>
+          <Container size="xl">
+            <Group
+              justify="center"
+              pt={150}
+              pb={100}
+              style={{ flexDirection: 'column' }}
+            >
+              <Title size="50px" ta={'center'} fw={400} c={'#fff'}>
+                APPLE LEATHER? HOW IT WORKS?
+              </Title>
+              <Text ta="center" w={800} c={'#fff'}>
+                Our bags, crafted from USDA-certified vegan ,,apple" leather
+                using remnants from juice production, exemplify your commitment
+                to circular fashion, seam­lessly blending sustainability with
+                timeless elegance.
+              </Text>
+            </Group>
+          </Container>
+        </BackgroundImage>
+      </Box>
       <SimpleGrid
         cols={5}
         style={{ backgroundColor: '#fff' }}

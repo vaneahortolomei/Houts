@@ -1,26 +1,39 @@
 @font-face {
-  font-family: 'Novecento';
+  font-family: 'Novecento Wide Normal';
   font-style: normal;
   font-weight: 400;
   src:
-    local('Novecento'),
-    url(./Novecento/Novecento-WideNormal.ttf) format('truetype');
+    local('Novecento Wide Normal'),
+    url(../Novecento/Novecento-WideNormal.woff2) format('woff2'),
+    url(../Novecento/Novecento-WideNormal.woff) format('woff');
 }
 
 @font-face {
-  font-family: 'Novecento';
+  font-family: 'Novecento Wide Normal';
   font-style: normal;
   font-weight: 500;
   src:
-    local('Novecento'),
-    url(./Novecento/Novecento-WideMedium.ttf) format('truetype');
+    local('Novecento Wide Normal'),
+    url(../Novecento/Novecento-WideNormal.woff2) format('woff2'),
+    url(../Novecento/Novecento-WideNormal.woff) format('woff');
 }
 
 @font-face {
-  font-family: 'Novecento';
+  font-family: 'Novecento Wide Medium';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local('Novecento Wide Medium'),
+    url(../Novecento/Novecento-WideMedium.woff2) format('woff2'),
+    url(../Novecento/Novecento-WideMedium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Novecento Wide Medium';
   font-style: normal;
   font-weight: 700;
   src:
-    local('Novecento'),
-    url(./Novecento/Novecento-WideBold.ttf) format('truetype');
+    local('Novecento Wide Medium'),
+    url(../Novecento/Novecento-WideMedium.woff2) format('woff2'),
+    url(../Novecento/Novecento-WideMedium.woff) format('woff');
 }
