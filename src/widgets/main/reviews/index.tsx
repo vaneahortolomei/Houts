@@ -47,12 +47,6 @@ export const Reviews = () => {
       anchor: 'https://www.linkedin.com/in/baidoc/'
     },
     {
-      image: Alex,
-      text: '“I really like the medullary part of the bag “',
-      title: 'ALEX BAUER',
-      anchor: 'https://www.linkedin.com/in/alexander-bauer-538b87138/'
-    },
-    {
       image: David,
       text: '“Business casual and modern, i like it “',
       title: 'DAVID STRITTMATTER',
@@ -81,12 +75,6 @@ export const Reviews = () => {
       text: '“ Never knew about apple vegan leathe and  have to say i got really impressed, well done! “',
       title: 'TUDOR BAIDOC',
       anchor: 'https://www.linkedin.com/in/baidoc/'
-    },
-    {
-      image: Alex,
-      text: '“I really like the medullary part of the bag “',
-      title: 'ALEX BAUER',
-      anchor: 'https://www.linkedin.com/in/alexander-bauer-538b87138/'
     }
   ];
 
