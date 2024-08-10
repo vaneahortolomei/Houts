@@ -1,108 +1,34 @@
 import * as React from 'react';
-import { useState } from 'react';
-import { Group, Burger, Anchor, Container } from '@mantine/core';
+import { useContext } from 'react';
+import { Burger, Container, Box } from '@mantine/core';
 import { AppShell } from '@mantine/core';
 import styles from './Header.module.scss';
-import Logo from '@/assets/Logo.svg';
+import { DrawerContext } from '@/features/components/DrawerContext';
+import { useIsResponsive } from '@/hooks/use-is-responsive';
+import { NavLinks } from '@/features/components/NavLinks';
 
-interface HeaderProps {
-  opened: boolean;
-  toggle: () => void;
-}
-
-export const Header: React.FC<HeaderProps> = ({ opened, toggle }) => {
-  const [active, setActive] = useState(0);
-
-  const mainLinks = [
-    { link: 'about', label: 'ABOUT HOUTS' },
-    { link: 'works', label: 'HOW IT WORKS' },
-    { link: 'functionality', label: 'FUNCTIONALITY' },
-    { link: '', label: 'Logo', image: Logo },
-    { link: 'journey', label: 'OUR STORY' },
-    { link: 'sustainability', label: 'SUSTAINABILITY' },
-    {
-      link: 'https://forms.monday.com/forms/d78eb79b6a002fabefb77e0e504f2592?r=use1',
-      label: 'JOIN THE WAITING LIST',
-      target: true
-    }
-  ];
-
-  const handleLinkClick = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    index: number
-  ) => {
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute('href')?.substring(1);
-    if (targetId) {
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop,
-          behavior: 'smooth'
-        });
-      }
-
-      setActive(index);
-    }
-  };
-
-  const mainItems = mainLinks.map((item, index) => {
-    if (item.image) {
-      return (
-        <a
-          href={`/${item.link}`}
-          key={item.label}
-          className={styles.header__links}
-        >
-          <img
-            src={item.image}
-            alt={item.label}
-            className={styles.header__logo}
-          />
-        </a>
-      );
-    } else if (item.target) {
-      return (
-        <Anchor<'a'>
-          href={item.link}
-          target="_blank"
-          key={item.label}
-          className={styles.header__links_target}
-          data-active={index === active || undefined}
-        >
-          {item.label}
-        </Anchor>
-      );
-    } else {
-      return (
-        <Anchor<'a'>
-          href={`#${item.link}`}
-          key={item.label}
-          className={styles.header__links}
-          data-active={index === active || undefined}
-          onClick={(event) => handleLinkClick(event, index)}
-        >
-          {item.label}
-        </Anchor>
-      );
-    }
-  });
+export const Header = () => {
+  const { setDrawerOpen } = useContext(DrawerContext);
+  const isResponsive = useIsResponsive(1024);
 
   return (
-    <>
-      <AppShell.Header style={{ position: 'static' }} className={styles.header}>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <Container fluid>
-          <Group
-            justify="center"
-            visibleFrom="sm"
-            className={styles.header__list}
-          >
-            {mainItems}
-          </Group>
-        </Container>
-      </AppShell.Header>
-    </>
+    <AppShell.Header style={{ position: 'static' }} className={styles.header}>
+      {isResponsive && (
+        <Box>
+          <Burger
+            hiddenFrom={'1024px'}
+            size="sm"
+            onClick={() => setDrawerOpen(true)}
+          />
+        </Box>
+      )}
+      <Container fluid>
+        {!isResponsive && (
+          <Box>
+            <NavLinks />
+          </Box>
+        )}
+      </Container>
+    </AppShell.Header>
   );
 };
