@@ -3,8 +3,12 @@ import { Container, Text, Title, Group, Box } from '@mantine/core';
 import styles from './About.module.scss';
 import ImageWithDots from '@/features/components/AnimatedCircle';
 import Bags from '@/assets/Bags.png';
+import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 export const About = () => {
+  const isResponsive = useIsResponsive(1024);
+  const isResponsive1300 = useIsResponsive(1300);
+
   const descriptions = [
     {
       title: 'BACKSIDE: TOP POCKET',
@@ -34,43 +38,74 @@ export const About = () => {
   ];
 
   const circles = [
-    { top: '10%', left: '32%', animationDuration: '2s' },
-    { top: '35%', left: '72%', animationDuration: '3s' },
-    { top: '52%', left: '33%', animationDuration: '2.4s' },
-    { top: '65%', left: '30%', animationDuration: '2.2s' },
-    { top: '62%', left: '73%', animationDuration: '2.7s' }
+    { top: '10%', left: isResponsive ? '5px' : '32%', animationDuration: '2s' },
+    {
+      top: isResponsive ? '32%' : '52%',
+      left: isResponsive ? '35px' : '33%',
+      animationDuration: '2.4s'
+    },
+    {
+      top: isResponsive ? '42%' : '65%',
+      left: isResponsive ? '20px' : '30%',
+      animationDuration: '2.2s'
+    },
+    {
+      top: isResponsive ? '27%' : '35%',
+      left: isResponsive ? '79%' : '72%',
+      animationDuration: '3s'
+    },
+    {
+      top: isResponsive ? '39%' : '62%',
+      left: isResponsive ? '82%' : '73%',
+      animationDuration: '2.7s'
+    }
   ];
 
   const containerStyles: React.CSSProperties = {
     display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'space-between'
+    flexDirection: isResponsive ? 'column' : 'row',
+    alignItems: isResponsive1300 ? 'center' : 'flex-start',
+    justifyContent: 'space-between',
+    gap: isResponsive ? '100px' : '0'
   };
 
   const imgStyles: React.CSSProperties = {
-    width: '70%',
+    width: isResponsive ? '100%' : '70%',
     height: 'auto'
   };
 
   const descriptionStyles: React.CSSProperties = {
     flex: '0 1 300px',
-    marginRight: '100px',
-    marginTop: '120px'
+    marginRight: isResponsive1300 ? '50px' : '100px',
+    marginTop: isResponsive1300 ? '0' : '120px',
+    order: isResponsive ? 1 : 0
+  };
+
+  const titleTextStyles: React.CSSProperties = {
+    fontSize: isResponsive1300 ? '20px' : '25px'
+  };
+
+  const descTextStyles: React.CSSProperties = {
+    fontSize: isResponsive1300 ? '16px' : '20px'
   };
 
   return (
     <section className={styles.about} id="about">
       <Container size="xl">
         <Group justify="center" className={styles.about__titles}>
-          <Title size="50px" fw={400}>
+          <Title fw={400} className={styles.about__title}>
             ABOUT HOUTS BAG
           </Title>
-          <Box w={510} className={styles.about__text_group}>
+          <Box className={styles.about__text_group}>
             <Text fz={20} fw={500} mb={20} mt={10}>
               Your lifestyle. Limitless
             </Text>
-            <Text fz={20} fw={500} mb={30}>
+            <Text
+              fz={20}
+              fw={500}
+              mb={30}
+              className={styles.about__description}
+            >
               The versatile vegan Apple Leather bag that goes from a comfortable
               backpack to a handbag that supports your active lifestyle.
             </Text>
@@ -79,12 +114,14 @@ export const About = () => {
             BACKSIDE & FRONT
           </Text>
         </Group>
-        <Box mt={50} pb={100}>
+        <Box mt={50}>
           <ImageWithDots
             descriptions={descriptions}
             containerStyles={containerStyles}
             descriptionStyles={descriptionStyles}
             imgStyles={imgStyles}
+            titleTextStyles={titleTextStyles}
+            descTextStyles={descTextStyles}
             circles={circles}
             img={Bags}
             imgTitle={'BACKSIDE & FRONT'}

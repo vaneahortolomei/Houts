@@ -5,6 +5,11 @@ import { IconArrowUp } from '@tabler/icons-react';
 import { useWindowScroll } from '@mantine/hooks';
 import { DrawerProvider } from '@/features/components/DrawerContext';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
+import {
+  headerDesktopHeight,
+  headerMobileHeight,
+  mobileNavbar
+} from '@/shared/constants';
 
 export const BaseTemplate = () => {
   const [scroll, scrollTo] = useWindowScroll();
@@ -15,8 +20,10 @@ export const BaseTemplate = () => {
       <DrawerProvider>
         <AppShell
           withBorder={false}
-          header={{ height: 60 }}
-          navbar={{ width: isResponsive ? 280 : 0, breakpoint: 'sm' }}
+          header={{
+            height: isResponsive ? headerMobileHeight : headerDesktopHeight
+          }}
+          navbar={{ width: mobileNavbar, breakpoint: 'sm' }}
           footer={{ height: 100 }}
           padding="md"
           styles={{
@@ -24,6 +31,9 @@ export const BaseTemplate = () => {
               width: isResponsive ? '100%' : '',
               minHeight: isResponsive ? 'auto' : '100vh',
               height: isResponsive ? 'auto' : 'initial'
+            },
+            navbar: {
+              position: 'static'
             }
           }}
           sx={{ overflow: isResponsive ? 'auto' : 'hidden' }}
@@ -32,7 +42,7 @@ export const BaseTemplate = () => {
           <Navbar />
           <Main />
           <Footer />
-          <Affix position={{ bottom: 20, right: 20 }}>
+          <Affix position={{ bottom: 20, right: 20 }} zIndex={99}>
             <Transition transition="slide-up" mounted={scroll.y > 80}>
               {(transitionStyles) => (
                 <Button
@@ -60,7 +70,7 @@ export const BaseTemplate = () => {
               )}
             </Transition>
           </Affix>
-          <Affix position={{ bottom: 60, right: 20 }}>
+          <Affix position={{ bottom: 60, right: 20 }} zIndex={99}>
             <Transition transition="slide-up" mounted={scroll.y > 80}>
               {(transitionStyles) => (
                 <Button

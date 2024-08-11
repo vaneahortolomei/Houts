@@ -1,0 +1,10 @@
+.reviews {
+    background-color: #fff;
+    &__group {
+        justify-content: center;
+        padding: 40px 0;
+        @media(min-width: 1025px){
+            padding: 100px 0;
+        }
+    }
+}

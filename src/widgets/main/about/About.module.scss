@@ -2,13 +2,23 @@
     background-color: $fourth-color;
     &__titles {
         flex-direction: column;
-        padding-top: 100px;
+        padding: 40px 0;
+        @media(min-width: 1025px){
+            padding: 100px 0;
+        }
     }
     &__text_title {
         color: $primary-color;
     }
+    &__title {
+        font-size: 50px;
+        text-align: center;
+    }
     &__text_group {
         text-align: center;
+        @media(min-width: 768px){
+            width: 510px;
+        }
     }
     &__img {
         //max-width: 70%;

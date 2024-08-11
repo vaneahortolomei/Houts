@@ -1,8 +1,10 @@
 import React, { useContext, useCallback } from 'react';
-import { AppShell, Drawer, ScrollArea } from '@mantine/core';
+import { AppShell, Drawer, Image, ScrollArea } from '@mantine/core';
 import { DrawerContext } from '@/features/components/DrawerContext';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import { NavLinks } from '@/features/components/NavLinks';
+import Logo from '@/assets/Logo.svg';
+import { headerMobileHeight } from '@/shared/constants';
 
 export const Navbar = () => {
   const { isDrawerOpen, setDrawerOpen } = useContext(DrawerContext);
@@ -19,16 +21,27 @@ export const Navbar = () => {
           position="right"
           size="xs"
           opened={isDrawerOpen}
+          title={<Image src={Logo} h={21} w={123} />}
           onClose={onClose}
-          withCloseButton={false}
+          withCloseButton={true}
           transitionProps={{ duration: 155, timingFunction: 'linear' }}
+          styles={{
+            header: {
+              height: headerMobileHeight,
+              marginBottom: '20px'
+            },
+            title: {
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'flex-start'
+            }
+          }}
         >
           <AppShell.Navbar>
             <ScrollArea
               offsetScrollbars
               scrollbarSize={6}
-              px={'12px'}
-              py="0"
+              p="0"
               styles={{ viewport: { paddingRight: 0 } }}
               sx={{
                 '& > * > *': { display: 'block !important' }

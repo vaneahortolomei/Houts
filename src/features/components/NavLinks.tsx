@@ -3,15 +3,20 @@ import { Group, NavLink } from '@mantine/core';
 import * as React from 'react';
 import Logo from '@/assets/Logo.svg';
 import { useState } from 'react';
+import { useIsResponsive } from '@/hooks/use-is-responsive';
+import { DrawerContext } from '@/features/components/DrawerContext';
+import { useContext } from 'react';
 
 export const NavLinks = () => {
   const [active, setActive] = useState(0);
+  const isResponsive = useIsResponsive(1024);
+  const { setDrawerOpen } = useContext(DrawerContext);
 
   const mainLinks = [
     { link: 'about', label: 'ABOUT HOUTS' },
     { link: 'works', label: 'HOW IT WORKS' },
     { link: 'functionality', label: 'FUNCTIONALITY' },
-    { link: '', label: 'Logo', image: Logo },
+    { link: '#', label: 'Logo', image: Logo },
     { link: 'journey', label: 'OUR STORY' },
     { link: 'sustainability', label: 'SUSTAINABILITY' },
     {
@@ -38,23 +43,29 @@ export const NavLinks = () => {
       }
 
       setActive(index);
+      setDrawerOpen(false);
     }
   };
 
   const mainItems = mainLinks.map((item, index) => {
     if (item.image) {
       return (
-        <a
-          href={`/${item.link}`}
-          key={item.label}
-          className={styles.header__links}
-        >
-          <img
-            src={item.image}
-            alt={item.label}
-            className={styles.header__logo}
-          />
-        </a>
+        <>
+          {!isResponsive && (
+            <a
+              href={`/${item.link}`}
+              key={item.label}
+              className={styles.header__links}
+              onClick={() => setDrawerOpen(false)}
+            >
+              <img
+                src={item.image}
+                alt={item.label}
+                className={styles.header__logo}
+              />
+            </a>
+          )}
+        </>
       );
     } else if (item.target) {
       return (
@@ -66,11 +77,14 @@ export const NavLinks = () => {
           className={styles.header__links_target}
           active={index === active}
           variant="subtle"
+          onClick={() => setDrawerOpen(false)}
         />
       );
     } else {
       return (
         <NavLink<'a'>
+          p={0}
+          ta={'left'}
           label={item.label}
           href={`#${item.link}`}
           key={item.label}

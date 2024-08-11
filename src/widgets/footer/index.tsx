@@ -12,8 +12,11 @@ import {
 import Facebook from '@/assets/footer/Facebook.svg';
 import Instagram from '@/assets/footer/Instagram.svg';
 import Linkedin from '@/assets/footer/Linkedin.svg';
+import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 export const Footer = () => {
+  const isResponsive = useIsResponsive(1024);
+
   const socialLinks = [
     {
       id: 1,
@@ -51,10 +54,10 @@ export const Footer = () => {
           pb={100}
           style={{ flexDirection: 'column' }}
         >
-          <Title fz={50} c={'#fff'} fw={400}>
+          <Title fz={isResponsive ? 27 : 50} c={'#fff'} fw={400}>
             FOLLOW US
           </Title>
-          <Text ta={'center'} w={350} c={'#fff'}>
+          <Text ta={'center'} w={isResponsive ? 'auto' : 350} c={'#fff'}>
             on all Social Media platforms and follow the path to the launch of
             Houts!
           </Text>

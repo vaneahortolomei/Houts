@@ -1,4 +1,25 @@
+.text {
+    background-color: #F6F4F1;
+    &__group {
+        justify-content: center;
+        padding: 40px 0;
+        flex-direction: column;
+        @media(min-width: 1025px){
+            padding: 100px 0;
+        }
+    }
+    &__description {
+        width: auto;
+        @media(min-width: 1025px){
+            width: 800px;
+        }
+    }
+}
 .grid {
+    padding: 40px 0;
+    @media(min-width: 1025px){
+        padding: 100px 0;
+    }
     &__group {
         position: relative;
     }
@@ -20,11 +41,28 @@
     &__col {
         display: flex;
         align-items: center;
+        justify-content: center;
+    }
+    &__groupText {
+        flex-direction: column;
+        @media(min-width: 1025px){
+            flex-direction: row;
+        }
         &_bottom {
             flex-direction: column;
+            @media(max-width: 1025px){
+                align-items: center;
+            }
         }
     }
     &__img {
         flex: none;
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+        @media(min-width: 1025px){
+            width: 100%;
+        }
     }
 }
