@@ -7,6 +7,7 @@ import Bag1 from '@/assets/Bild-1.png';
 import BagFull from '@/assets/BagFull.png';
 import ImageWithDots from '@/features/components/AnimatedCircle';
 import BagLug from '@/assets/BagLug.png';
+import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 const AnimatedLine: React.FC = () => {
   return (
@@ -59,6 +60,8 @@ const AnimatedLine: React.FC = () => {
 export default AnimatedLine;
 
 export const Functionality = () => {
+  const isResponsive1300 = useIsResponsive(1300);
+
   const descriptions = [
     {
       title: 'DOUBLE LAPTOP/TABLET POCKET',
@@ -138,6 +141,14 @@ export const Functionality = () => {
   const imgLuggageStyles: React.CSSProperties = {
     width: 'auto',
     height: 'auto'
+  };
+
+  const titleTextStyles: React.CSSProperties = {
+    fontSize: isResponsive1300 ? '20px' : '25px'
+  };
+
+  const descTextStyles: React.CSSProperties = {
+    fontSize: isResponsive1300 ? '16px' : '20px'
   };
 
   return (
@@ -255,6 +266,8 @@ export const Functionality = () => {
           containerStyles={containerStyles}
           descriptionStyles={descriptionStyles}
           imgStyles={imgStyles}
+          titleTextStyles={titleTextStyles}
+          descTextStyles={descTextStyles}
           circles={circles}
           img={BagFull}
           imgTitle={'Transformer'}
@@ -266,6 +279,8 @@ export const Functionality = () => {
           containerStyles={containerLuggageStyles}
           descriptionStyles={descriptionLuggageStyles}
           imgStyles={imgLuggageStyles}
+          titleTextStyles={titleTextStyles}
+          descTextStyles={descTextStyles}
           circles={luggageCircles}
           img={BagLug}
           imgTitle={'Luggage'}
