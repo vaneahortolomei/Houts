@@ -20,6 +20,8 @@ interface Props {
   containerStyles: React.CSSProperties;
   imgStyles: React.CSSProperties;
   descriptionStyles: React.CSSProperties;
+  descTextStyles: React.CSSProperties;
+  titleTextStyles: React.CSSProperties;
   circles: CircleData[];
   img: string;
   imgTitle: string;
@@ -103,6 +105,8 @@ const ImageWithDots: React.FC<Props> = ({
   imgStyles,
   descriptionStyles,
   circles,
+  descTextStyles,
+  titleTextStyles,
   img,
   imgTitle
 }) => {
@@ -128,10 +132,10 @@ const ImageWithDots: React.FC<Props> = ({
         >
           {(styles) => (
             <Box style={styles}>
-              <Title size={25} mb={20} fw={400} c={'#A74127'}>
+              <Title style={titleTextStyles} mb={20} fw={400} c={'#A74127'}>
                 {selectedText.title}
               </Title>
-              <Text fz={20}>{selectedText.description}</Text>
+              <Text style={descTextStyles}>{selectedText.description}</Text>
             </Box>
           )}
         </Transition>

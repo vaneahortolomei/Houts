@@ -6,8 +6,11 @@ import IconJourney1 from '@/assets/journey/journey-1.svg';
 import IconJourney2 from '@/assets/journey/journey-2.svg';
 import IconJourney3 from '@/assets/journey/journey-3.svg';
 import IconJourney4 from '@/assets/journey/journey-4.svg';
+import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 export const Journey = () => {
+  const isResponsive = useIsResponsive(1024);
+
   const data = [
     {
       icon: IconJourney1,
@@ -44,18 +47,18 @@ export const Journey = () => {
   ];
   return (
     <>
-      <section id="journey" style={{ backgroundColor: '#F6F4F1' }}>
+      <section id="journey" className={styles.text}>
         <Container size="xl">
-          <Group
-            justify="center"
-            pt={150}
-            pb={100}
-            style={{ flexDirection: 'column' }}
-          >
-            <Title size="50px" ta={'center'} fw={400}>
+          <Group justify="center" className={styles.text__group}>
+            <Title
+              className={styles.text__title}
+              size="50px"
+              ta={'center'}
+              fw={400}
+            >
               OUR STORY & JOURNEY
             </Title>
-            <Text ta="center" w={800}>
+            <Text className={styles.text__description} ta="center">
               We are the founders of Houts, 2 energetic young people passionate
               about the idea of combining a lifestyle and sustainability in one
               punch. Be part of our community and make your lifestyle limitless.
@@ -79,21 +82,27 @@ export const Journey = () => {
                     <Image src={item.icon} w={50} h={50} />
                   </Box>
                   <Group
-                    className={`${styles.timeline_content} ${item.flag === 'left' ? styles.left : styles.right}`}
+                    className={`${styles.timeline_content} ${!isResponsive && item.flag === 'left' ? styles.left : styles.right}`}
                   >
                     <Box>
                       <Text
                         className={styles.timeline_year}
-                        fz={60}
                         c={'#A74127'}
                         fw={400}
-                        m={0}
                       >
                         {item.year}
                       </Text>
                     </Box>
-                    <Box p={'20px 0'} w={300}>
-                      <Title fz={25} fw={300} mb={10} c={'#A74127'}>
+                    <Box
+                      p={isResponsive ? '0 0 20px 0' : '20px 0'}
+                      w={isResponsive ? 'auto' : 300}
+                    >
+                      <Title
+                        fz={isResponsive ? 20 : 25}
+                        fw={300}
+                        mb={10}
+                        c={'#A74127'}
+                      >
                         {item.title}
                       </Title>
                       <Text>{item.desc}</Text>

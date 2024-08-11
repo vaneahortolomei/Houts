@@ -1,7 +1,27 @@
 .header {
-    background-color: transparent;
-    position: static;
-    margin: 50px 0 0;
+    background-color: #ffffff;
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    @media (min-width: 1025px) {
+        margin: 20px 0 0;
+        position: static;
+        box-shadow: none;
+    }
+    &__mobile {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        &_logo {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+    }
     &__logo {
         width: 138px;
         margin-top: 5px;
@@ -10,8 +30,12 @@
         color: #222027;
         font-size: 13px;
         font-weight: 500;
+        @media (min-width: 1025px) {
+            width: auto;
+        }
         &:hover {
             color: #222027;
+            background-color: transparent;
         }
 
         &[data-active] {
@@ -24,20 +48,39 @@
             align-items: center;
             border-radius: 46px;
             font-weight: 600;
-            width: 140px;
-            text-align: center;
+            width: auto;
+            text-align: left;
             background-color: #A74127;
             font-size: 12px;
             color: #fff;
             transition: 0.2s;
             line-height: 1.2;
+            @media (min-width: 1024px) {
+                width: 140px;
+                text-align: center;
+            }
             &:hover {
                 background-color: #a65844;
+            }
+            span {
+                font-size: 12px;
+                color: #fff;
             }
         }
     }
     &__list {
-        gap: 100px;
-        align-items: center;
+        justify-content: flex-start;
+        @media (min-width: 1025px) {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (min-width: 1300px) {
+            gap: 70px;
+        }
+        @media (min-width: 1550px) {
+            gap: 100px;
+        }
     }
 }

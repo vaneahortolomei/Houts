@@ -1,3 +1,31 @@
+.text {
+    background-color: #F6F4F1;
+    &_sustainability {
+        background-color: #fff;
+    }
+    &__group {
+        justify-content: center;
+        padding: 40px 0;
+        flex-direction: column;
+        @media(min-width: 1025px) {
+            padding: 100px 0;
+        }
+    }
+
+    &__title {
+        font-size: 27px;
+        @media(min-width: 1025px){
+            font-size: 50px;
+        }
+    }
+
+    &__description {
+        width: auto;
+        @media(min-width: 1025px) {
+            width: 800px;
+        }
+    }
+}
 .link {
     padding: 0 30px;
     display: flex;
@@ -16,4 +44,7 @@
 }
 .img {
     object-fit: contain;
+    @media(max-width: 1024px){
+        transform: rotate(90deg);
+    }
 }

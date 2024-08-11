@@ -1,0 +1,21 @@
+.options {
+    background-color: #F6F4F1;
+    &__group {
+        padding: 40px 0;
+        @media(min-width: 1025px){
+            padding: 100px 0;
+        }
+    }
+    &__col {
+        flex-direction: column;
+        @media(min-width: 1025px){
+            flex-direction: row;
+        }
+    }
+    &__text {
+        width: auto;
+        @media(min-width: 1025px){
+            width: 330px;
+        }
+    }
+}

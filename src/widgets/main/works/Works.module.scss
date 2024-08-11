@@ -1,20 +1,131 @@
+.text {
+    background-color: #F6F4F1;
+    overflow: hidden;
+    &__group {
+        justify-content: center;
+        padding: 40px 0;
+        flex-direction: column;
+        @media(min-width: 1025px) {
+            padding: 100px 0;
+        }
+    }
+
+    &__background {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 27px;
+        @media(min-width: 1025px) {
+            font-size: 50px;
+        }
+    }
+
+    &__description {
+        width: auto;
+        @media(min-width: 1025px) {
+            width: 800px;
+        }
+    }
+}
+
+.grid {
+    gap: 100px;
+    padding: 100px 20px;
+    @media(min-width: 1025px) {
+        padding: 200px 0;
+        gap: 0;
+    }
+    &__item {
+        flex-direction: row;
+        align-items: flex-start;
+        @media(min-width: 1025px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0;
+        }
+    }
+    &__title {
+        text-align: left;
+        @media(min-width: 1025px){
+            width: 155px;
+            text-align: center;
+        }
+    }
+    &__text {
+        width: auto;
+        text-align: left;
+        @media(min-width: 1025px){
+            width: 200px;
+            text-align: center;
+        }
+    }
+    &__textWrapper {
+        @media(max-width: 1024px){
+            flex: 1;
+            margin-left: 20px;
+        }
+        @media(min-width: 1025px){
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
 .flexWithLine {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: auto;
 
     &:not(:last-child)::after {
         content: '';
         position: absolute;
-        left: -50%;
-        top: 50%;
-        width: 100%;
-        height: 2px;
+        top: calc(100% + 10px);
+        left: 50%;
+        width: 2px;
+        height: calc(100% + 250px);
         background: #A74127;
-        transform: translateY(-50%);
+        transform: translateX(-50%);
+    }
+
+    @media(min-width: 1025px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: -50%;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: #A74127;
+            transform: translateY(-50%);
+        }
+    }
+
+    @media(max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: block;
+        }
     }
 }
+
+
 .iconWrapper {
     position: relative;
     display: flex;

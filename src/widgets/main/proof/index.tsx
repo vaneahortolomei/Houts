@@ -11,22 +11,20 @@ import {
 import ThincubatorOne from '@/assets/think.png';
 import ThincubatorTwo from '@/assets/think2.png';
 import styles from '@/widgets/main/proof/Social.module.scss';
+import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 export const SocialProof = () => {
+  const isResponsive = useIsResponsive(1024);
+
   return (
     <>
-      <section id="social-proof" style={{ backgroundColor: '#F6F4F1' }}>
+      <section id="social-proof" className={styles.text}>
         <Container size="xl">
-          <Group
-            justify="center"
-            pt={150}
-            pb={100}
-            style={{ flexDirection: 'column' }}
-          >
+          <Group justify="center" className={styles.text__group}>
             <Title size="35px" fw={400} ta={'center'}>
               SOCIAL PROOF
             </Title>
-            <Text ta="center" w={800}>
+            <Text className={styles.text__description} ta="center">
               Showcased at prestigious events like ILM Offenbach and
               Thincubator, our 2-in-1 bag has garnered acclaim for its
               innovative design and versatility. It has received positive
@@ -39,25 +37,39 @@ export const SocialProof = () => {
           </Group>
         </Container>
       </section>
-      <section style={{ backgroundColor: '#fff' }}>
+      <section className={styles.grid}>
         <Container size="xl">
-          <Grid pt={100} pb={120} className={styles.grid}>
-            <Grid.Col span={5.5}>
-              <Group justify="center" className={styles.grid__group}>
+          <Grid>
+            <Grid.Col span={isResponsive ? 12 : 5.5}>
+              <Group
+                justify={isResponsive ? 'center' : 'left'}
+                className={styles.grid__group}
+              >
                 <Image
                   className={styles.grid__img}
                   src={ThincubatorOne}
-                  w={'100%'}
                   h={'auto'}
                 />
               </Group>
             </Grid.Col>
-            <Grid.Col span={6.5} className={styles.grid__col} pl={100}>
-              <Group justify="left">
+            <Grid.Col
+              span={isResponsive ? 12 : 6.5}
+              className={styles.grid__col}
+              pl={isResponsive ? 0 : 100}
+              mb={50}
+            >
+              <Group
+                justify={isResponsive ? 'center' : 'left'}
+                className={styles.grid__groupText}
+              >
                 <Title c={'#A74127'} fz={20}>
                   ILM OFFENBACH 2024
                 </Title>
-                <Text w={470} fz={16} ta={'left'}>
+                <Text
+                  w={isResponsive ? '100%' : 470}
+                  fz={16}
+                  ta={isResponsive ? 'center' : 'left'}
+                >
                   We took our bite from ILM Offenbach. It was a huge deal for
                   us! We got to show off our vegan apple leather bags for the
                   first time, and honestly, we're still riding that high.{' '}
@@ -74,17 +86,39 @@ export const SocialProof = () => {
                 </Anchor>
               </Group>
             </Grid.Col>
-            <Grid.Col span={6.5} className={styles.grid__col} pr={100}>
+            {isResponsive && (
+              <Grid.Col span={isResponsive ? 12 : 5.5}>
+                <Group
+                  justify={isResponsive ? 'center' : 'left'}
+                  className={styles.grid__group}
+                >
+                  <Image
+                    className={styles.grid__img}
+                    src={ThincubatorTwo}
+                    h={'auto'}
+                  />
+                </Group>
+              </Grid.Col>
+            )}
+            <Grid.Col
+              span={isResponsive ? 12 : 6.5}
+              className={styles.grid__col}
+              pr={isResponsive ? 0 : 100}
+            >
               <Group
-                className={styles.grid__col_bottom}
-                justify="right"
+                className={styles.grid__groupText_bottom}
+                justify={isResponsive ? 'center' : 'right'}
                 align="end"
-                flex={1}
+                flex={isResponsive ? '0 0 100%' : 1}
               >
                 <Title c={'#A74127'} fz={20}>
                   THINCUBATOR 2024
                 </Title>
-                <Text w={420} fz={16} ta={'right'}>
+                <Text
+                  w={isResponsive ? '100%' : 420}
+                  fz={16}
+                  ta={isResponsive ? 'center' : 'right'}
+                >
                   Being a part of thincubator by thinc! was an incredible
                   experience! Over two weeks, alongside 40 other young startup
                   enthusiasts, we dedicated ourselves to our projects.
@@ -100,16 +134,20 @@ export const SocialProof = () => {
                 </Anchor>
               </Group>
             </Grid.Col>
-            <Grid.Col span={5.5}>
-              <Group justify="center" className={styles.grid__group}>
-                <Image
-                  className={styles.grid__img}
-                  src={ThincubatorTwo}
-                  w={'100%'}
-                  h={'auto'}
-                />
-              </Group>
-            </Grid.Col>
+            {!isResponsive && (
+              <Grid.Col span={isResponsive ? 12 : 5.5}>
+                <Group
+                  justify={isResponsive ? 'center' : 'left'}
+                  className={styles.grid__group}
+                >
+                  <Image
+                    className={styles.grid__img}
+                    src={ThincubatorTwo}
+                    h={'auto'}
+                  />
+                </Group>
+              </Grid.Col>
+            )}
           </Grid>
         </Container>
       </section>

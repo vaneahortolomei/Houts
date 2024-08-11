@@ -14,21 +14,19 @@ import styles from '@/widgets/main/sustainability/Sustainability.module.scss';
 import Arrow from '@/assets/sustainability/Arrow.png';
 import Bag from '@/assets/sustainability/Bag.png';
 import Tree from '@/assets/sustainability/Tree.png';
+import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 export const Sustainability = () => {
+  const isResponsive = useIsResponsive(1024);
+
   return (
-    <section id="sustainability" style={{ backgroundColor: '#F6F4F1' }}>
+    <section id="sustainability" className={styles.text}>
       <Container size="xl">
-        <Group
-          justify="center"
-          pt={50}
-          pb={100}
-          style={{ flexDirection: 'column' }}
-        >
-          <Title size="50px" ta={'center'} fw={400}>
+        <Group justify="center" className={styles.text__group}>
+          <Title className={styles.text__title} ta={'center'} fw={400}>
             SUSTAINABILITY
           </Title>
-          <Text ta="center" w={800}>
+          <Text className={styles.text__description} ta="center">
             For every Houts product, we plant one tree to do our bit for the
             environment. Join us on our mission to restore forests across the
             world. Follow our journey on:
@@ -44,15 +42,31 @@ export const Sustainability = () => {
             </Anchor>
           </Box>
         </Group>
-        <Flex justify={'center'} pb={50} gap={0}>
-          <Flex align={'center'} direction={'column'} w={220}>
+        <Flex
+          justify={'center'}
+          align={'center'}
+          pb={50}
+          gap={0}
+          direction={isResponsive ? 'column' : 'row'}
+        >
+          <Flex
+            align={'center'}
+            direction={'column'}
+            w={220}
+            mb={isResponsive ? 120 : 0}
+          >
             <Image w={100} h={'auto'} src={Bag} />
             <Text fz={20} mt={10} fw={600} c={'#A74127'}>
               BAGS
             </Text>
           </Flex>
           <Image src={Arrow} w={225} h={'auto'} className={styles.img} />
-          <Flex justify={'space-between'} align={'center'} direction={'column'}>
+          <Flex
+            justify={'space-between'}
+            align={'center'}
+            direction={'column'}
+            mt={isResponsive ? 120 : 0}
+          >
             <Image src={Tree} w={70} h={'auto'} mt={15} />
             <Text fz={20} mt={10} fw={600} c={'#A74127'}>
               ONE BAG = ONE TREE
@@ -60,19 +74,28 @@ export const Sustainability = () => {
           </Flex>
         </Flex>
       </Container>
-      <Box style={{ backgroundColor: '#fff' }}>
+      <Box className={styles.text_sustainability}>
         <Container size="xl">
           <SimpleGrid
-            cols={2}
-            pb={100}
-            pt={50}
-            style={{ alignItems: 'baseline', gap: '110px' }}
+            cols={isResponsive ? 1 : 2}
+            className={styles.text__group}
+            style={{
+              alignItems: 'baseline',
+              gap: isResponsive ? '50px' : '110px'
+            }}
           >
-            <Group align={'flex-start'}>
-              <Title w={400} fz={30} fw={400} c={'#A74127'} mb={20}>
+            <Group align={'flex-start'} justify={isResponsive ? 'center' : ''}>
+              <Title
+                w={400}
+                fz={30}
+                fw={400}
+                c={'#A74127'}
+                mb={20}
+                ta={isResponsive ? 'center' : 'left'}
+              >
                 GOING BEYOND NEUTRAL: OUR COMMITMENT TO A POSITIVE IMPACT
               </Title>
-              <Text>
+              <Text ta={isResponsive ? 'center' : 'left'}>
                 At Houts, we believe that being carbon neutral, which means
                 simply balancing the environmental harm we might cause, isn't
                 enough. We see it as merely staying afloat. Instead, we
@@ -80,7 +103,7 @@ export const Sustainability = () => {
                 lens: Does it have a negative, neutral, or positive impact on
                 the climate?
               </Text>
-              <Text>
+              <Text ta={isResponsive ? 'center' : 'left'}>
                 That's why we go further. We don't just aim to offset our carbon
                 footprint; we commit to offsetting 110% of it. But we don’t stop
                 there—we also take active steps to restore ecosystems that have
@@ -90,21 +113,32 @@ export const Sustainability = () => {
                 positively to our planet’s health.
               </Text>
             </Group>
-            <Group align={'flex-start'} gap={0}>
-              <Title mb={65} w={400} fz={30} fw={400} c={'#A74127'}>
+            <Group
+              align={'flex-start'}
+              justify={isResponsive ? 'center' : ''}
+              gap={0}
+            >
+              <Title
+                mb={65}
+                w={400}
+                fz={30}
+                fw={400}
+                c={'#A74127'}
+                ta={isResponsive ? 'center' : 'left'}
+              >
                 <Text span fz={40} fw={700}>
                   110%{' '}
                 </Text>
                 CARBON NEUTRAL COMMITMENT
               </Title>
-              <Text mb={20}>
+              <Text mb={20} ta={isResponsive ? 'center' : 'left'}>
                 Every year, we meticulously measure and offset 100% of our
                 carbon footprint in partnership with{' '}
                 <strong>OneTreePlanted</strong> while continuously working to
                 reduce our emissions annually. But at Houts, we believe in doing
                 more than just breaking even with the environment.
               </Text>
-              <Text>
+              <Text ta={isResponsive ? 'center' : 'left'}>
                 We commit to offsetting at least 10% more carbon than we emit,
                 ensuring that our impact is not just neutral but net
                 positive—actively benefiting the climate.
