@@ -83,7 +83,7 @@ export const Reviews = () => {
     <section id="reviews" className={styles.reviews}>
       <Group className={styles.reviews__group}>
         <Group justify="center" mb={50}>
-          <Title size="35px" fw={400}>
+          <Title size="35px" fw={400} ta={'center'}>
             OUR TESTER{' '}
             <Text fw={400} span inherit c={'#A74127'}>
               REVIEWS

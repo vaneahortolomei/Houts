@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '@/widgets/main/functionality/Functionality.module.scss';
-import { Container, Group, Title, Text, Image, Box, Flex } from '@mantine/core';
+import { Container, Group, Title, Text, Image, Box } from '@mantine/core';
 import BackPack from '@/assets/Backpack.png';
 import ShoulderBag from '@/assets/Shoulder-bag.png';
 import Bag1 from '@/assets/Bild-1.png';
@@ -11,7 +11,7 @@ import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 const AnimatedLine: React.FC = () => {
   return (
-    <svg width="100" height="500" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100" height="330" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <style>
           {`
@@ -60,6 +60,7 @@ const AnimatedLine: React.FC = () => {
 export default AnimatedLine;
 
 export const Functionality = () => {
+  const isResponsive = useIsResponsive(1024);
   const isResponsive1300 = useIsResponsive(1300);
 
   const descriptions = [
@@ -78,31 +79,39 @@ export const Functionality = () => {
   ];
 
   const circles = [
-    { top: '43%', right: '27%', animationDuration: '1.8s' },
-    { top: '63%', right: '49%', animationDuration: '2.5s' }
+    { top: '40%', right: '48%', animationDuration: '1.8s' },
+    { top: '63%', left: '8%', animationDuration: '2.5s' }
   ];
 
   const containerStyles: React.CSSProperties = {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: isResponsive ? 'column' : 'row',
     alignItems: 'flex-end',
     justifyContent: 'end',
-    gap: '130px'
+    gap: isResponsive ? '0' : '100px'
   };
 
   const imgStyles: React.CSSProperties = {
-    width: '55%',
+    width: 'auto',
     height: 'auto'
   };
 
-  const descriptionStyles: React.CSSProperties = {
-    flex: '0 1 300px',
-    marginRight: '100px',
-    marginTop: '120px',
-    marginBottom: '100px'
+  const containerGroupStyles: React.CSSProperties = {
+    width: isResponsive ? '70%' : 'auto',
+    flex: '0 1 auto'
   };
 
-  //Luggage section styles
+  const descriptionStyles: React.CSSProperties = {
+    flex: isResponsive ? '0' : '0 1 400px',
+    marginRight: isResponsive ? '0' : '100px',
+    marginTop: isResponsive ? '50px' : '120px',
+    marginBottom: isResponsive ? '40px' : '100px',
+    padding: '0 20px',
+    order: isResponsive ? 1 : 0
+  };
+
+  /** Luggage section styles */
+
   const luggageDescriptions = [
     {
       title: 'INSTANT VERTICAL LAPTOP ACCESS',
@@ -117,23 +126,23 @@ export const Functionality = () => {
   ];
 
   const luggageCircles = [
-    { top: '9%', left: '13%', animationDuration: '2.2s' },
-    { top: '47%', left: '12%', animationDuration: '1.9s' }
+    { top: '9%', left: '35%', animationDuration: '2.2s' },
+    { top: '47%', left: '30%', animationDuration: '1.9s' }
   ];
 
   const containerLuggageStyles: React.CSSProperties = {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: isResponsive ? 'column' : 'row',
     alignItems: 'unset',
     justifyContent: 'flex-start'
-    // gap: '330px'
   };
 
   const descriptionLuggageStyles: React.CSSProperties = {
-    flex: '0 1 700px',
-    marginRight: '100px',
-    marginTop: '120px',
-    marginBottom: '100px',
+    flex: isResponsive ? 'none' : '0 1 700px',
+    marginRight: isResponsive ? '0' : '100px',
+    marginTop: isResponsive ? '50px' : '120px',
+    marginBottom: isResponsive ? '40px' : '100px',
+    padding: '0 20px',
     alignSelf: 'center',
     order: 1
   };
@@ -141,6 +150,11 @@ export const Functionality = () => {
   const imgLuggageStyles: React.CSSProperties = {
     width: 'auto',
     height: 'auto'
+  };
+
+  const containerLuggageGroupStyles: React.CSSProperties = {
+    display: 'flex',
+    flex: '0 1 auto'
   };
 
   const titleTextStyles: React.CSSProperties = {
@@ -155,10 +169,15 @@ export const Functionality = () => {
     <section className={styles.functionality} id="functionality">
       <Container size="xl">
         <Group justify="center" className={styles.functionality__titles}>
-          <Title size="50px" fw={400}>
-            FUNCTIONALITY
-          </Title>
-          <Text w={1000} fz={20} fw={500} mb={20} mt={10} ta={'center'}>
+          <Title fw={400}>FUNCTIONALITY</Title>
+          <Text
+            className={styles.functionality__desc}
+            maw={1000}
+            fw={500}
+            mb={20}
+            mt={10}
+            ta={'center'}
+          >
             The modular bag 2-in-1 seamlessly transitions between a backpack and
             a shoulder bag, offering unparalleled versatility for dynamic
             lifestyles. Its innovative design allows easy conversion with
@@ -181,17 +200,15 @@ export const Functionality = () => {
           className={styles.functionality__img_container}
         >
           <Image
-            w="49.8%"
             mr={'-1px'}
             fit={'contain'}
             src={BackPack}
-            className={styles.functionality__img}
+            className={styles.functionality__img_f}
           />
           <Image
-            w="50%"
             fit={'contain'}
             src={ShoulderBag}
-            className={styles.functionality__img}
+            className={styles.functionality__img_s}
           />
         </Group>
         <Group
@@ -199,14 +216,20 @@ export const Functionality = () => {
           className={styles.functionality__titles}
           mb={20}
         >
-          <Title size={'35px'} fw={400}>
+          <Title size={'35px'} fw={400} ta={'center'}>
             NOT ENOUGH? WE GOT YOU
             <Text span inherit fz={35} fw={400} c={'#A74127'}>
               {' '}
               COVERED
             </Text>
           </Title>
-          <Text w={1000} fz={20} fw={500} mt={10} ta={'center'}>
+          <Text
+            className={styles.functionality__desc}
+            maw={1000}
+            fw={500}
+            mt={10}
+            ta={'center'}
+          >
             The modular bag 2-in-1 seamlessly transitions between a backpack and
             a shoulder bag, offering unparalleled versatility for dynamic
             lifestyles. Its innovative design allows easy conversion with
@@ -216,55 +239,25 @@ export const Functionality = () => {
             travelers, and fashion-forward individuals.
           </Text>
         </Group>
-        <Group style={{ alignItems: 'flex-start' }} gap={0}>
+        <Group
+          className={styles.functionality__bagGroup}
+          style={{ alignItems: 'flex-start' }}
+          gap={0}
+        >
           <Image
-            w="60%"
             fit={'contain'}
             src={Bag1}
-            className={styles.functionality__img}
+            className={styles.functionality__img_bag}
           />
-          <Flex>
-            <Title
-              fz={20}
-              w={120}
-              mb={150}
-              ta={'center'}
-              style={{ alignSelf: 'end' }}
-              fw={400}
-            >
-              WITHOUT
-              <Text span inherit fz={20} fw={400} c={'#A74127'}>
-                {' '}
-                EXTENSION
-              </Text>
-            </Title>
-            <Box>
-              <AnimatedLine />
-            </Box>
-            <Box>
-              <Title fz={16} mt={40} mb={20} fw={400} c={'#A74127'}>
-                EXTENSION
-              </Title>
-              <Title fz={16} w={100} fw={400} mb={20}>
-                EXPANDABLE COMPARTEMENT
-              </Title>
-              <Title fz={16} w={150} fw={400}>
-                UP TO{' '}
-                <Text span inherit fz={27} fw={600} c={'#A74127'}>
-                  67%
-                </Text>{' '}
-                MORE SPACE
-              </Title>
-            </Box>
-          </Flex>
         </Group>
       </Container>
 
-      <Box mt={100} mb={200}>
+      <Box mt={100} mb={40}>
         <ImageWithDots
           descriptions={descriptions}
           containerStyles={containerStyles}
           descriptionStyles={descriptionStyles}
+          containerGroupStyles={containerGroupStyles}
           imgStyles={imgStyles}
           titleTextStyles={titleTextStyles}
           descTextStyles={descTextStyles}
@@ -279,6 +272,7 @@ export const Functionality = () => {
           containerStyles={containerLuggageStyles}
           descriptionStyles={descriptionLuggageStyles}
           imgStyles={imgLuggageStyles}
+          containerLuggageGroupStyles={containerLuggageGroupStyles}
           titleTextStyles={titleTextStyles}
           descTextStyles={descTextStyles}
           circles={luggageCircles}

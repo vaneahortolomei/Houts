@@ -1,11 +1,62 @@
 .functionality {
+    background-color: #fff;
     &__titles {
-        padding: 100px 0;
+        font-size: 50px;
         flex-direction: column;
+        padding: 40px 0;
+        @media(min-width: 1025px){
+            padding: 100px 0;
+        }
+    }
+    &__desc {
+        font-size: 16px;
+        @media(min-width: 1025px){
+            font-size: 20px;
+        }
+    }
+    &__img {
+        &_bag {
+            width: 100%;
+            margin-left: -40%;
+            @media(min-width: 768px){
+                width: 60%;
+                margin-left: 0;
+            }
+        }
+        &_f {
+            width: 100%;
+            order: 1;
+            @media(min-width: 768px){
+                width: 49.8%;
+                order: 0;
+            }
+        }
+        &_s {
+            width: 100%;
+            order: 0;
+            @media(min-width: 768px){
+                width: 50%;
+                order: 1;
+            }
+        }
+    }
+    &__bagGroup {
+        flex-wrap: nowrap;
     }
     &__img_container {
         flex-wrap: nowrap;
         align-items: flex-start;
+        flex-direction: column;
+        margin-left: -16px;
+        margin-right: -16px;
+        @media(min-width: 768px){
+            flex-direction: row;
+        }
+        @media(min-width: 1025px){
+            margin-left: 0;
+            margin-right: 0;
+        }
+
     }
     &__laptopsContainer {
         position: relative;

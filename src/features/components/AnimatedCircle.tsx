@@ -22,6 +22,8 @@ interface Props {
   descriptionStyles: React.CSSProperties;
   descTextStyles: React.CSSProperties;
   titleTextStyles: React.CSSProperties;
+  containerGroupStyles?: React.CSSProperties;
+  containerLuggageGroupStyles?: React.CSSProperties;
   circles: CircleData[];
   img: string;
   imgTitle: string;
@@ -34,12 +36,16 @@ const ImgContainer = styled.div`
 `;
 
 export const Circle = styled.div<{ animationDuration: string }>`
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #a74127;
   position: absolute;
   cursor: pointer;
+  @media (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
 
   animation: pulse ${({ animationDuration }) => animationDuration} infinite;
 
@@ -64,10 +70,14 @@ export const Circle = styled.div<{ animationDuration: string }>`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     background-color: white;
     border-radius: 50%;
+    @media (min-width: 768px) {
+      width: 15px;
+      height: 15px;
+    }
   }
 
   &::after {
@@ -100,6 +110,8 @@ export const Circle = styled.div<{ animationDuration: string }>`
 `;
 
 const ImageWithDots: React.FC<Props> = ({
+  containerLuggageGroupStyles,
+  containerGroupStyles,
   descriptions,
   containerStyles,
   imgStyles,
@@ -108,6 +120,7 @@ const ImageWithDots: React.FC<Props> = ({
   descTextStyles,
   titleTextStyles,
   img,
+
   imgTitle
 }) => {
   const [selectedText, setSelectedText] = useState(descriptions[0]);
@@ -140,20 +153,29 @@ const ImageWithDots: React.FC<Props> = ({
           )}
         </Transition>
       </Box>
-      <img src={img} alt={imgTitle} style={imgStyles} />
-      {circles.map((circle, index: number) => (
-        <Circle
-          key={index}
-          style={{
-            top: circle.top,
-            left: circle.left,
-            bottom: circle.bottom,
-            right: circle.right
-          }}
-          animationDuration={circle.animationDuration}
-          onClick={() => handleCircleClick(index)}
-        />
-      ))}
+      <Box
+        style={{
+          position: 'relative',
+          flex: 1,
+          ...containerGroupStyles,
+          ...containerLuggageGroupStyles
+        }}
+      >
+        <img src={img} alt={imgTitle} style={imgStyles} />
+        {circles.map((circle, index: number) => (
+          <Circle
+            key={index}
+            style={{
+              top: circle.top,
+              left: circle.left,
+              bottom: circle.bottom,
+              right: circle.right
+            }}
+            animationDuration={circle.animationDuration}
+            onClick={() => handleCircleClick(index)}
+          />
+        ))}
+      </Box>
     </ImgContainer>
   );
 };
