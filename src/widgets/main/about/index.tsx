@@ -38,25 +38,29 @@ export const About = () => {
   ];
 
   const circles = [
-    { top: '10%', left: isResponsive ? '5px' : '32%', animationDuration: '2s' },
     {
-      top: isResponsive ? '32%' : '52%',
-      left: isResponsive ? '35px' : '33%',
+      top: '11%',
+      left: '1%',
+      animationDuration: '2s'
+    },
+    {
+      top: '52%',
+      left: '4%',
       animationDuration: '2.4s'
     },
     {
-      top: isResponsive ? '42%' : '65%',
-      left: isResponsive ? '20px' : '30%',
+      top: '65%',
+      left: '0%',
       animationDuration: '2.2s'
     },
     {
-      top: isResponsive ? '27%' : '35%',
-      left: isResponsive ? '79%' : '72%',
+      top: '35%',
+      left: '60%',
       animationDuration: '3s'
     },
     {
-      top: isResponsive ? '39%' : '62%',
-      left: isResponsive ? '82%' : '73%',
+      top: '62%',
+      left: '61%',
       animationDuration: '2.7s'
     }
   ];
@@ -66,19 +70,21 @@ export const About = () => {
     flexDirection: isResponsive ? 'column' : 'row',
     alignItems: isResponsive1300 ? 'center' : 'flex-start',
     justifyContent: 'space-between',
-    gap: isResponsive ? '100px' : '0'
+    gap: isResponsive ? '50px' : '0'
   };
 
   const imgStyles: React.CSSProperties = {
-    width: isResponsive ? '100%' : '70%',
+    position: 'relative',
+    width: isResponsive ? '100%' : '100%',
     height: 'auto'
   };
 
   const descriptionStyles: React.CSSProperties = {
-    flex: '0 1 300px',
-    marginRight: isResponsive1300 ? '50px' : '100px',
+    flex: isResponsive ? '' : '0 1 300px',
+    marginRight: isResponsive1300 ? (isResponsive ? '' : '50px') : '100px',
     marginTop: isResponsive1300 ? '0' : '120px',
-    order: isResponsive ? 1 : 0
+    order: isResponsive ? 1 : 0,
+    marginBottom: isResponsive ? '40px' : ''
   };
 
   const titleTextStyles: React.CSSProperties = {

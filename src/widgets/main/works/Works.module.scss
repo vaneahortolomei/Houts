@@ -86,7 +86,7 @@
     &:not(:last-child)::after {
         content: '';
         position: absolute;
-        top: calc(100% + 10px);
+        top: calc(100% + -5px);
         left: 50%;
         width: 2px;
         height: calc(100% + 250px);
