@@ -2,7 +2,8 @@ import { Container, Text, Title, Group, Box, Image } from '@mantine/core';
 import React from 'react';
 import styles from './TopSection.module.scss';
 import { useTranslation } from 'react-i18next';
-import ImageReact from '@/assets/top/top.png';
+import DesktopBag from '@/assets/top/top.png';
+import MobileBag from '@/assets/top/bug-top.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import { mobilePaddingFromHeader } from '@/shared/constants';
 
@@ -33,7 +34,7 @@ export const TopSection = () => {
             className={styles.top__section_img}
             radius="md"
             fit="contain"
-            src={ImageReact}
+            src={isResponsive ? MobileBag : DesktopBag}
           />
         </Box>
       </Container>

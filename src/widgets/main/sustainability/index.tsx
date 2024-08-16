@@ -56,7 +56,7 @@ export const Sustainability = () => {
             mb={isResponsive ? 120 : 0}
           >
             <Image w={100} h={'auto'} src={Bag} />
-            <Text fz={20} mt={10} fw={600} c={'#A74127'}>
+            <Text fz={isResponsive ? 18 : 20} mt={10} fw={600} c={'#A74127'}>
               BAGS
             </Text>
           </Flex>
@@ -68,7 +68,7 @@ export const Sustainability = () => {
             mt={isResponsive ? 120 : 0}
           >
             <Image src={Tree} w={70} h={'auto'} mt={15} />
-            <Text fz={20} mt={10} fw={600} c={'#A74127'}>
+            <Text fz={isResponsive ? 18 : 20} mt={10} fw={600} c={'#A74127'}>
               ONE BAG = ONE TREE
             </Text>
           </Flex>
@@ -87,7 +87,7 @@ export const Sustainability = () => {
             <Group align={'flex-start'} justify={isResponsive ? 'center' : ''}>
               <Title
                 w={400}
-                fz={30}
+                fz={isResponsive ? 18 : 30}
                 fw={400}
                 c={'#A74127'}
                 mb={20}
@@ -119,14 +119,14 @@ export const Sustainability = () => {
               gap={0}
             >
               <Title
-                mb={65}
+                mb={isResponsive ? 20 : 65}
                 w={400}
-                fz={30}
+                fz={isResponsive ? 18 : 30}
                 fw={400}
                 c={'#A74127'}
                 ta={isResponsive ? 'center' : 'left'}
               >
-                <Text span fz={40} fw={700}>
+                <Text span fz={isResponsive ? 18 : 40} fw={700}>
                   110%{' '}
                 </Text>
                 CARBON NEUTRAL COMMITMENT

@@ -3,12 +3,24 @@ import { Box } from '@mantine/core';
 import Poster from '@/assets/Poster.jpg';
 import Video from '@/assets/HOUTS.mp4';
 import styles from './Video.module.scss';
+import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 export const TeaserVideo = () => {
+  const isResponsive = useIsResponsive(1024);
+
   return (
-    <section className={styles.myVideo}>
+    <section id="video" className={styles.myVideo}>
       <Box>
-        <video width="100%" height="auto" autoPlay loop muted poster={Poster}>
+        <video
+          className={'hui'}
+          width="100%"
+          height="auto"
+          controls={isResponsive}
+          autoPlay={!isResponsive}
+          loop
+          muted
+          poster={Poster}
+        >
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

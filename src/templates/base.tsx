@@ -1,5 +1,13 @@
-import * as React from 'react';
-import { AppShell, Affix, Button, Transition, rem, Text } from '@mantine/core';
+import React, { useEffect, useState } from 'react';
+import {
+  AppShell,
+  Affix,
+  Button,
+  Transition,
+  rem,
+  Text,
+  LoadingOverlay
+} from '@mantine/core';
 import { Header, Navbar, Main, Footer } from '@/widgets';
 import { IconArrowUp } from '@tabler/icons-react';
 import { useWindowScroll } from '@mantine/hooks';
@@ -14,9 +22,55 @@ import {
 export const BaseTemplate = () => {
   const [scroll, scrollTo] = useWindowScroll();
   const isResponsive = useIsResponsive(1024);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(true);
+
+  useEffect(() => {
+    window.onload = () => {
+      setTimeout(() => {
+        setIsLoading(true);
+        setTimeout(() => {
+          setIsOverlayVisible(false);
+        }, 100);
+      }, 2000);
+    };
+  }, []);
 
   return (
     <>
+      <Transition
+        mounted={isOverlayVisible}
+        transition="fade"
+        duration={600}
+        timingFunction="ease"
+        onExited={() => setIsOverlayVisible(false)}
+      >
+        {(styles) => (
+          <LoadingOverlay
+            visible={isLoading}
+            zIndex={1000}
+            h={'100dvh'}
+            overlayProps={{ radius: 'sm' }}
+            loaderProps={{
+              children: (
+                <div className="loader">
+                  <div className="rect top" />
+                  <div className="rect bottom" />
+                </div>
+              )
+            }}
+            style={styles}
+            styles={{
+              root: {
+                position: 'fixed'
+              },
+              overlay: {
+                backgroundColor: '#fff'
+              }
+            }}
+          />
+        )}
+      </Transition>
       <DrawerProvider>
         <AppShell
           withBorder={false}
@@ -111,3 +165,44 @@ export const BaseTemplate = () => {
     </>
   );
 };
+
+const loaderStyles = `
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    height: 57px;
+}
+
+.rect {
+    width: 50px;
+    height: 27px;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+}
+
+.top {
+    animation: disappear-reappear 2s infinite ease-in-out;
+}
+
+.bottom {
+    animation: disappear-reappear 2s infinite ease-in-out;
+    animation-delay: 1s;
+}
+
+@keyframes disappear-reappear {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+`;
+
+// Добавление стилей на страницу
+const styleSheet = document.createElement('style');
+styleSheet.type = 'text/css';
+styleSheet.innerText = loaderStyles;
+document.head.appendChild(styleSheet);

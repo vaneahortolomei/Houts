@@ -88,10 +88,19 @@
         position: absolute;
         top: calc(100% + -5px);
         left: 50%;
-        width: 2px;
+        width: 0.1px;
         height: calc(100% + 250px);
         background: #A74127;
         transform: translateX(-50%);
+        @supports (-webkit-appearance: none) {
+            width: 0.1px;
+        }
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            width: 0.1px;
+        }
+        @-moz-document url-prefix() {
+            width: 1px;
+        }
     }
 
     @media(min-width: 1025px) {

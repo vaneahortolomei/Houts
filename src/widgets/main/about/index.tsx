@@ -120,7 +120,7 @@ export const About = () => {
             BACKSIDE & FRONT
           </Text>
         </Group>
-        <Box mt={50}>
+        <Box mt={isResponsive ? 10 : 50} pb={isResponsive ? 10 : 70}>
           <ImageWithDots
             descriptions={descriptions}
             containerStyles={containerStyles}

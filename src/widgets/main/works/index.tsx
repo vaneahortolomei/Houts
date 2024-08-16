@@ -95,8 +95,8 @@ export const Works = () => {
               <Image
                 className={styles.iconWrapper}
                 src={item.img}
-                w={117}
-                h={117}
+                w={isResponsive ? 58 : 117}
+                h={isResponsive ? 58 : 117}
               />
             </Box>
             <Box className={styles.grid__textWrapper}>
@@ -104,7 +104,7 @@ export const Works = () => {
                 className={styles.grid__title}
                 c={'#A74127'}
                 fw={300}
-                fz={20}
+                fz={isResponsive ? 18 : 20}
                 mb={20}
                 mt={20}
               >

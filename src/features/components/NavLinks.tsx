@@ -13,13 +13,14 @@ export const NavLinks = () => {
   const { setDrawerOpen } = useContext(DrawerContext);
 
   const mainLinks = [
-    { link: 'about', label: 'ABOUT HOUTS' },
-    { link: 'works', label: 'HOW IT WORKS' },
-    { link: 'functionality', label: 'FUNCTIONALITY' },
-    { link: '#', label: 'Logo', image: Logo },
-    { link: 'journey', label: 'OUR STORY' },
-    { link: 'sustainability', label: 'SUSTAINABILITY' },
+    { id: 0, link: 'about', label: 'ABOUT HOUTS' },
+    { id: 1, link: 'works', label: 'HOW IT WORKS' },
+    { id: 2, link: 'functionality', label: 'FUNCTIONALITY' },
+    { id: 3, link: '#', label: 'Logo', image: Logo },
+    { id: 4, link: 'journey', label: 'OUR STORY' },
+    { id: 5, link: 'sustainability', label: 'SUSTAINABILITY' },
     {
+      id: 6,
       link: 'https://forms.monday.com/forms/d78eb79b6a002fabefb77e0e504f2592?r=use1',
       label: 'JOIN THE WAITING LIST',
       target: true
@@ -54,7 +55,7 @@ export const NavLinks = () => {
           {!isResponsive && (
             <a
               href={`/${item.link}`}
-              key={item.label}
+              key={item.id}
               className={styles.header__links}
               onClick={() => setDrawerOpen(false)}
             >
@@ -73,7 +74,7 @@ export const NavLinks = () => {
           label={item.label}
           href={item.link}
           target="_blank"
-          key={item.label}
+          key={item.id}
           className={styles.header__links_target}
           active={index === active}
           variant="subtle"
@@ -87,7 +88,7 @@ export const NavLinks = () => {
           ta={'left'}
           label={item.label}
           href={`#${item.link}`}
-          key={item.label}
+          key={item.id}
           className={styles.header__links}
           active={index === active}
           onClick={(event) => handleLinkClick(event, index)}
