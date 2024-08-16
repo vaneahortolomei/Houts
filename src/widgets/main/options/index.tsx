@@ -28,7 +28,7 @@ export const BagOptions = () => {
         >
           <Grid.Col span={isResponsive ? 12 : 4}>
             <Group justify={'center'} className={styles.options__col}>
-              <Flex align="center" gap={10}>
+              <Flex align="center" gap={10} className={styles.options__head}>
                 <Image src={First} w={45} h={45} />
                 <Title fz={20}>APPLE LEATHER</Title>
               </Flex>
@@ -43,7 +43,12 @@ export const BagOptions = () => {
           </Grid.Col>
           <Grid.Col span={isResponsive ? 12 : 4}>
             <Group justify={'center'} className={styles.options__col}>
-              <Flex align="center" gap={10} w={280}>
+              <Flex
+                align="center"
+                gap={10}
+                w={280}
+                className={styles.options__head}
+              >
                 <Image src={Second} w={45} h={45} />
                 <Title fz={20} style={{ lineHeight: '1.1' }}>
                   BAG AS YOUR PERSONAL STATEMENT
@@ -59,7 +64,7 @@ export const BagOptions = () => {
           </Grid.Col>
           <Grid.Col span={isResponsive ? 12 : 4}>
             <Group justify={'center'} className={styles.options__col}>
-              <Flex align="center" gap={10}>
+              <Flex align="center" gap={10} className={styles.options__head}>
                 <Image src={Third} w={45} h={45} />
                 <Title fz={20}>TWO BAGS IN ONE</Title>
               </Flex>

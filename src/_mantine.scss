@@ -14,6 +14,12 @@ $text-color: #222027;
 $third-color: #A4A4A4;
 $fourth-color: #F6F4F1;
 
+body, html {
+    -webkit-font-smoothing: antialiased;  /* Для WebKit-браузеров */
+    -moz-osx-font-smoothing: grayscale;   /* Для Firefox на macOS */
+    text-rendering: optimizeLegibility;
+}
+
 body {
     font-family: "avenir-book", sans-serif;
     font-style: normal;

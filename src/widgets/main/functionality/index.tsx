@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '@/widgets/main/functionality/Functionality.module.scss';
 import { Container, Group, Title, Text, Image, Box } from '@mantine/core';
-import BackPack from '@/assets/Backpack.png';
-import ShoulderBag from '@/assets/Shoulder-bag.png';
-import Bag1 from '@/assets/Bild-1.png';
-import BagFull from '@/assets/BagFull.png';
+import BackPack from '@/assets/functionality/Backpack.png';
+import ShoulderBag from '@/assets/functionality/Shoulder-bag.png';
+import Bag1 from '@/assets/functionality/Bild-1.png';
+import BagFull from '@/assets/functionality/BagFull.png';
 import ImageWithDots from '@/features/components/AnimatedCircle';
-import BagLug from '@/assets/BagLug.png';
+import BagLug from '@/assets/functionality/BagLug.png';
+import BagArrow from '@/assets/functionality/bag-arrow.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 const AnimatedLine: React.FC = () => {
@@ -102,8 +103,8 @@ export const Functionality = () => {
   };
 
   const descriptionStyles: React.CSSProperties = {
-    flex: isResponsive ? '0' : '0 1 400px',
-    marginRight: isResponsive ? '0' : '100px',
+    flex: isResponsive ? '0' : '0 1 500px',
+    marginRight: isResponsive ? '0' : '80px',
     marginTop: isResponsive ? '50px' : '120px',
     marginBottom: isResponsive ? '40px' : '100px',
     padding: '0 20px',
@@ -239,15 +240,16 @@ export const Functionality = () => {
             travelers, and fashion-forward individuals.
           </Text>
         </Group>
-        <Group
-          className={styles.functionality__bagGroup}
-          style={{ alignItems: 'flex-start' }}
-          gap={0}
-        >
+        <Group className={styles.functionality__bagGroup} gap={0}>
           <Image
             fit={'contain'}
             src={Bag1}
             className={styles.functionality__img_bag}
+          />
+          <Image
+            fit={'contain'}
+            src={BagArrow}
+            className={styles.functionality__img_arrow}
           />
         </Group>
       </Container>

@@ -47,6 +47,15 @@
         @media(min-width: 1025px) {
             left: 50%;
         }
+        @supports (-webkit-appearance: none) {
+            width: 1px;
+        }
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            width: 1px;
+        }
+        @-moz-document url-prefix() {
+            width: 1px;
+        }
     }
 
     &_item {
@@ -143,7 +152,7 @@
     }
 
     .timeline_year {
-        font-size: 40px;
+        font-size: 27px;
         font-weight: bold;
         margin-bottom: 10px;
         @media(min-width: 1025px){

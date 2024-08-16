@@ -98,7 +98,7 @@ export const Journey = () => {
                       w={isResponsive ? 'auto' : 300}
                     >
                       <Title
-                        fz={isResponsive ? 20 : 25}
+                        fz={isResponsive ? 18 : 25}
                         fw={300}
                         mb={10}
                         c={'#A74127'}
