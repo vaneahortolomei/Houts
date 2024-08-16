@@ -30,9 +30,9 @@ export const BaseTemplate = () => {
       setTimeout(() => {
         setIsLoading(true);
         setTimeout(() => {
-          setIsOverlayVisible(true);
+          setIsOverlayVisible(false);
         }, 100);
-      }, 2500);
+      }, 2000);
     };
   }, []);
 
@@ -41,7 +41,7 @@ export const BaseTemplate = () => {
       <Transition
         mounted={isOverlayVisible}
         transition="fade"
-        duration={700}
+        duration={600}
         timingFunction="ease"
         onExited={() => setIsOverlayVisible(false)}
       >
