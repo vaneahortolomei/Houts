@@ -27,7 +27,7 @@ export const Header = () => {
           }}
         >
           <Box className={styles.header__mobile_logo}>
-            <Image src={Logo} h={21} w={123} />
+            <Image src={Logo} h={19} w={123} />
           </Box>
           <Burger
             aria-label="Toggle navigation"

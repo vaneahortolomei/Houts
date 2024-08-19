@@ -93,7 +93,7 @@
         background: #A74127;
         transform: translateX(-50%);
         @supports (-webkit-appearance: none) {
-            width: 0.1px;
+            width: 2px;
         }
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             width: 0.1px;
