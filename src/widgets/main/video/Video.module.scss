@@ -1,8 +1,5 @@
-//.autoPlayVideo {
-//    autoplay: false;
-//    @media (min-width: 1024px) {
-//        &__autoPlayVideo {
-//            autoplay: true;
-//        }
-//    }
-//}
+.myVideo {
+    &__video {
+        object-fit: cover;
+    }
+}

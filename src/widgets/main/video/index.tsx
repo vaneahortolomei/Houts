@@ -12,7 +12,7 @@ export const TeaserVideo = () => {
     <section id="video" className={styles.myVideo}>
       <Box>
         <video
-          className={'hui'}
+          className={styles.myVideo__video}
           width="100%"
           height="auto"
           controls={isResponsive}

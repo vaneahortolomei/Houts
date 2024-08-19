@@ -26,14 +26,24 @@ export const BaseTemplate = () => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
 
   useEffect(() => {
-    window.onload = () => {
-      setTimeout(() => {
-        setIsLoading(true);
-        setTimeout(() => {
-          setIsOverlayVisible(false);
-        }, 100);
-      }, 2000);
-    };
+    if (isOverlayVisible) {
+      document.body.classList.add('loading');
+    } else {
+      document.body.classList.remove('loading');
+    }
+  }, [isOverlayVisible]);
+
+  useEffect(() => {
+    const timer1 = setTimeout(() => {
+      setIsLoading(true);
+      const timer2 = setTimeout(() => {
+        setIsOverlayVisible(false);
+      }, 100);
+
+      return () => clearTimeout(timer2);
+    }, 2000);
+
+    return () => clearTimeout(timer1);
   }, []);
 
   return (
@@ -167,6 +177,9 @@ export const BaseTemplate = () => {
 };
 
 const loaderStyles = `
+body.loading {
+  overflow: hidden;
+}
 .loader {
     display: flex;
     flex-direction: column;
