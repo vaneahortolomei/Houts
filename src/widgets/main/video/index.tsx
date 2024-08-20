@@ -14,7 +14,7 @@ export const TeaserVideo = () => {
         <video
           className={styles.myVideo__video}
           width="100%"
-          height="auto"
+          height={isResponsive ? 'auto' : '700px'}
           controls={isResponsive}
           autoPlay={!isResponsive}
           loop

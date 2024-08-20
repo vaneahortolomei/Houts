@@ -18,6 +18,7 @@ import IconWorks4 from '@/assets/works/Icon-4.svg';
 import IconWorks5 from '@/assets/works/Icon-5.svg';
 import Leather from '@/assets/Leather.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
+import FadeInSection from '@/features/components/FadeInSection';
 
 export const Works = () => {
   const isResponsive = useIsResponsive(1024);
@@ -64,22 +65,28 @@ export const Works = () => {
           className={styles.text__background}
         >
           <Container size="xl">
-            <Group justify="center" className={styles.text__group}>
-              <Title
-                className={styles.text__title}
-                ta={'center'}
-                fw={400}
-                c={'#fff'}
-              >
-                APPLE LEATHER? HOW IT WORKS?
-              </Title>
-              <Text className={styles.text__description} ta="center" c={'#fff'}>
-                Our bags, crafted from USDA-certified vegan ,,apple" leather
-                using remnants from juice production, exemplify your commitment
-                to circular fashion, seam­lessly blending sustainability with
-                timeless elegance.
-              </Text>
-            </Group>
+            <FadeInSection>
+              <Group justify="center" className={styles.text__group}>
+                <Title
+                  className={styles.text__title}
+                  ta={'center'}
+                  fw={400}
+                  c={'#fff'}
+                >
+                  APPLE LEATHER? HOW IT WORKS?
+                </Title>
+                <Text
+                  className={styles.text__description}
+                  ta="center"
+                  c={'#fff'}
+                >
+                  Our bags, crafted from USDA-certified vegan ,,apple" leather
+                  using remnants from juice production, exemplify your
+                  commitment to circular fashion, seam­lessly blending
+                  sustainability with timeless elegance.
+                </Text>
+              </Group>
+            </FadeInSection>
           </Container>
         </BackgroundImage>
       </Box>
@@ -100,17 +107,19 @@ export const Works = () => {
               />
             </Box>
             <Box className={styles.grid__textWrapper}>
-              <Title
-                className={styles.grid__title}
-                c={'#A74127'}
-                fw={300}
-                fz={isResponsive ? 18 : 20}
-                mb={20}
-                mt={20}
-              >
-                {item.title}
-              </Title>
-              <Text className={styles.grid__text}>{item.text}</Text>
+              <FadeInSection>
+                <Title
+                  className={styles.grid__title}
+                  c={'#A74127'}
+                  fw={300}
+                  fz={isResponsive ? 18 : 20}
+                  mb={20}
+                  mt={20}
+                >
+                  {item.title}
+                </Title>
+                <Text className={styles.grid__text}>{item.text}</Text>
+              </FadeInSection>
             </Box>
           </Flex>
         ))}

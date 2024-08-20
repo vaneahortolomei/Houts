@@ -8,6 +8,7 @@ import Max from '@/assets/reviews/Maximilian.png';
 import Neeraj from '@/assets/reviews/Neeraj.png';
 import Tudor from '@/assets/reviews/Tudor.png';
 import styles from './Reviews.module.scss';
+import FadeInSection from '@/features/components/FadeInSection';
 
 export const Reviews = () => {
   const data = [
@@ -82,79 +83,86 @@ export const Reviews = () => {
   return (
     <section id="reviews" className={styles.reviews}>
       <Group className={styles.reviews__group}>
-        <Group justify="center" mb={50}>
-          <Title size="35px" fw={400} ta={'center'}>
-            OUR TESTER{' '}
-            <Text fw={400} span inherit c={'#A74127'}>
-              REVIEWS
-            </Text>
-          </Title>
-        </Group>
-        <Box>
-          <Carousel
-            height={350}
-            slideSize="300px"
-            slideGap={{ base: 'md' }}
-            loop
-            dragFree
-            align="center"
-          >
-            {data.map((item, index) => (
-              <Carousel.Slide key={index}>
-                <Box
-                  style={{
-                    backgroundColor: '#222027',
-                    height: '100%',
-                    borderRadius: '30px',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    flexDirection: 'column',
-                    padding: '20px 0'
-                  }}
-                >
-                  <Group justify="center">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      w={108}
-                      h={108}
-                      mb={10}
-                      style={{ borderRadius: '50%', border: '5px solid #fff' }}
-                    />
-                    <Text
-                      c={'#fff'}
-                      fz={15}
-                      ta={'center'}
-                      p={'0 30px'}
-                      style={{ lineHeight: 1.2 }}
-                    >
-                      {item.text}
-                    </Text>
-                  </Group>
-                  <Anchor
-                    href={item.anchor}
-                    target="_blank"
-                    underline="never"
+        <FadeInSection>
+          <Group justify="center" mb={50}>
+            <Title size="35px" fw={400} ta={'center'}>
+              OUR TESTER{' '}
+              <Text fw={400} span inherit c={'#A74127'}>
+                REVIEWS
+              </Text>
+            </Title>
+          </Group>
+        </FadeInSection>
+        <FadeInSection>
+          <Box>
+            <Carousel
+              height={350}
+              slideSize="300px"
+              slideGap={{ base: 'md' }}
+              loop
+              dragFree
+              align="center"
+            >
+              {data.map((item, index) => (
+                <Carousel.Slide key={index}>
+                  <Box
                     style={{
-                      color: '#fff',
-                      fontSize: '20px',
-                      textAlign: 'center',
-                      width: '200px'
-                    }}
-                    sx={{
-                      '&:hover': {
-                        color: '#A74127'
-                      }
+                      backgroundColor: '#222027',
+                      height: '100%',
+                      borderRadius: '30px',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      flexDirection: 'column',
+                      padding: '20px 0'
                     }}
                   >
-                    {item.title}
-                  </Anchor>
-                </Box>
-              </Carousel.Slide>
-            ))}
-          </Carousel>
-        </Box>
+                    <Group justify="center">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        w={108}
+                        h={108}
+                        mb={10}
+                        style={{
+                          borderRadius: '50%',
+                          border: '5px solid #fff'
+                        }}
+                      />
+                      <Text
+                        c={'#fff'}
+                        fz={15}
+                        ta={'center'}
+                        p={'0 30px'}
+                        style={{ lineHeight: 1.2 }}
+                      >
+                        {item.text}
+                      </Text>
+                    </Group>
+                    <Anchor
+                      href={item.anchor}
+                      target="_blank"
+                      underline="never"
+                      style={{
+                        color: '#fff',
+                        fontSize: '20px',
+                        textAlign: 'center',
+                        width: '200px'
+                      }}
+                      sx={{
+                        '&:hover': {
+                          color: '#A74127'
+                        }
+                      }}
+                    >
+                      {item.title}
+                    </Anchor>
+                  </Box>
+                </Carousel.Slide>
+              ))}
+            </Carousel>
+          </Box>
+        </FadeInSection>
       </Group>
     </section>
   );
