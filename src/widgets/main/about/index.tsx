@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Text, Title, Group, Box } from '@mantine/core';
 import styles from './About.module.scss';
 import ImageWithDots from '@/features/components/AnimatedCircle';
+import FadeInSection from '@/features/components/FadeInSection';
 import Bags from '@/assets/Bags.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 
@@ -98,41 +99,46 @@ export const About = () => {
   return (
     <section className={styles.about} id="about">
       <Container size="xl">
-        <Group justify="center" className={styles.about__titles}>
-          <Title fw={400} className={styles.about__title}>
-            ABOUT HOUTS BAG
-          </Title>
-          <Box className={styles.about__text_group}>
-            <Text fz={20} fw={500} mb={20} mt={10}>
-              Your lifestyle. Limitless
+        <FadeInSection>
+          <Group justify="center" className={styles.about__titles}>
+            <Title fw={400} className={styles.about__title}>
+              ABOUT HOUTS BAG
+            </Title>
+            <Box className={styles.about__text_group}>
+              <Text fz={20} fw={500} mb={20} mt={10}>
+                Your lifestyle. Limitless
+              </Text>
+              <Text
+                fz={20}
+                fw={500}
+                mb={30}
+                className={styles.about__description}
+              >
+                The versatile vegan Apple Leather bag that goes from a
+                comfortable backpack to a handbag that supports your active
+                lifestyle.
+              </Text>
+            </Box>
+            <Text fz={31} c={'#A4A4A4'}>
+              BACKSIDE & FRONT
             </Text>
-            <Text
-              fz={20}
-              fw={500}
-              mb={30}
-              className={styles.about__description}
-            >
-              The versatile vegan Apple Leather bag that goes from a comfortable
-              backpack to a handbag that supports your active lifestyle.
-            </Text>
+          </Group>
+        </FadeInSection>
+        <FadeInSection>
+          <Box mt={isResponsive ? 10 : 50} pb={isResponsive ? 10 : 70}>
+            <ImageWithDots
+              descriptions={descriptions}
+              containerStyles={containerStyles}
+              descriptionStyles={descriptionStyles}
+              imgStyles={imgStyles}
+              titleTextStyles={titleTextStyles}
+              descTextStyles={descTextStyles}
+              circles={circles}
+              img={Bags}
+              imgTitle={'BACKSIDE & FRONT'}
+            />
           </Box>
-          <Text fz={31} c={'#A4A4A4'}>
-            BACKSIDE & FRONT
-          </Text>
-        </Group>
-        <Box mt={isResponsive ? 10 : 50} pb={isResponsive ? 10 : 70}>
-          <ImageWithDots
-            descriptions={descriptions}
-            containerStyles={containerStyles}
-            descriptionStyles={descriptionStyles}
-            imgStyles={imgStyles}
-            titleTextStyles={titleTextStyles}
-            descTextStyles={descTextStyles}
-            circles={circles}
-            img={Bags}
-            imgTitle={'BACKSIDE & FRONT'}
-          />
-        </Box>
+        </FadeInSection>
       </Container>
     </section>
   );

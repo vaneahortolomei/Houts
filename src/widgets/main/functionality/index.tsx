@@ -9,6 +9,7 @@ import ImageWithDots from '@/features/components/AnimatedCircle';
 import BagLug from '@/assets/functionality/BagLug.png';
 import BagArrow from '@/assets/functionality/bag-arrow.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
+import FadeInSection from '@/features/components/FadeInSection';
 
 const AnimatedLine: React.FC = () => {
   return (
@@ -169,119 +170,132 @@ export const Functionality = () => {
   return (
     <section className={styles.functionality} id="functionality">
       <Container size="xl">
-        <Group justify="center" className={styles.functionality__titles}>
-          <Title fw={400}>FUNCTIONALITY</Title>
-          <Text
-            className={styles.functionality__desc}
-            maw={1000}
-            fw={500}
+        <FadeInSection>
+          <Group justify="center" className={styles.functionality__titles}>
+            <Title fw={400}>FUNCTIONALITY</Title>
+            <Text
+              className={styles.functionality__desc}
+              maw={1000}
+              fw={500}
+              mb={20}
+              mt={10}
+              ta={'center'}
+            >
+              The modular bag 2-in-1 seamlessly transitions between a backpack
+              and a shoulder bag, offering unparalleled versatility for dynamic
+              lifestyles. Its innovative design allows easy conversion with
+              detachable straps and secure compartments, catering to both casual
+              and professional needs. This adaptable accessory ensures
+              practicality and style, making it ideal for active professionals,
+              travelers, and fashion-forward individuals.
+            </Text>
+            <Title size={'35px'} fw={400}>
+              TWO BAGS IN
+              <Text span inherit fz={35} fw={400} c={'#A74127'}>
+                {' '}
+                ONE
+              </Text>
+            </Title>
+          </Group>
+        </FadeInSection>
+        <FadeInSection>
+          <Group
+            justify="center"
+            gap={0}
+            className={styles.functionality__img_container}
+          >
+            <Image
+              mr={'-1px'}
+              fit={'contain'}
+              src={BackPack}
+              className={styles.functionality__img_f}
+            />
+            <Image
+              fit={'contain'}
+              src={ShoulderBag}
+              className={styles.functionality__img_s}
+            />
+          </Group>
+        </FadeInSection>
+        <FadeInSection>
+          <Group
+            justify="center"
+            className={styles.functionality__titles}
             mb={20}
-            mt={10}
-            ta={'center'}
           >
-            The modular bag 2-in-1 seamlessly transitions between a backpack and
-            a shoulder bag, offering unparalleled versatility for dynamic
-            lifestyles. Its innovative design allows easy conversion with
-            detachable straps and secure compartments, catering to both casual
-            and professional needs. This adaptable accessory ensures
-            practicality and style, making it ideal for active professionals,
-            travelers, and fashion-forward individuals.
-          </Text>
-          <Title size={'35px'} fw={400}>
-            TWO BAGS IN
-            <Text span inherit fz={35} fw={400} c={'#A74127'}>
-              {' '}
-              ONE
+            <Title size={'35px'} fw={400} ta={'center'}>
+              NOT ENOUGH? WE GOT YOU
+              <Text span inherit fz={35} fw={400} c={'#A74127'}>
+                {' '}
+                COVERED
+              </Text>
+            </Title>
+            <Text
+              className={styles.functionality__desc}
+              maw={1000}
+              fw={500}
+              mt={10}
+              ta={'center'}
+            >
+              The modular bag 2-in-1 seamlessly transitions between a backpack
+              and a shoulder bag, offering unparalleled versatility for dynamic
+              lifestyles. Its innovative design allows easy conversion with
+              detachable straps and secure compartments, catering to both casual
+              and professional needs. This adaptable accessory ensures
+              practicality and style, making it ideal for active professionals,
+              travelers, and fashion-forward individuals.
             </Text>
-          </Title>
-        </Group>
-        <Group
-          justify="center"
-          gap={0}
-          className={styles.functionality__img_container}
-        >
-          <Image
-            mr={'-1px'}
-            fit={'contain'}
-            src={BackPack}
-            className={styles.functionality__img_f}
-          />
-          <Image
-            fit={'contain'}
-            src={ShoulderBag}
-            className={styles.functionality__img_s}
-          />
-        </Group>
-        <Group
-          justify="center"
-          className={styles.functionality__titles}
-          mb={20}
-        >
-          <Title size={'35px'} fw={400} ta={'center'}>
-            NOT ENOUGH? WE GOT YOU
-            <Text span inherit fz={35} fw={400} c={'#A74127'}>
-              {' '}
-              COVERED
-            </Text>
-          </Title>
-          <Text
-            className={styles.functionality__desc}
-            maw={1000}
-            fw={500}
-            mt={10}
-            ta={'center'}
-          >
-            The modular bag 2-in-1 seamlessly transitions between a backpack and
-            a shoulder bag, offering unparalleled versatility for dynamic
-            lifestyles. Its innovative design allows easy conversion with
-            detachable straps and secure compartments, catering to both casual
-            and professional needs. This adaptable accessory ensures
-            practicality and style, making it ideal for active professionals,
-            travelers, and fashion-forward individuals.
-          </Text>
-        </Group>
-        <Group className={styles.functionality__bagGroup} gap={0}>
-          <Image
-            fit={'contain'}
-            src={Bag1}
-            className={styles.functionality__img_bag}
-          />
-          <Image
-            fit={'contain'}
-            src={BagArrow}
-            className={styles.functionality__img_arrow}
-          />
-        </Group>
+          </Group>
+        </FadeInSection>
+        <FadeInSection>
+          <Group className={styles.functionality__bagGroup} gap={0}>
+            <Image
+              fit={'contain'}
+              src={Bag1}
+              className={styles.functionality__img_bag}
+            />
+            <Image
+              fit={'contain'}
+              src={BagArrow}
+              className={styles.functionality__img_arrow}
+            />
+          </Group>
+        </FadeInSection>
       </Container>
 
-      <Box mt={100} mb={40}>
-        <ImageWithDots
-          descriptions={descriptions}
-          containerStyles={containerStyles}
-          descriptionStyles={descriptionStyles}
-          containerGroupStyles={containerGroupStyles}
-          imgStyles={imgStyles}
-          titleTextStyles={titleTextStyles}
-          descTextStyles={descTextStyles}
-          circles={circles}
-          img={BagFull}
-          imgTitle={'Transformer'}
-        />
-      </Box>
-      <Box>
-        <ImageWithDots
-          descriptions={luggageDescriptions}
-          containerStyles={containerLuggageStyles}
-          descriptionStyles={descriptionLuggageStyles}
-          imgStyles={imgLuggageStyles}
-          containerLuggageGroupStyles={containerLuggageGroupStyles}
-          titleTextStyles={titleTextStyles}
-          descTextStyles={descTextStyles}
-          circles={luggageCircles}
-          img={BagLug}
-          imgTitle={'Luggage'}
-        />
-      </Box>
+      <FadeInSection>
+        <Box mt={100} mb={40}>
+          <ImageWithDots
+            descriptions={descriptions}
+            containerStyles={containerStyles}
+            descriptionStyles={descriptionStyles}
+            containerGroupStyles={containerGroupStyles}
+            imgStyles={imgStyles}
+            titleTextStyles={titleTextStyles}
+            descTextStyles={descTextStyles}
+            circles={circles}
+            img={BagFull}
+            imgTitle={'Transformer'}
+          />
+        </Box>
+      </FadeInSection>
+
+      <FadeInSection>
+        <Box>
+          <ImageWithDots
+            descriptions={luggageDescriptions}
+            containerStyles={containerLuggageStyles}
+            descriptionStyles={descriptionLuggageStyles}
+            imgStyles={imgLuggageStyles}
+            containerLuggageGroupStyles={containerLuggageGroupStyles}
+            titleTextStyles={titleTextStyles}
+            descTextStyles={descTextStyles}
+            circles={luggageCircles}
+            img={BagLug}
+            imgTitle={'Luggage'}
+          />
+        </Box>
+      </FadeInSection>
     </section>
   );
 };
