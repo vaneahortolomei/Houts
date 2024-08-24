@@ -39,7 +39,7 @@ export const Circle = styled.div<{ animationDuration: string }>`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #a74127;
+  background-color: #222027;
   position: absolute;
   cursor: pointer;
   @media (min-width: 768px) {
@@ -89,7 +89,7 @@ export const Circle = styled.div<{ animationDuration: string }>`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgba(167, 65, 39, 0.5);
+    background-color: #222027;
     animation: wave ${({ animationDuration }) => animationDuration} infinite;
   }
 
@@ -145,7 +145,7 @@ const ImageWithDots: React.FC<Props> = ({
         >
           {(styles) => (
             <Box style={styles}>
-              <Title style={titleTextStyles} mb={20} fw={400} c={'#A74127'}>
+              <Title style={titleTextStyles} mb={20} fw={400} c={'#222027'}>
                 {selectedText.title}
               </Title>
               <Text style={descTextStyles}>{selectedText.description}</Text>

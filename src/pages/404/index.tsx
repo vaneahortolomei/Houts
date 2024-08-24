@@ -29,7 +29,7 @@ const NotFound = () => {
           w={'100%'}
           onClick={handleRedirect}
           variant="filled"
-          color="#A74127"
+          color="#222027"
           styles={{
             label: {
               color: '#fff'

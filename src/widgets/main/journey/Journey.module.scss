@@ -1,5 +1,5 @@
 .text {
-    background-color: #F6F4F1;
+    background-color: #e4e4e499;
 
     &__group {
         justify-content: center;
@@ -41,7 +41,7 @@
         bottom: 0;
         left: 0;
         width: 0.5px;
-        background-color: #A74127;
+        background-color: #222027;
         transform: translateX(-50%);
         z-index: 1;
         @media(min-width: 1025px) {
@@ -69,7 +69,7 @@
             width: 50px;
             height: 44px;
             background-color: #fff;
-            border: 0 solid #A74127;
+            border: 0 solid #222027;
             border-radius: 50%;
             z-index: 10;
             transform: translateX(-50%);
@@ -90,18 +90,16 @@
         & .timeline_content {
             width: 100%;
             gap: 0;
-            padding: 0 20px;
-            background-color: #F6F4F1;
+            padding: 40px;
+            background-color: #e4e4e499;
             border-radius: 29px;
             position: relative;
+            flex-direction: column;
+            align-items: flex-start;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
             @media(min-width: 1025px){
                 width: 45%;
             }
-            @media(max-width: 1024px){
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
             &::before {
                 content: '';
                 position: absolute;
@@ -118,7 +116,7 @@
                 &::before {
                     left: -20px;
                     border-width: 20px 20px 20px 0;
-                    border-color: transparent #f5f5f5 transparent transparent;
+                    border-color: transparent #e4e4e499 transparent transparent;
                 }
 
                 @media(min-width: 1025px) {
@@ -128,7 +126,7 @@
                         right: -20px;
                         left: auto;
                         border-width: 20px 0 20px 20px;
-                        border-color: transparent transparent transparent #f5f5f5;
+                        border-color: transparent transparent transparent #e4e4e499;
                     }
                 }
             }
@@ -140,7 +138,7 @@
                 &::before {
                     left: -20px;
                     border-width: 20px 20px 20px 0;
-                    border-color: transparent #f5f5f5 transparent transparent;
+                    border-color: transparent #e4e4e499 transparent transparent;
                 }
 
                 @media(min-width: 1025px) {

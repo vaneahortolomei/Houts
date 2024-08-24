@@ -68,7 +68,7 @@ export const SocialProof = () => {
                   justify={isResponsive ? 'center' : 'left'}
                   className={styles.grid__groupText}
                 >
-                  <Title c={'#A74127'} fz={20}>
+                  <Title c={'#222027'} fz={20}>
                     ILM OFFENBACH 2024
                   </Title>
                   <Text
@@ -121,7 +121,7 @@ export const SocialProof = () => {
                   align="end"
                   flex={isResponsive ? '0 0 100%' : 1}
                 >
-                  <Title c={'#A74127'} fz={20}>
+                  <Title c={'#222027'} fz={20}>
                     THINCUBATOR 2024
                   </Title>
                   <Text
