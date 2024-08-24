@@ -92,21 +92,18 @@ export const Journey = () => {
                       <Box>
                         <Text
                           className={styles.timeline_year}
-                          c={'#A74127'}
+                          c={'#222027'}
                           fw={400}
                         >
                           {item.year}
                         </Text>
                       </Box>
-                      <Box
-                        p={isResponsive ? '0 0 20px 0' : '20px 0'}
-                        w={isResponsive ? 'auto' : 300}
-                      >
+                      <Box>
                         <Title
                           fz={isResponsive ? 18 : 25}
-                          fw={300}
+                          fw={500}
                           mb={10}
-                          c={'#A74127'}
+                          c={'#222027'}
                         >
                           {item.title}
                         </Title>

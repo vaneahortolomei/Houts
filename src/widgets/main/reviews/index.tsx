@@ -87,7 +87,7 @@ export const Reviews = () => {
           <Group justify="center" mb={50}>
             <Title size="35px" fw={400} ta={'center'}>
               OUR TESTER{' '}
-              <Text fw={400} span inherit c={'#A74127'}>
+              <Text fw={400} span inherit c={'#222027'}>
                 REVIEWS
               </Text>
             </Title>
@@ -125,6 +125,7 @@ export const Reviews = () => {
                         h={108}
                         mb={10}
                         style={{
+                          filter: 'grayscale(75%)',
                           borderRadius: '50%',
                           border: '5px solid #fff'
                         }}
@@ -151,7 +152,7 @@ export const Reviews = () => {
                       }}
                       sx={{
                         '&:hover': {
-                          color: '#A74127'
+                          color: '#222027'
                         }
                       }}
                     >

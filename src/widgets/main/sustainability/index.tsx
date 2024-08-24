@@ -64,7 +64,7 @@ export const Sustainability = () => {
               mb={isResponsive ? 120 : 0}
             >
               <Image w={100} h={'auto'} src={Bag} />
-              <Text fz={isResponsive ? 18 : 20} mt={10} fw={600} c={'#A74127'}>
+              <Text fz={isResponsive ? 18 : 20} mt={10} fw={600} c={'#222027'}>
                 BAGS
               </Text>
             </Flex>
@@ -76,7 +76,7 @@ export const Sustainability = () => {
               mt={isResponsive ? 120 : 0}
             >
               <Image src={Tree} w={70} h={'auto'} mt={15} />
-              <Text fz={isResponsive ? 18 : 20} mt={10} fw={600} c={'#A74127'}>
+              <Text fz={isResponsive ? 18 : 20} mt={10} fw={600} c={'#222027'}>
                 ONE BAG = ONE TREE
               </Text>
             </Flex>
@@ -85,29 +85,26 @@ export const Sustainability = () => {
       </Container>
       <Box className={styles.text_sustainability}>
         <Container size="xl">
-          <FadeInSection>
-            <SimpleGrid
-              cols={isResponsive ? 1 : 2}
-              className={styles.text__group}
-              style={{
-                alignItems: 'baseline',
-                gap: isResponsive ? '50px' : '110px'
-              }}
-            >
-              <Group
-                align={'flex-start'}
-                justify={isResponsive ? 'center' : ''}
+          <SimpleGrid
+            cols={isResponsive ? 1 : 2}
+            className={styles.text__group}
+            style={{
+              alignItems: 'baseline',
+              gap: isResponsive ? '50px' : '110px'
+            }}
+          >
+            <Group align={'flex-start'} justify={isResponsive ? 'center' : ''}>
+              <Title
+                w={400}
+                fz={isResponsive ? 18 : 30}
+                fw={400}
+                c={'#222027'}
+                mb={20}
+                ta={isResponsive ? 'center' : 'left'}
               >
-                <Title
-                  w={400}
-                  fz={isResponsive ? 18 : 30}
-                  fw={400}
-                  c={'#A74127'}
-                  mb={20}
-                  ta={isResponsive ? 'center' : 'left'}
-                >
-                  GOING BEYOND NEUTRAL: OUR COMMITMENT TO A POSITIVE IMPACT
-                </Title>
+                GOING BEYOND NEUTRAL: OUR COMMITMENT TO A POSITIVE IMPACT
+              </Title>
+              <FadeInSection>
                 <Text ta={isResponsive ? 'center' : 'left'}>
                   At Houts, we believe that being carbon neutral, which means
                   simply balancing the environmental harm we might cause, isn't
@@ -125,25 +122,27 @@ export const Sustainability = () => {
                   ensure that every Houts product not only minimizes damage but
                   actually contributes positively to our planet’s health.
                 </Text>
-              </Group>
-              <Group
-                align={'flex-start'}
-                justify={isResponsive ? 'center' : ''}
-                gap={0}
+              </FadeInSection>
+            </Group>
+            <Group
+              align={'flex-start'}
+              justify={isResponsive ? 'center' : ''}
+              gap={0}
+            >
+              <Title
+                mb={isResponsive ? 20 : 65}
+                w={400}
+                fz={isResponsive ? 18 : 30}
+                fw={400}
+                c={'#222027'}
+                ta={isResponsive ? 'center' : 'left'}
               >
-                <Title
-                  mb={isResponsive ? 20 : 65}
-                  w={400}
-                  fz={isResponsive ? 18 : 30}
-                  fw={400}
-                  c={'#A74127'}
-                  ta={isResponsive ? 'center' : 'left'}
-                >
-                  <Text span fz={isResponsive ? 18 : 40} fw={700}>
-                    110%{' '}
-                  </Text>
-                  CARBON NEUTRAL COMMITMENT
-                </Title>
+                <Text span fz={isResponsive ? 18 : 40} fw={700}>
+                  110%{' '}
+                </Text>
+                CARBON NEUTRAL COMMITMENT
+              </Title>
+              <FadeInSection>
                 <Text mb={20} ta={isResponsive ? 'center' : 'left'}>
                   Every year, we meticulously measure and offset 100% of our
                   carbon footprint in partnership with{' '}
@@ -156,9 +155,9 @@ export const Sustainability = () => {
                   ensuring that our impact is not just neutral but net
                   positive—actively benefiting the climate.
                 </Text>
-              </Group>
-            </SimpleGrid>
-          </FadeInSection>
+              </FadeInSection>
+            </Group>
+          </SimpleGrid>
         </Container>
       </Box>
     </section>

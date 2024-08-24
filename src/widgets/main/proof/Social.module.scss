@@ -1,5 +1,5 @@
 .text {
-    background-color: #F6F4F1;
+    background-color: #e4e4e499;
     &__group {
         justify-content: center;
         padding: 40px 0;
@@ -30,12 +30,12 @@
         align-items: center;
         border-radius: 46px;
         height: 48px;
-        background-color: #A74127;
+        background-color: #222027;
         font-size: 15px;
         color: #fff;
         transition: 0.2s;
         &:hover {
-            background-color: #a65844;
+            background-color: #222027d4;
         }
     }
     &__col {
@@ -58,6 +58,7 @@
     &__img {
         flex: none;
         width: 100%;
+        filter: grayscale(25%) drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
         @media (min-width: 768px) {
             width: 50%;
         }

@@ -124,7 +124,7 @@ export const BaseTemplate = () => {
                     }
                   }}
                   style={{
-                    backgroundColor: '#222027',
+                    backgroundColor: '#000',
                     ...transitionStyles
                   }}
                   onClick={() => scrollTo({ y: 0 })}
@@ -153,7 +153,7 @@ export const BaseTemplate = () => {
                     }
                   }}
                   style={{
-                    backgroundColor: '#A74127',
+                    backgroundColor: '#000',
                     width: '152px',
                     ...transitionStyles
                   }}
@@ -192,7 +192,7 @@ body.loading {
     width: 50px;
     height: 27px;
     background-color: #1a1a1a;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .top {
@@ -214,7 +214,6 @@ body.loading {
 }
 `;
 
-// Добавление стилей на страницу
 const styleSheet = document.createElement('style');
 styleSheet.type = 'text/css';
 styleSheet.innerText = loaderStyles;

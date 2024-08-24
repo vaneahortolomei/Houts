@@ -8,7 +8,8 @@ import {
   Image,
   SimpleGrid,
   Flex,
-  BackgroundImage
+  BackgroundImage,
+  Popover
 } from '@mantine/core';
 import styles from '@/widgets/main/works/Works.module.scss';
 import IconWorks1 from '@/assets/works/Icon-1.svg';
@@ -16,7 +17,7 @@ import IconWorks2 from '@/assets/works/Icon-2.svg';
 import IconWorks3 from '@/assets/works/Icon-3.svg';
 import IconWorks4 from '@/assets/works/Icon-4.svg';
 import IconWorks5 from '@/assets/works/Icon-5.svg';
-import Leather from '@/assets/Leather.png';
+import Leather from '@/assets/works/Leather.jpg';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import FadeInSection from '@/features/components/FadeInSection';
 
@@ -97,31 +98,65 @@ export const Works = () => {
         className={styles.grid}
       >
         {lineItems.map((item) => (
-          <Flex className={styles.grid__item} key={item.id}>
-            <Box className={styles.flexWithLine}>
-              <Image
-                className={styles.iconWrapper}
-                src={item.img}
-                w={isResponsive ? 58 : 117}
-                h={isResponsive ? 58 : 117}
-              />
-            </Box>
-            <Box className={styles.grid__textWrapper}>
-              <FadeInSection>
-                <Title
-                  className={styles.grid__title}
-                  c={'#A74127'}
-                  fw={300}
-                  fz={isResponsive ? 18 : 20}
-                  mb={20}
-                  mt={20}
-                >
-                  {item.title}
-                </Title>
-                <Text className={styles.grid__text}>{item.text}</Text>
-              </FadeInSection>
-            </Box>
-          </Flex>
+          <>
+            {isResponsive ? (
+              <Flex className={styles.grid__item} key={item.id}>
+                <Box className={styles.flexWithLine}>
+                  <Image
+                    className={styles.iconWrapper}
+                    src={item.img}
+                    w={isResponsive ? 58 : 117}
+                    h={isResponsive ? 58 : 117}
+                  />
+                </Box>
+                <Box className={styles.grid__textWrapper}>
+                  <Title
+                    className={styles.grid__title}
+                    c={'#222027'}
+                    fw={300}
+                    fz={isResponsive ? 18 : 20}
+                    mb={20}
+                    mt={20}
+                  >
+                    {item.title}
+                  </Title>
+                  <Text className={styles.grid__text}>{item.text}</Text>
+                </Box>
+              </Flex>
+            ) : (
+              <Popover width={300} position={'bottom'} radius={'lg'}>
+                <Flex className={styles.grid__item} key={item.id}>
+                  <Box className={styles.flexWithLine}>
+                    <Popover.Target>
+                      <Image
+                        className={styles.iconWrapper}
+                        src={item.img}
+                        w={isResponsive ? 58 : 74}
+                        h={isResponsive ? 58 : 74}
+                      />
+                    </Popover.Target>
+                  </Box>
+                  <Box>
+                    <Popover.Dropdown>
+                      <Box className={styles.grid__textWrapper}>
+                        <Title
+                          className={styles.grid__title}
+                          c={'#222027'}
+                          fw={300}
+                          fz={isResponsive ? 18 : 20}
+                          mb={20}
+                          mt={20}
+                        >
+                          {item.title}
+                        </Title>
+                        <Text className={styles.grid__text}>{item.text}</Text>
+                      </Box>
+                    </Popover.Dropdown>
+                  </Box>
+                </Flex>
+              </Popover>
+            )}
+          </>
         ))}
       </SimpleGrid>
     </section>

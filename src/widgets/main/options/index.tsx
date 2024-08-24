@@ -21,14 +21,14 @@ export const BagOptions = () => {
   return (
     <section id="options" className={styles.options}>
       <Container size="xl">
-        <FadeInSection>
-          <Grid
-            gutter="xl"
-            justify="space-between"
-            align="baseline"
-            className={styles.options__group}
-          >
-            <Grid.Col span={isResponsive ? 12 : 4}>
+        <Grid
+          gutter="xl"
+          justify="space-between"
+          align="baseline"
+          className={styles.options__group}
+        >
+          <Grid.Col span={isResponsive ? 12 : 4}>
+            <FadeInSection>
               <Group justify={'center'} className={styles.options__col}>
                 <Flex align="center" gap={10} className={styles.options__head}>
                   <Image src={First} w={45} h={45} />
@@ -42,8 +42,10 @@ export const BagOptions = () => {
                   choices without compromising on quality or aesthetics.
                 </Text>
               </Group>
-            </Grid.Col>
-            <Grid.Col span={isResponsive ? 12 : 4}>
+            </FadeInSection>
+          </Grid.Col>
+          <Grid.Col span={isResponsive ? 12 : 4}>
+            <FadeInSection>
               <Group justify={'center'} className={styles.options__col}>
                 <Flex
                   align="center"
@@ -63,8 +65,10 @@ export const BagOptions = () => {
                   for making a lasting impression wherever you go.
                 </Text>
               </Group>
-            </Grid.Col>
-            <Grid.Col span={isResponsive ? 12 : 4}>
+            </FadeInSection>
+          </Grid.Col>
+          <Grid.Col span={isResponsive ? 12 : 4}>
+            <FadeInSection>
               <Group justify={'center'} className={styles.options__col}>
                 <Flex align="center" gap={10} className={styles.options__head}>
                   <Image src={Third} w={45} h={45} />
@@ -78,9 +82,9 @@ export const BagOptions = () => {
                   range of preferences and situations with ease.
                 </Text>
               </Group>
-            </Grid.Col>
-          </Grid>
-        </FadeInSection>
+            </FadeInSection>
+          </Grid.Col>
+        </Grid>
       </Container>
     </section>
   );

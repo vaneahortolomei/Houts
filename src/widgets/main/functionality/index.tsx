@@ -164,15 +164,17 @@ export const Functionality = () => {
   };
 
   const descTextStyles: React.CSSProperties = {
-    fontSize: isResponsive1300 ? '16px' : '20px'
+    fontSize: '16px'
   };
 
   return (
     <section className={styles.functionality} id="functionality">
       <Container size="xl">
-        <FadeInSection>
-          <Group justify="center" className={styles.functionality__titles}>
+        <Group justify="center" className={styles.functionality__titles}>
+          <FadeInSection>
             <Title fw={400}>FUNCTIONALITY</Title>
+          </FadeInSection>
+          <FadeInSection>
             <Text
               className={styles.functionality__desc}
               maw={1000}
@@ -189,15 +191,17 @@ export const Functionality = () => {
               practicality and style, making it ideal for active professionals,
               travelers, and fashion-forward individuals.
             </Text>
+          </FadeInSection>
+          <FadeInSection>
             <Title size={'35px'} fw={400}>
               TWO BAGS IN
-              <Text span inherit fz={35} fw={400} c={'#A74127'}>
+              <Text span inherit fz={35} fw={400} c={'#222027'}>
                 {' '}
                 ONE
               </Text>
             </Title>
-          </Group>
-        </FadeInSection>
+          </FadeInSection>
+        </Group>
         <FadeInSection>
           <Group
             justify="center"
@@ -217,19 +221,21 @@ export const Functionality = () => {
             />
           </Group>
         </FadeInSection>
-        <FadeInSection>
-          <Group
-            justify="center"
-            className={styles.functionality__titles}
-            mb={20}
-          >
+        <Group
+          justify="center"
+          className={styles.functionality__titles}
+          mb={20}
+        >
+          <FadeInSection>
             <Title size={'35px'} fw={400} ta={'center'}>
               NOT ENOUGH? WE GOT YOU
-              <Text span inherit fz={35} fw={400} c={'#A74127'}>
+              <Text span inherit fz={35} fw={400} c={'#222027'}>
                 {' '}
                 COVERED
               </Text>
             </Title>
+          </FadeInSection>
+          <FadeInSection>
             <Text
               className={styles.functionality__desc}
               maw={1000}
@@ -245,8 +251,8 @@ export const Functionality = () => {
               practicality and style, making it ideal for active professionals,
               travelers, and fashion-forward individuals.
             </Text>
-          </Group>
-        </FadeInSection>
+          </FadeInSection>
+        </Group>
         <FadeInSection>
           <Group className={styles.functionality__bagGroup} gap={0}>
             <Image

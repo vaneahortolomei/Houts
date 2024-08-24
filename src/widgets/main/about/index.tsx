@@ -93,37 +93,34 @@ export const About = () => {
   };
 
   const descTextStyles: React.CSSProperties = {
-    fontSize: isResponsive1300 ? '16px' : '20px'
+    fontSize: '16px'
   };
 
   return (
     <section className={styles.about} id="about">
       <Container size="xl">
-        <FadeInSection>
-          <Group justify="center" className={styles.about__titles}>
-            <Title fw={400} className={styles.about__title}>
-              ABOUT HOUTS BAG
-            </Title>
-            <Box className={styles.about__text_group}>
-              <Text fz={20} fw={500} mb={20} mt={10}>
-                Your lifestyle. Limitless
-              </Text>
-              <Text
-                fz={20}
-                fw={500}
-                mb={30}
-                className={styles.about__description}
-              >
-                The versatile vegan Apple Leather bag that goes from a
-                comfortable backpack to a handbag that supports your active
-                lifestyle.
-              </Text>
-            </Box>
-            <Text fz={31} c={'#A4A4A4'}>
-              BACKSIDE & FRONT
+        <Group justify="center" className={styles.about__titles}>
+          <Title fw={400} className={styles.about__title}>
+            ABOUT HOUTS BAG
+          </Title>
+          <Box className={styles.about__text_group}>
+            <Text fz={20} fw={500} mb={20} mt={10}>
+              Your lifestyle. Limitless
             </Text>
-          </Group>
-        </FadeInSection>
+            <Text
+              fz={20}
+              fw={500}
+              mb={30}
+              className={styles.about__description}
+            >
+              The versatile vegan Apple Leather bag that goes from a comfortable
+              backpack to a handbag that supports your active lifestyle.
+            </Text>
+          </Box>
+          <Text fz={31} c={'#A4A4A4'}>
+            BACKSIDE & FRONT
+          </Text>
+        </Group>
         <FadeInSection>
           <Box mt={isResponsive ? 10 : 50} pb={isResponsive ? 10 : 70}>
             <ImageWithDots

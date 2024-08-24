@@ -23,9 +23,9 @@
         @media(min-width: 768px)  {
             margin-top: 80px;
         }
-        @media(min-width: 1024px)  {
-            margin-top: -45px;
-        }
+        //@media(min-width: 1024px)  {
+        //    margin-top: -45px;
+        //}
     }
     &_img {
         //width: 100%;
@@ -36,6 +36,6 @@
         }
     }
     &_word {
-        color: #A74127;
+        color: #5B5A5F;
     }
 }
