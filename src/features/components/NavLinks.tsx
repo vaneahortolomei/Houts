@@ -36,12 +36,12 @@ export const NavLinks = () => {
     if (targetId) {
       const targetElement = document.getElementById(targetId);
 
-      if (targetElement) {
+      setTimeout(() => {
         window.scrollTo({
-          top: targetElement.offsetTop,
+          top: targetElement?.offsetTop,
           behavior: 'smooth'
         });
-      }
+      }, 120);
 
       setActive(index);
       setDrawerOpen(false);

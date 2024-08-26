@@ -47,8 +47,12 @@
         @media(min-width: 1025px) {
             left: 50%;
         }
-        @supports (-webkit-appearance: none) {
-            width: 1px;
+        @media not all and (min-resolution:.001dpcm) {
+            @supports (-webkit-appearance:none) {
+                width: 1px;
+                transform: scaleY(1);
+                transform-origin: top;
+            }
         }
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             width: 1px;
@@ -96,7 +100,6 @@
             position: relative;
             flex-direction: column;
             align-items: flex-start;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
             @media(min-width: 1025px){
                 width: 45%;
             }

@@ -11,8 +11,11 @@
         color: $primary-color;
     }
     &__title {
-        font-size: 50px;
+        font-size: 35px;
         text-align: center;
+        @media(min-width: 768px){
+            font-size: 50px;
+        }
     }
     &__text_group {
         text-align: center;
