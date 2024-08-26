@@ -10,6 +10,7 @@ import { SocialProof } from '@/widgets/main/proof';
 import { Journey } from '@/widgets/main/journey';
 import { Works } from '@/widgets/main/works';
 import { Sustainability } from '@/widgets/main/sustainability';
+// import { ParallaxProvider } from 'react-scroll-parallax';
 
 export const Main = () => {
   return (

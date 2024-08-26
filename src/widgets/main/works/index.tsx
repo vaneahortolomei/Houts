@@ -9,7 +9,7 @@ import {
   SimpleGrid,
   Flex,
   BackgroundImage,
-  Popover
+  Tooltip
 } from '@mantine/core';
 import styles from '@/widgets/main/works/Works.module.scss';
 import IconWorks1 from '@/assets/works/Icon-1.svg';
@@ -110,51 +110,43 @@ export const Works = () => {
                   />
                 </Box>
                 <Box className={styles.grid__textWrapper}>
-                  <Title
-                    className={styles.grid__title}
-                    c={'#222027'}
-                    fw={300}
-                    fz={isResponsive ? 18 : 20}
-                    mb={20}
-                    mt={20}
-                  >
-                    {item.title}
-                  </Title>
-                  <Text className={styles.grid__text}>{item.text}</Text>
+                  <FadeInSection>
+                    <Title
+                      className={styles.grid__title}
+                      c={'#222027'}
+                      fw={300}
+                      fz={isResponsive ? 18 : 20}
+                      mb={20}
+                      mt={20}
+                    >
+                      {item.title}
+                    </Title>
+                    <Text className={styles.grid__text}>{item.text}</Text>
+                  </FadeInSection>
                 </Box>
               </Flex>
             ) : (
-              <Popover width={300} position={'bottom'} radius={'lg'}>
-                <Flex className={styles.grid__item} key={item.id}>
+              <Flex className={styles.grid__item} key={item.id}>
+                <Tooltip
+                  multiline
+                  w={200}
+                  withArrow
+                  openDelay={300}
+                  transitionProps={{ transition: 'fade', duration: 300 }}
+                  label={item.text}
+                  color={'#222027'}
+                >
                   <Box className={styles.flexWithLine}>
-                    <Popover.Target>
-                      <Image
-                        className={styles.iconWrapper}
-                        src={item.img}
-                        w={isResponsive ? 58 : 74}
-                        h={isResponsive ? 58 : 74}
-                      />
-                    </Popover.Target>
+                    <Image
+                      className={styles.iconWrapper}
+                      src={item.img}
+                      w={isResponsive ? 58 : 74}
+                      h={isResponsive ? 58 : 74}
+                    />
                   </Box>
-                  <Box>
-                    <Popover.Dropdown>
-                      <Box className={styles.grid__textWrapper}>
-                        <Title
-                          className={styles.grid__title}
-                          c={'#222027'}
-                          fw={300}
-                          fz={isResponsive ? 18 : 20}
-                          mb={20}
-                          mt={20}
-                        >
-                          {item.title}
-                        </Title>
-                        <Text className={styles.grid__text}>{item.text}</Text>
-                      </Box>
-                    </Popover.Dropdown>
-                  </Box>
-                </Flex>
-              </Popover>
+                </Tooltip>
+                <Box className={styles.grid__textWrapper} />
+              </Flex>
             )}
           </>
         ))}
