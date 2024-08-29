@@ -39,6 +39,13 @@ export const Header = () => {
     >
       {isResponsive && (
         <Box className={styles.header__mobile}>
+          <Button
+            variant="subtle"
+            className={styles.header__lang}
+            onClick={toggleLanguage}
+          >
+            {selectedLanguage === 'en' ? 'DE' : 'EN'}
+          </Button>
           <Box className={styles.header__mobile_logo}>
             <Image src={Logo} h={19} w={123} />
           </Box>
@@ -50,17 +57,17 @@ export const Header = () => {
         </Box>
       )}
       {!isResponsive && (
-        <Container fluid>
+        <Container fluid style={{ display: 'flex' }}>
           <NavLinks />
+          <Button
+            variant="subtle"
+            className={styles.header__lang}
+            onClick={toggleLanguage}
+          >
+            {selectedLanguage === 'en' ? 'DE' : 'EN'}
+          </Button>
         </Container>
       )}
-      <Button
-        variant="subtle"
-        className={styles.header__lang}
-        onClick={toggleLanguage}
-      >
-        {selectedLanguage === 'en' ? 'DE' : 'EN'}
-      </Button>
     </AppShell.Header>
   );
 };

@@ -49,17 +49,6 @@ export const BaseTemplate = () => {
     return () => clearTimeout(timer1);
   }, []);
 
-  // // Отслеживание смены языка
-  // useEffect(() => {
-  //   // Включаем лоадер при смене языка
-  //   setIsOverlayVisible(true);
-  //   const timer = setTimeout(() => {
-  //     setIsOverlayVisible(false);
-  //   }, 300); // Время отображения лоадера после смены языка
-  //
-  //   return () => clearTimeout(timer);
-  // }, [currentLanguage]);
-
   return (
     <>
       <Transition

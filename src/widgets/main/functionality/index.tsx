@@ -1,6 +1,15 @@
 import React from 'react';
 import styles from '@/widgets/main/functionality/Functionality.module.scss';
-import { Container, Group, Title, Text, Image, Box } from '@mantine/core';
+import {
+  Container,
+  Group,
+  Title,
+  Text,
+  Image,
+  Box,
+  BackgroundImage,
+  Center
+} from '@mantine/core';
 import BackPack from '@/assets/functionality/Backpack.png';
 import ShoulderBag from '@/assets/functionality/Shoulder-bag.png';
 import Bag1 from '@/assets/functionality/Bild-eng.png';
@@ -205,17 +214,27 @@ export const Functionality = () => {
             gap={0}
             className={styles.functionality__img_container}
           >
-            <Image
+            <BackgroundImage
               mr={'-1px'}
-              fit={'contain'}
               src={BackPack}
               className={styles.functionality__img_f}
-            />
-            <Image
-              fit={'contain'}
+            >
+              <Center p="md" h={'100%'}>
+                <Text c="white" fz={36}>
+                  {t('lang.functionality.img')}
+                </Text>
+              </Center>
+            </BackgroundImage>
+            <BackgroundImage
               src={ShoulderBag}
               className={styles.functionality__img_s}
-            />
+            >
+              <Center p="md" h={'100%'}>
+                <Text c="white" fz={36}>
+                  {t('lang.functionality.img1')}
+                </Text>
+              </Center>
+            </BackgroundImage>
           </Group>
         </FadeInSection>
         <Group
