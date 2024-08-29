@@ -9,8 +9,11 @@ import Neeraj from '@/assets/reviews/Neeraj.png';
 import Tudor from '@/assets/reviews/Tudor.png';
 import styles from './Reviews.module.scss';
 import FadeInSection from '@/features/components/FadeInSection';
+import { useTranslation } from 'react-i18next';
 
 export const Reviews = () => {
+  const { t } = useTranslation();
+
   const data = [
     {
       image: Alex,
@@ -86,10 +89,7 @@ export const Reviews = () => {
         <FadeInSection>
           <Group justify="center" mb={50}>
             <Title size="35px" fw={400} ta={'center'}>
-              OUR TESTER{' '}
-              <Text fw={400} span inherit c={'#222027'}>
-                REVIEWS
-              </Text>
+              {t('lang.reviews.title')}
             </Title>
           </Group>
         </FadeInSection>

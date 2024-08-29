@@ -20,40 +20,42 @@ import IconWorks5 from '@/assets/works/Icon-5.svg';
 import Leather from '@/assets/works/Leather.jpg';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import FadeInSection from '@/features/components/FadeInSection';
+import { useTranslation } from 'react-i18next';
 
 export const Works = () => {
   const isResponsive = useIsResponsive(1024);
+  const { t } = useTranslation();
 
   const lineItems = [
     {
       id: 1,
       img: IconWorks1,
-      title: 'APPLE LEATHER? HOW IT WORKS?',
-      text: 'Our bags, crafted from USDA-certified vegan ,,apple" leather using remnants from juice production, exemplify your commitment to circular fashion, seam­lessly blending sustainability with timeless elegance.'
+      title: `${t('lang.works.items.item.title')}`,
+      text: `${t('lang.works.items.item.desc')}`
     },
     {
       id: 2,
       img: IconWorks2,
-      title: 'IT ALL STARTED WITH AN APPLE',
-      text: 'The “vegan” leather we use in our bags was once an apple growing on a tree'
+      title: `${t('lang.works.items.item1.title')}`,
+      text: `${t('lang.works.items.item1.desc')}`
     },
     {
       id: 3,
       img: IconWorks3,
-      title: 'JUICE PRODUCTION',
-      text: 'The fruit is not directly used in the production of the leather like material. The apples come mostly from the production of apple juice'
+      title: `${t('lang.works.items.item2.title')}`,
+      text: `${t('lang.works.items.item2.desc')}`
     },
     {
       id: 4,
       img: IconWorks4,
-      title: 'APPLE RESIDUAL',
-      text: 'We take this leftover apple pulp and turn it into a durable, eco-friendly material that looks and feels like leather.'
+      title: `${t('lang.works.items.item3.title')}`,
+      text: `${t('lang.works.items.item3.desc')}`
     },
     {
       id: 5,
       img: IconWorks5,
-      title: 'UPCYCLED ECOLOGICAL BAGS',
-      text: 'Here is the start your commitment to circular fashion, seamlessly blending sustainability with timeless elegance.'
+      title: `${t('lang.works.items.item4.title')}`,
+      text: `${t('lang.works.items.item4.desc')}`
     }
   ];
 
@@ -74,17 +76,14 @@ export const Works = () => {
                   fw={400}
                   c={'#fff'}
                 >
-                  APPLE LEATHER? HOW IT WORKS?
+                  {t('lang.works.title')}
                 </Title>
                 <Text
                   className={styles.text__description}
                   ta="center"
                   c={'#fff'}
                 >
-                  Our bags, crafted from USDA-certified vegan ,,apple" leather
-                  using remnants from juice production, exemplify your
-                  commitment to circular fashion, seam­lessly blending
-                  sustainability with timeless elegance.
+                  {t('lang.works.desc')}
                 </Text>
               </Group>
             </FadeInSection>

@@ -6,23 +6,26 @@ import { useState } from 'react';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import { DrawerContext } from '@/features/components/DrawerContext';
 import { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const NavLinks = () => {
   const [active, setActive] = useState(0);
   const isResponsive = useIsResponsive(1024);
   const { setDrawerOpen } = useContext(DrawerContext);
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   const mainLinks = [
-    { id: 0, link: 'about', label: 'ABOUT HOUTS' },
-    { id: 1, link: 'works', label: 'HOW IT WORKS' },
-    { id: 2, link: 'functionality', label: 'FUNCTIONALITY' },
+    { id: 0, link: 'about', label: `${t('lang.nav.about')}` },
+    { id: 1, link: 'works', label: `${t('lang.nav.works')}` },
+    { id: 2, link: 'functionality', label: `${t('lang.nav.functionality')}` },
     { id: 3, link: '#', label: 'Logo', image: Logo },
-    { id: 4, link: 'journey', label: 'OUR STORY' },
-    { id: 5, link: 'sustainability', label: 'SUSTAINABILITY' },
+    { id: 4, link: 'journey', label: `${t('lang.nav.journey')}` },
+    { id: 5, link: 'sustainability', label: `${t('lang.nav.sustainability')}` },
     {
       id: 6,
       link: 'https://forms.monday.com/forms/d78eb79b6a002fabefb77e0e504f2592?r=use1',
-      label: 'JOIN THE WAITING LIST',
+      label: `${t('lang.nav.label')}`,
       target: true
     }
   ];
@@ -79,6 +82,13 @@ export const NavLinks = () => {
           active={index === active}
           variant="subtle"
           onClick={() => setDrawerOpen(false)}
+          style={{
+            width: !isResponsive
+              ? currentLanguage === 'de'
+                ? 172
+                : 140
+              : 'auto'
+          }}
         />
       );
     } else {

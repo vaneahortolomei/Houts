@@ -18,12 +18,15 @@ import {
   headerMobileHeight,
   mobileNavbar
 } from '@/shared/constants';
+import { useTranslation } from 'react-i18next';
 
 export const BaseTemplate = () => {
   const [scroll, scrollTo] = useWindowScroll();
   const isResponsive = useIsResponsive(1024);
   const [isLoading, setIsLoading] = useState(true);
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   useEffect(() => {
     if (isOverlayVisible) {
@@ -46,12 +49,23 @@ export const BaseTemplate = () => {
     return () => clearTimeout(timer1);
   }, []);
 
+  // // Отслеживание смены языка
+  // useEffect(() => {
+  //   // Включаем лоадер при смене языка
+  //   setIsOverlayVisible(true);
+  //   const timer = setTimeout(() => {
+  //     setIsOverlayVisible(false);
+  //   }, 300); // Время отображения лоадера после смены языка
+  //
+  //   return () => clearTimeout(timer);
+  // }, [currentLanguage]);
+
   return (
     <>
       <Transition
         mounted={isOverlayVisible}
         transition="fade"
-        duration={600}
+        duration={500}
         timingFunction="ease"
         onExited={() => setIsOverlayVisible(false)}
       >
@@ -129,7 +143,7 @@ export const BaseTemplate = () => {
                   }}
                   onClick={() => scrollTo({ y: 0 })}
                 >
-                  SCROLL TO TOP
+                  {t('lang.affix.scroll')}
                 </Button>
               )}
             </Transition>
@@ -154,7 +168,7 @@ export const BaseTemplate = () => {
                   }}
                   style={{
                     backgroundColor: '#000',
-                    width: '152px',
+                    width: currentLanguage === 'de' ? 200 : 150,
                     ...transitionStyles
                   }}
                 >
@@ -162,9 +176,13 @@ export const BaseTemplate = () => {
                     fz="12px"
                     fw="600"
                     lineClamp={1.5}
-                    style={{ color: '#fff', width: 100, lineHeight: 1.2 }}
+                    style={{
+                      color: '#fff',
+                      width: currentLanguage === 'de' ? 'auto' : 100,
+                      lineHeight: 1.2
+                    }}
                   >
-                    JOIN THE WAITING LIST
+                    {t('lang.affix.label')}
                   </Text>
                 </Button>
               )}

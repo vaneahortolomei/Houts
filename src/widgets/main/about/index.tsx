@@ -5,36 +5,33 @@ import ImageWithDots from '@/features/components/AnimatedCircle';
 import FadeInSection from '@/features/components/FadeInSection';
 import Bags from '@/assets/Bags.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
+import { useTranslation } from 'react-i18next';
 
 export const About = () => {
   const isResponsive = useIsResponsive(1024);
   const isResponsive1300 = useIsResponsive(1300);
+  const { t } = useTranslation();
 
   const descriptions = [
     {
-      title: 'BACKSIDE: TOP POCKET',
-      description:
-        "The top pocket is ideal for items you need quick access to, such as your phone, passport, or keys. Its convenient location and spacious interior make it perfect for storing essentials on the go. The pocket's secure closure keeps your belongings safe, while the sleek design maintains the bag's sophisticated appearance."
+      title: `${t('lang.about.bagDescription.backsideTopPocket.title')}`,
+      description: `${t('lang.about.bagDescription.backsideTopPocket.text')}`
     },
     {
-      title: 'MINIMALIST DESIGN',
-      description:
-        "Embrace the elegance of simplicity with this bag's minimalist design. Clean lines, subtle details, and a focus on functionality make this bag a perfect choice for those who appreciate understated sophistication. The minimalist approach ensures that the bag remains timeless and versatile, suitable for any occasion."
+      title: `${t('lang.about.bagDescription.luggageStrap.title')}`,
+      description: `${t('lang.about.bagDescription.luggageStrap.text')}`
     },
     {
-      title: 'LUGGAGE STRAP',
-      description:
-        'Our bag includes a durable luggage strap, making it easy to secure to your rolling suitcase. This convenient feature boosts mobility and simplifies travel, ensuring a seamless journey wherever you go.'
+      title: `${t('lang.about.bagDescription.backsideBottomPocket.title')}`,
+      description: `${t('lang.about.bagDescription.backsideBottomPocket.text')}`
     },
     {
-      title: 'BACKSIDE: BOTTOM POCKET',
-      description:
-        'The bottom pocket provides additional storage for your daily necessities. Whether you need to carry cables, a small notebook, or personal items, this pocket offers ample space and easy accessibility. The durable zipper ensures your items stay securely in place, making it a practical addition to this stylish bag.'
+      title: `${t('lang.about.bagDescription.minimalistDesign.title')}`,
+      description: `${t('lang.about.bagDescription.minimalistDesign.text')}`
     },
     {
-      title: 'FRONTSIDE: POCKET',
-      description:
-        "The frontside pocket is a versatile compartment that offers extra room for your belongings. It's perfect for storing items that you need to access frequently throughout the day for example Bag Straps. The pocket's streamlined design seamlessly integrates with the bag's overall aesthetic, adding both functionality and style."
+      title: `${t('lang.about.bagDescription.frontSidePocket.title')}`,
+      description: `${t('lang.about.bagDescription.frontSidePocket.text')}`
     }
   ];
 
@@ -101,11 +98,11 @@ export const About = () => {
       <Container size="xl">
         <Group justify="center" className={styles.about__titles}>
           <Title fw={400} className={styles.about__title}>
-            ABOUT HOUTS BAG
+            {t('lang.about.title')}
           </Title>
           <Box className={styles.about__text_group}>
             <Text fz={20} fw={500} mb={20} mt={10}>
-              Your lifestyle. Limitless
+              {t('lang.about.subtitle')}
             </Text>
             <Text
               fz={20}
@@ -113,12 +110,11 @@ export const About = () => {
               mb={30}
               className={styles.about__description}
             >
-              The versatile vegan Apple Leather bag that goes from a comfortable
-              backpack to a handbag that supports your active lifestyle.
+              {t('lang.about.desc')}
             </Text>
           </Box>
-          <Text fz={31} c={'#A4A4A4'}>
-            BACKSIDE & FRONT
+          <Text fz={isResponsive ? 17 : 35} c={'#A4A4A4'}>
+            {t('lang.about.title2')}
           </Text>
         </Group>
         <FadeInSection>

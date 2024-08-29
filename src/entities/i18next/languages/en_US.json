@@ -1,7 +1,177 @@
 {
   "lang": {
-    "title": "WE SAY...",
-    "yourLifestyle": "YOUR LIFESTYLE.",
-    "limitless": " LIMITLESS"
+    "top": {
+      "title": "WE SAY...",
+      "yourLifestyle": "YOUR LIFESTYLE.",
+      "limitless": " LIMITLESS"
+    },
+    "about": {
+      "title": "ABOUT HOUTS BAG",
+      "subtitle": "Your lifestyle. Limitless",
+      "desc": "The versatile vegan Apple Leather bag that goes from a comfortable backpack to a handbag that supports your active lifestyle.",
+      "title2": "BACKSIDE & FRONT",
+      "bagDescription": {
+        "backsideTopPocket": {
+          "title": "BACKSIDE: TOP POCKET",
+          "text": "The top pocket is ideal for items you need quick access to, such as your phone, passport, or keys. Its convenient location and spacious interior make it perfect for storing essentials on the go. \n\n The pocket's secure closure keeps your belongings safe, while the sleek design maintains the bag's sophisticated appearance."
+        },
+        "luggageStrap": {
+          "title": "LUGGAGE STRAP",
+          "text": "Our bag includes a durable luggage strap, making it easy to secure to your rolling suitcase. \n\n This convenient feature boosts mobility and simplifies travel, ensuring a seamless journey wherever you go."
+        },
+        "backsideBottomPocket": {
+          "title": "BACKSIDE: BOTTOM POCKET",
+          "text": "The bottom pocket provides additional storage for your daily necessities. Whether you need to carry cables, a small notebook, or personal items, this pocket offers ample space and easy accessibility. \n\n The durable zipper ensures your items stay securely in place, making it a practical addition to this stylish bag."
+        },
+        "minimalistDesign": {
+          "title": "MINIMALIST DESIGN",
+          "text": "Embrace the elegance of simplicity with this bag's minimalist design. Clean lines, subtle details, and a focus on functionality make this bag a perfect choice for those who appreciate understated sophistication. \n\n The minimalist approach ensures that the bag remains timeless and versatile, suitable for any occasion."
+        },
+        "frontSidePocket": {
+          "title": "FRONTSIDE: POCKET",
+          "text": "The frontside pocket is a versatile compartment that offers extra room for your belongings. It's perfect for storing items that you need to access frequently throughout the day for example Bag Straps. \n\n The pocket's streamlined design seamlessly integrates with the bag's overall aesthetic, adding both functionality and style."
+        }
+      }
+    },
+    "functionality": {
+      "title": "FUNCTIONALITY",
+      "title2": "NOT ENOUGH? WE GOT YOU",
+      "title3": "COVERED",
+      "desc": "The modular bag 2-in-1 seamlessly transitions between a backpack\n              and a shoulder bag, offering unparalleled versatility for dynamic\n              lifestyles. Its innovative design allows easy conversion with\n              detachable straps and secure compartments, catering to both casual\n              and professional needs. This adaptable accessory ensures\n              practicality and style, making it ideal for active professionals,\n              travelers, and fashion-forward individuals.",
+      "desc2": "When space runs out, our modular bag's innovative expandable compartment has your back. With just a simple unzip, it transforms, offering up to 67% more storage capacity. Whether you’re carrying extra gear for work or packing essentials for a weekend getaway, this bag adjusts to your needs effortlessly. No more struggling to fit in those last-minute items—expand, store, and go with confidence. Designed for the dynamic individual, this adaptable feature ensures that you’re always ready, no matter how much you need to carry.",
+      "subtitle": "TWO BAGS IN",
+      "subtitle2": "ONE",
+      "horizontalDesc": {
+        "compact": {
+          "title": "COMPACT AND SECURE DOCUMENT SLEEVE",
+          "desc": "This sleek document sleeve provides excellent protection for your important papers.\n\nMade from durable materials, it fits easily into your briefcase or backpack. The secure design keeps your documents in place and prevents creases. Perfect for professionals on the go."
+        },
+        "versatile": {
+          "title": "VERSATILE AND DURABLE CARRY CASE",
+          "desc": "This carry case offers ample space for documents, tablets, and laptops.\n\nIts sturdy exterior, reinforced zippers, and durable padding inside the pockets provide reliable protection for your electronics and other belongings. Ideal for everyday use and travel."
+        }
+      },
+      "luggageDesc": {
+        "instant": {
+          "title": "INSTANT VERTICAL LAPTOP ACCESS",
+          "desc": "Our design allows you to quickly and effortlessly retrieve your laptop from a standing position without having to dig through other contents or lay the bag flat. \n\nPerfect for tight spaces like   security lines or busy coffee shops, this feature enhances convenience and saves time, making your travel and work transitions smoother and more efficient."
+        },
+        "luggage": {
+          "title": "LUGGAGE STRAP",
+          "desc": "Our bag includes a durable luggage strap, making it easy to secure to your rolling suitcase. \n\nThis convenient feature boosts mobility and simplifies travel, ensuring a seamless journey wherever you go."
+        }
+      }
+    },
+    "options": {
+      "title": "APPLE LEATHER",
+      "title1": "BAG AS YOUR PERSONAL STATEMENT",
+      "title2": "TWO BAGS IN ONE",
+      "desc": "Our bags are crafted from eco-friendly apple leather, offering\n                  durability and a luxurious finish while supporting\n                  sustainability in fashion. Stylish and versatile, they are\n                  perfect for conscious consumers seeking responsible fashion\n                  choices without compromising on quality or aesthetics.",
+      "desc1": "A bag that represents you: Designed to be more than just a\n                  carrier for your essentials, this bag serves as a personal\n                  statement, reflecting your unique style and identity. Perfect\n                  for making a lasting impression wherever you go.",
+      "desc2": "Design of the 2-in-1 bag enables swift transformation from a\n                  shoulder bag to a backpack with ease. This adaptability makes\n                  it an ideal choice for those who value flexibility and\n                  functionality in their everyday carry, ensuring it meets a\n                  range of preferences and situations with ease."
+    },
+    "reviews": {
+      "title": "OUR TESTER REVIEWS"
+    },
+    "socialProof": {
+      "title": "SOCIAL PROOF",
+      "desc": "Showcased at prestigious events like ILM Offenbach and Thincubator, our 2-in-1 bag has garnered acclaim for its innovative design and versatility. It has received positive feedback from both industry experts and consumers, establishing itself as a standout product. These showcases have significantly enhanced its credibility and appeal in the competitive fashion and accessory market, making it a favored choice among discerning customers looking for both style and functionality.",
+      "thincubator": {
+        "col": {
+          "title": "ILM OFFENBACH 2024",
+          "desc": "We took our bite from ILM Offenbach. It was a huge deal for\n                    us! We got to show off our vegan apple leather bags for the\n                    first time, and honestly, we're still riding that high.",
+          "button": "MORE ABOUT"
+        },
+        "col1": {
+          "title": "THINCUBATOR 2024",
+          "desc": "Being a part of thincubator by thinc! was an incredible\n                    experience! Over two weeks, alongside 40 other young startup\n                    enthusiasts, we dedicated ourselves to our projects.",
+          "button": "MORE ABOUT"
+        }
+      }
+    },
+    "journey": {
+      "title": "OUR STORY & JOURNEY",
+      "desc": "We are the founders of Houts, 2 energetic young people\n                passionate about the idea of combining a lifestyle and\n                sustainability in one punch. Be part of our community and make\n                your lifestyle limitless.",
+      "timeLine": {
+        "journey": {
+          "title": "FIRST ITERATIONS & SKETCHES",
+          "desc": "On an evening walk with a coffee, Alex and I discussed the first ideas and visions of the bag. The first steps were taken in August 2021."
+        },
+        "journey1": {
+          "title": "FIRST PROTOTYPES",
+          "desc": "After a year of work on the project, sketches, market analysis, the search for manufacturers, we started the manufacture of the first prototype."
+        },
+        "journey2": {
+          "title": "PREPARING THE MARKETING STRATEGY & THE FINAL PROTOTYPE",
+          "desc": "Dozens of prototypes, but finally we reached the end of this chapter. It's time to create a marketing and promotion strategy."
+        },
+        "journey3": {
+          "title": "CROWDFUNDING CAMPAIGN",
+          "desc": "The last stage was of course the Crowdfunding campaign. It always seemed like a distant point for us, but forget that we also reached the final stage."
+        }
+      }
+    },
+    "works": {
+      "title": "APPLE LEATHER? HOW IT WORKS?",
+      "desc": "Our bags, crafted from USDA-certified vegan ,,apple\" leather\n                  using remnants from juice production, exemplify your\n                  commitment to circular fashion, seam\u00ADlessly blending\n                  sustainability with timeless elegance.",
+      "items": {
+        "item": {
+          "title": "IT ALL STARTED WITH AN APPLE",
+          "desc": "The “vegan” leather we use in our bags was once an apple growing on a tree"
+        },
+        "item1": {
+          "title": "JUICE PRODUCTION",
+          "desc": "The fruit is not directly used in the production of the leather like material. The apples come mostly from the production of apple juice"
+        },
+        "item2": {
+          "title": "APPLE RESIDUAL",
+          "desc": "We take this leftover apple pulp and turn it into a durable, eco-friendly material that looks and feels like leather"
+        },
+        "item3": {
+          "title": "“VEGAN” LEATHER",
+          "desc": "The remaining apple pulp and residues are pressed and dyed to form the material used in our bags"
+        },
+        "item4": {
+          "title": "UPCYCLED ECOLOGICAL BAGS",
+          "desc": "Here is the start your commitment to circular fashion, seamlessly blending sustainability with timeless elegance"
+        }
+      }
+    },
+    "sustainability": {
+      "title": "SUSTAINABILITY",
+      "desc": "For every Houts product, we plant one tree to do our bit for the\n              environment. Join us on our mission to restore forests across the\n              world.",
+      "subtitle": "Follow our journey on:",
+      "imgText": "BAGS",
+      "imgText1": "ONE BAG = ONE TREE",
+      "textSection": {
+        "col": {
+          "title": "GOING BEYOND NEUTRAL: OUR COMMITMENT TO A POSITIVE IMPACT",
+          "desc": "At Houts, we believe that being carbon neutral, which means\n                  simply balancing the environmental harm we might cause, isn't\n                  enough. We see it as merely staying afloat. Instead, we\n                  challenge ourselves to consider every action through a clear\n                  lens: Does it have a negative, neutral, or positive impact on\n                  the climate?",
+          "desc1": "That's why we go further. We don't just aim to offset our\n                  carbon footprint; we commit to offsetting 110% of it. But we\n                  don’t stop there—we also take active steps to restore\n                  ecosystems that have been harmed by the widespread use of\n                  single-use paper and plastic. By adopting this approach, we\n                  ensure that every Houts product not only minimizes damage but\n                  actually contributes positively to our planet’s health."
+        },
+        "col1": {
+          "title": "110%",
+          "title1": "CARBON NEUTRAL COMMITMENT",
+          "desc": "Every year, we meticulously measure and offset 100% of our\n                  carbon footprint in partnership with\n                  OneTreePlanted while continuously working to\n                  reduce our emissions annually. But at Houts, we believe in\n                  doing more than just breaking even with the environment.",
+          "desc1": " We commit to offsetting at least 10% more carbon than we emit,\n                  ensuring that our impact is not just neutral but net\n                  positive—actively benefiting the climate."
+        }
+      }
+    },
+    "footer": {
+      "title": "SUPPORT US",
+      "desc": "on all Social Media platforms and follow the path to the launch of\n            Houts!"
+    },
+    "nav": {
+      "about": "ABOUT HOUTS",
+      "works": "HOW IT WORKS",
+      "functionality": "FUNCTIONALITY",
+      "journey": "OUR STORY",
+      "sustainability": "SUSTAINABILITY",
+      "label": "JOIN THE \nWAITING LIST"
+    },
+    "affix": {
+      "label": "JOIN THE WAITING LIST",
+      "scroll": "SCROLL TO TOP"
+    }
   }
 }
