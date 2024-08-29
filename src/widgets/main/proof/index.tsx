@@ -13,9 +13,11 @@ import ThincubatorTwo from '@/assets/think2.png';
 import styles from '@/widgets/main/proof/Social.module.scss';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import FadeInSection from '@/features/components/FadeInSection';
+import { useTranslation } from 'react-i18next';
 
 export const SocialProof = () => {
   const isResponsive = useIsResponsive(1024);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -24,17 +26,10 @@ export const SocialProof = () => {
           <FadeInSection>
             <Group justify="center" className={styles.text__group}>
               <Title size="35px" fw={400} ta={'center'}>
-                SOCIAL PROOF
+                {t('lang.socialProof.title')}
               </Title>
               <Text className={styles.text__description} ta="center">
-                Showcased at prestigious events like ILM Offenbach and
-                Thincubator, our 2-in-1 bag has garnered acclaim for its
-                innovative design and versatility. It has received positive
-                feedback from both industry experts and consumers, establishing
-                itself as a standout product. These showcases have significantly
-                enhanced its credibility and appeal in the competitive fashion
-                and accessory market, making it a favored choice among
-                discerning customers looking for both style and functionality.
+                {t('lang.socialProof.desc')}
               </Text>
             </Group>
           </FadeInSection>
@@ -69,16 +64,14 @@ export const SocialProof = () => {
                   className={styles.grid__groupText}
                 >
                   <Title c={'#222027'} fz={20}>
-                    ILM OFFENBACH 2024
+                    {t('lang.socialProof.thincubator.col.title')}
                   </Title>
                   <Text
                     w={isResponsive ? '100%' : 470}
                     fz={16}
                     ta={isResponsive ? 'center' : 'left'}
                   >
-                    We took our bite from ILM Offenbach. It was a huge deal for
-                    us! We got to show off our vegan apple leather bags for the
-                    first time, and honestly, we're still riding that high.{' '}
+                    {t('lang.socialProof.thincubator.col.desc')}
                   </Text>
                   <Anchor
                     className={styles.grid__link}
@@ -88,7 +81,7 @@ export const SocialProof = () => {
                     fw={600}
                   >
                     {' '}
-                    MORE ABOUT
+                    {t('lang.socialProof.thincubator.col.button')}
                   </Anchor>
                 </Group>
               </FadeInSection>
@@ -122,16 +115,14 @@ export const SocialProof = () => {
                   flex={isResponsive ? '0 0 100%' : 1}
                 >
                   <Title c={'#222027'} fz={20}>
-                    THINCUBATOR 2024
+                    {t('lang.socialProof.thincubator.col1.title')}
                   </Title>
                   <Text
                     w={isResponsive ? '100%' : 420}
                     fz={16}
                     ta={isResponsive ? 'center' : 'right'}
                   >
-                    Being a part of thincubator by thinc! was an incredible
-                    experience! Over two weeks, alongside 40 other young startup
-                    enthusiasts, we dedicated ourselves to our projects.
+                    {t('lang.socialProof.thincubator.col1.desc')}
                   </Text>
                   <Anchor
                     className={styles.grid__link}
@@ -140,7 +131,7 @@ export const SocialProof = () => {
                     target="_blank"
                     fw={600}
                   >
-                    MORE ABOUT
+                    {t('lang.socialProof.thincubator.col1.button')}
                   </Anchor>
                 </Group>
               </FadeInSection>

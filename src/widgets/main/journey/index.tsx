@@ -8,41 +8,39 @@ import IconJourney3 from '@/assets/journey/journey-3.svg';
 import IconJourney4 from '@/assets/journey/journey-4.svg';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import FadeInSection from '@/features/components/FadeInSection';
+import { useTranslation } from 'react-i18next';
 
 export const Journey = () => {
   const isResponsive = useIsResponsive(1024);
+  const { t } = useTranslation();
 
   const data = [
     {
       icon: IconJourney1,
       year: '2021',
-      title: 'FIRST ITERATIONS & SKETCHES',
-      desc: 'On an evening walk with a coffee, Alex and I discussed the first ideas and visions of the bag. The first steps were taken in August 2021.',
+      title: `${t('lang.journey.timeLine.journey.title')}`,
+      desc: `${t('lang.journey.timeLine.journey.desc')}`,
       flag: 'left'
     },
     {
       icon: IconJourney2,
       year: '2022',
-      title: 'FIRST PROTOTYPES',
-      desc: 'After a year of work on the project, sketches, market analysis, the search for manufacturers, we started the manufacture of the first prototype.',
+      title: `${t('lang.journey.timeLine.journey1.title')}`,
+      desc: `${t('lang.journey.timeLine.journey1.desc')}`,
       flag: 'right'
     },
     {
       icon: IconJourney3,
       year: '2023',
-      title: 'PREPARING THE MARKETING STRATEGY & THE FINAL PROTOTYPE',
-      desc:
-        "Dozens of prototypes, but finally we reached the end of this chapter. It's time to create a\n" +
-        '                    marketing and promotion strategy.',
+      title: `${t('lang.journey.timeLine.journey2.title')}`,
+      desc: `${t('lang.journey.timeLine.journey2.desc')}`,
       flag: 'left'
     },
     {
       icon: IconJourney4,
       year: '2024',
-      title: 'CROWDFUNDING CAMPAIGN',
-      desc:
-        'The last stage was of course the Crowdfunding campaign. It always seemed like a distant point for\n' +
-        '                    us, but forget that we also reached the final stage.',
+      title: `${t('lang.journey.timeLine.journey3.title')}`,
+      desc: `${t('lang.journey.timeLine.journey3.desc')}`,
       flag: 'right'
     }
   ];
@@ -58,13 +56,10 @@ export const Journey = () => {
                 ta={'center'}
                 fw={400}
               >
-                OUR STORY & JOURNEY
+                {t('lang.journey.title')}
               </Title>
               <Text className={styles.text__description} ta="center">
-                We are the founders of Houts, 2 energetic young people
-                passionate about the idea of combining a lifestyle and
-                sustainability in one punch. Be part of our community and make
-                your lifestyle limitless.
+                {t('lang.journey.desc')}
               </Text>
             </Group>
           </FadeInSection>

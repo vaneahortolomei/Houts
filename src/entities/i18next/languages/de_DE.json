@@ -1,7 +1,177 @@
 {
   "lang": {
-    "title": "DEUTCHE WORD",
-    "yourLifestyle": "DEUTCHE LIFESTYLE.",
-    "limitless": "DEUTCHE LIMITLESS."
+    "top": {
+      "title": "WE SAY...",
+      "yourLifestyle": "YOUR LIFESTYLE.",
+      "limitless": " LIMITLESS"
+    },
+    "about": {
+      "title": "ÜBER HOUTS BAG",
+      "subtitle": "Your lifestyle. Limitless",
+      "desc": "Entdecke die vielseitige vegane Apfelledertasche, die sich mühelos von einem bequemen Rucksack in eine stilvolle Handtasche verwandelt und deinen aktiven Lebensstil perfekt unterstützt.",
+      "title2": "VORDER- UND RÜCKSEITER",
+      "bagDescription": {
+        "backsideTopPocket": {
+          "title": "RÜCKSEITE: \nOBERES FACH",
+          "text": "Das obere Fach ist ideal für Gegenstände, die du schnell griffbereit haben musst, wie dein Handy, deinen Reisepass oder deine Schlüssel. Dank seiner praktischen Lage und dem großzügigen Innenraum eignet es sich perfekt, um wichtige Dinge unterwegs sicher zu verstauen.\n\nDer sichere Verschluss des Fachs gewährleistet, dass deine Sachen geschützt bleiben, während das schlanke Design die elegante Optik der Tasche bewahrt."
+        },
+        "luggageStrap": {
+          "title": "GEPÄCKRIEMEN",
+          "text": "Unsere Tasche ist mit einem robusten Gepäckriemen ausgestattet, der das Befestigen an deinem Rollkoffer mühelos ermöglicht. \n\nDieses durchdachte Feature verbessert deine Mobilität und erleichtert das Reisen, sodass du stets bequem und stressfrei unterwegs bist."
+        },
+        "backsideBottomPocket": {
+          "title": "RÜCKSEITE: UNTERES FACH",
+          "text": "Das untere Fach bietet zusätzlichen Stauraum für deine täglichen Notwendigkeiten. Ob Kabel, ein kleines Notizbuch oder persönliche Gegenstände – dieses Fach bietet ausreichend Platz und ermöglicht einen einfachen Zugang.\n\nDer robuste Reißverschluss sorgt dafür, dass deine Sachen sicher verstaut sind, wodurch dieses Fach zu einer praktischen und stilvollen Ergänzung der Tasche wird."
+        },
+        "minimalistDesign": {
+          "title": "MINIMALISTISCHES DESIGN",
+          "text": "Umarme die Eleganz der Einfachheit mit dem minimalistischen Design dieser Tasche. Klare Linien, subtile Details und ein Fokus auf Funktionalität machen sie zur idealen Wahl für alle, die dezente Raffinesse schätzen.\n\nDer minimalistische Ansatz stellt sicher, dass die Tasche zeitlos und vielseitig bleibt, perfekt passend für jede Gelegenheit."
+        },
+        "frontSidePocket": {
+          "title": "VORDERSEITE: FACH",
+          "text": "Das vordere Fach bietet vielseitigen zusätzlichen Stauraum für deine Habseligkeiten. Es eignet sich perfekt, um Dinge zu verstauen, die du im Laufe des Tages häufig benötigst, wie zum Beispiel Taschenriemen.\n\nDas schlanke Design des Fachs integriert sich nahtlos in die Gesamtästhetik der Tasche und verbindet Funktionalität mit Stil."
+        }
+      }
+    },
+    "functionality": {
+      "title": "FUNKTIONALITÄT",
+      "title2": "FUNKTIONALITÄT",
+      "title3": "",
+      "desc": "Unsere modulare 2-in-1-Tasche wechselt nahtlos zwischen einem Rucksack und einer Schultertasche und bietet so unvergleichliche Vielseitigkeit für deinen Lifestyle. Das innovative Design ermöglicht eine mühelose Umwandlung mit abnehmbaren Riemen und sicheren Fächern, die sowohl den alltäglichen Anforderungen als auch beruflichen Bedürfnissen gerecht werden. Dieses anpassungsfähige Tasche vereint Funktionalität mit Stil und ist die ideale Wahl für Berufstätige, Reisende und modebewusste Menschen.",
+      "desc2": "Wenn der Platz knapp wird, ist unser modularer Rucksack mit seinem innovativen erweiterbaren Fach genau das Richtige für dich. Mit einem einfachen Reißverschluss bietet er bis zu 67 % mehr Stauraum. Egal, ob du zusätzliche Ausrüstung für die Arbeit mitnehmen oder wichtige Dinge für einen Wochenendausflug einpacken möchtest, diese Tasche passt sich mühelos deinen Bedürfnissen an. Kein mühsames Verstauen von Last-Minute-Artikeln mehr – erweitern, verstauen und mit Zuversicht loslegen. Für dynamische Menschen entwickelt, sorgt diese anpassungsfähige Tasche dafür, dass du immer bereit bist, egal wie viel du tragen musst.",
+      "subtitle": "ZWEI TASCHEN IN",
+      "subtitle2": "EINER",
+      "horizontalDesc": {
+        "compact": {
+          "title": "KOMPAKTE UND SICHERE DOKUMENTENHÜLLE",
+          "desc": "Diese schlanke Dokumentenhülle bietet hervorragenden Schutz für Ihre wichtigen Unterlagen. Hergestellt aus strapazierfähigen Materialien, passt sie mühelos in Ihre Aktentasche oder Ihren Rucksack. \n\nDas durchdachte Design hält Ihre Dokumente sicher und verhindert Knicke. Ideal für Profis unterwegs."
+        },
+        "versatile": {
+          "title": "VIELSEITIGE UND ROBUSTE TRAGETASCHE",
+          "desc": "Diese Tragetasche bietet ausreichend Platz für Dokumente, Tablets und Laptops. Mit ihrem robusten äußeren, verstärkten Reißverschlüssen und strapazierfähiger Polsterung in den Taschen schützt sie Ihre Elektronik und andere Wertsachen zuverlässig. Perfekt für den täglichen Gebrauch und auf Reisen."
+        }
+      },
+      "luggageDesc": {
+        "instant": {
+          "title": "DEIN LAPTOP IMMER GRIFFBEREIT",
+          "desc": "Unser Design ermöglicht es dir, deinen Laptop schnell und mühelos aus einer aufrechten Position herauszuholen, ohne durch andere Inhalte wühlen oder die Tasche flach hinlegen zu müssen.\n\nPerfekt für enge Räume wie Sicherheitskontrollen oder belebte Cafés – dieses Feature erhöht den Komfort und spart Zeit, sodass deine Übergänge zwischen Reisen und Arbeiten reibungsloser und effizienter werden."
+        },
+        "luggage": {
+          "title": "GEPÄCKRIEMEN",
+          "desc": "Dank des robusten Gepäckriemens lässt sich die Tasche einfach an deinem Rollkoffer befestigen.\n\nDieses praktische Feature erhöht deine Mobilität und erleichtert das Reisen, sodass du stets entspannt und stilvoll unterwegs bist."
+        }
+      }
+    },
+    "options": {
+      "title": "APFELLEDER",
+      "title1": "TASCHE ALS DEIN\nPERSÖNLICHES STATEMENT",
+      "title2": "ZWEI TASCHEN IN EINER",
+      "desc": "Unsere Taschen bestehen aus umweltfreundlichem Apfelleder, das nicht nur durch Langlebigkeit und luxuriöse Optik überzeugt, sondern auch Nachhaltigkeit in der Mode unterstützt. Stilvoll und vielseitig – die perfekte Wahl für bewusste Konsumenten, die verantwortungsvolle Mode ohne Kompromisse bei Qualität oder Ästhetik schätzen.",
+      "desc1": "Diese Tasche ist mehr als nur ein Aufbewahrungsort für deine Essentials – sie ist ein persönliches Statement, das deinen einzigartigen Stil und deine Identität widerspiegelt. Ideal, um überall einen bleibenden Eindruck zu hinterlassen.",
+      "desc2": "Das durchdachte 2-in-1-Design ermöglicht eine schnelle Umwandlung von einer Schultertasche in einen Rucksack. Diese Anpassungsfähigkeit macht sie zur idealen Wahl für alle, die Flexibilität und Funktionalität in ihrem Alltag schätzen. Sie erfüllt mühelos eine Vielzahl von Bedürfnissen und passt sich jeder Situation an."
+    },
+    "reviews": {
+      "title": "FEEDBACK VON UNSEREN TESTERN"
+    },
+    "socialProof": {
+      "title": "ANERKANNTES INNOVATIVES DESIGN",
+      "desc": "Unsere 2-in-1-Tasche hat auf renommierten Veranstaltungen wie der ILM Offenbach und dem Thincubator Anerkennung für ihr innovatives Design und ihre Vielseitigkeit erhalten. Sie wurde sowohl von Branchenexperten als auch von Verbrauchern positiv bewertet und hat sich als herausragendes Produkt etabliert. Diese Präsentationen haben ihre Glaubwürdigkeit und Attraktivität im wettbewerbsintensiven Mode- und Accessoire-Markt erheblich gesteigert, was sie zur bevorzugten Wahl unter anspruchsvollen Kunden macht, die sowohl Stil als auch Funktionalität suchen.",
+      "thincubator": {
+        "col": {
+          "title": "ILM OFFENBACH 2024",
+          "desc": "Wir haben unseren Biss bei der ILM Offenbach genommen, und es war ein großer Erfolg für uns! Zum ersten Mal konnten wir unsere veganen Apfelledertaschen präsentieren, und ehrlich gesagt, schweben wir immer noch auf Wolke sieben.",
+          "button": "MEHR ERFAHREN"
+        },
+        "col1": {
+          "title": "THINCUBATOR 2024",
+          "desc": "Teil des Thincubator-Programms von Thinc! zu sein, war eine unglaubliche Erfahrung! Zwei Wochen lang haben wir uns gemeinsam mit 40 anderen jungen Startup-Enthusiasten unseren Projekten gewidmet.",
+          "button": "MEHR ERFAHREN"
+        }
+      }
+    },
+    "journey": {
+      "title": "UNSERE STORY & REISE",
+      "desc": "Wir sind die Gründer von Houts, zwei leidenschaftliche junge Menschen, die fest daran glauben, dass Lifestyle und Nachhaltigkeit Hand in Hand gehen können. Werde Teil unserer Community und lebe deinen grenzenlosen Lebensstil.",
+      "timeLine": {
+        "journey": {
+          "title": "ERSTE ENTWÜRFE & SKIZZEN",
+          "desc": "Bei einem Abendspaziergang mit einem Kaffee haben Alexandru Hortolomei und ich die ersten Ideen und Visionen für die Tasche besprochen. Die ersten Schritte wurden im August 2021 unternommen."
+        },
+        "journey1": {
+          "title": "ERSTE PROTOTYPEN",
+          "desc": "Nach einem Jahr intensiver Arbeit an dem Projekt, mit Skizzen, Marktanalysen und der Suche nach Herstellern, begannen wir mit der Produktion des ersten Prototyps."
+        },
+        "journey2": {
+          "title": "VORBEREITUNG DER MARKETINGSTRATEGIE\n& DES FINALEN PROTOTYPS",
+          "desc": "Nach Dutzenden von Prototypen, haben wir endlich das Ende dieses Kapitels erreicht. Jetzt ist es an der Zeit, eine Marketing- und Promotionsstrategie zu entwickeln."
+        },
+        "journey3": {
+          "title": "CROWDFUNDING-\nKAMPAGNE",
+          "desc": "Die letzte Etappe war natürlich die Crowdfunding-Kampagne. Sie schien für uns immer wie ein ferner Meilenstein, aber nun haben wir auch dieses Ziel erreicht."
+        }
+      }
+    },
+    "works": {
+      "title": "APFELLEDER? WAS IST DAS?",
+      "desc": "Unsere Taschen, gefertigt aus USDA-zertifiziertem veganem „Apfel“-Leder, das aus Resten der Saftproduktion hergestellt wird, verkörpern dein Engagement für zirkuläre Mode und vereinen nahtlos Nachhaltigkeit mit zeitloser Eleganz.",
+      "items": {
+        "item": {
+          "title": "ALLES BEGANN MIT EINEM APFEL",
+          "desc": "Das „vegane“ Leder, das wir in unseren Taschen verwenden, war einst ein Apfel, der an einem Baum wuchs."
+        },
+        "item1": {
+          "title": "SAFTPRODUKTION",
+          "desc": "Die Frucht selbst wird nicht direkt zur Herstellung des lederähnlichen Materials verwendet. Die Äpfel stammen größtenteils aus der Apfelsaftproduktion."
+        },
+        "item2": {
+          "title": "APFELRESTE",
+          "desc": "Wir nehmen diese übrig gebliebenen Apfeltreste und verwandeln sie in ein strapazierfähiges, umweltfreundliches Material, das wie Leder aussieht und sich auch so anfühlt."
+        },
+        "item3": {
+          "title": "„VEGANES“\nLEDER",
+          "desc": "Der verbleibenden Apfeltreste und die Rückstände werden gepresst und gefärbt, um das Material zu formen, das in unseren Taschen verwendet wird."
+        },
+        "item4": {
+          "title": "UPCYCELTE ÖKOLOGISCHE TASCHEN",
+          "desc": "Hier beginnt dein Engagement für zirkuläre Mode, bei dem Nachhaltigkeit nahtlos mit zeitloser Eleganz verschmilzt."
+        }
+      }
+    },
+    "sustainability": {
+      "title": "NACHHALTIGKEIT",
+      "desc": "Für jedes Houts-Produkt pflanzen wir einen Baum, um einen Beitrag zum Schutz der Umwelt zu leisten. Schließe dich uns an auf unserer Mission, die Wälder weltweit wieder aufzuforsten.\n\n",
+      "subtitle": "Verfolge unsere Reise auf:",
+      "imgText": "TASCHEN",
+      "imgText1": "EINE TASCHE = EIN BAUM",
+      "textSection": {
+        "col": {
+          "title": "ÜBER NEUTRALITÄT HINAUS:\nUNSER ENGAGEMENT FÜR EINE POSITIVE WIRKUNG",
+          "desc": "Bei Houts glauben wir, dass es nicht ausreicht, nur kohlenstoffneutral zu sein – also lediglich die durch uns verursachten Umweltschäden auszugleichen. Stattdessen hinterfragen wir jede unserer Handlungen: Haben sie eine negative, neutrale oder positive Auswirkung auf das Klima?",
+          "desc1": "Deshalb gehen wir weiter. Wir streben nicht nur an, unseren CO2-Fußabdruck auszugleichen; wir verpflichten uns, 110 % davon zu kompensieren. Aber damit nicht genug – wir ergreifen auch aktive Maßnahmen, um Ökosysteme wiederherzustellen, die durch den weitverbreiteten Einsatz von Einwegpapier und -plastik geschädigt wurden. Mit diesem Ansatz stellen wir sicher, dass jedes Houts-Produkt nicht nur Schäden minimiert, sondern tatsächlich positiv zur Gesundheit unseres Planeten beiträgt."
+        },
+        "col1": {
+          "title": "110%",
+          "title1": "KOHLENSTOFFNEUTRALES\nENGAGEMENT",
+          "desc": "Jedes Jahr messen und kompensieren wir sorgfältig 100 % unseres CO2-Fußabdrucks in Zusammenarbeit mit One Tree Planted und arbeiten kontinuierlich daran, unsere Emissionen jährlich zu reduzieren. Doch bei Houts glauben wir daran, mehr zu tun, als nur mit der Umwelt auf Null zu kommen.",
+          "desc1": "Wir verpflichten uns, mindestens 10 % mehr CO2 auszugleichen, als wir ausstoßen, um sicherzustellen, dass unser Einfluss nicht nur neutral, sondern netto positiv ist—und somit aktiv dem Klima zugutekommt."
+        }
+      }
+    },
+    "footer": {
+      "title": "UNTERSTÜTZE UNS",
+      "desc": "auf allen Social-Media-Plattformen  \nund begleite uns auf dem Weg zum Launch von Houts!"
+    },
+    "nav": {
+      "about": "ÜBER HOUTS",
+      "works": "WIE FUNKTIONIERT'S?",
+      "functionality": "FUNKTIONALITÄT",
+      "journey": "UNSERE STORY",
+      "sustainability": "NACHHALTIGKEIT",
+      "label": "AUF DIE WARTELISTE SETZEN"
+    },
+    "affix": {
+      "label": "AUF DIE \nWARTELISTE SETZEN",
+      "scroll": "NACH OBEN SCROLLEN"
+    }
   }
 }

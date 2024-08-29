@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Text, Title, Transition } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 interface Description {
   title: string;
@@ -125,6 +126,7 @@ const ImageWithDots: React.FC<Props> = ({
 }) => {
   const [selectedText, setSelectedText] = useState(descriptions[0]);
   const [opened, setOpened] = useState(true);
+  const { i18n } = useTranslation();
 
   const handleCircleClick = (index: number) => {
     setOpened(false);
@@ -133,6 +135,10 @@ const ImageWithDots: React.FC<Props> = ({
       setOpened(true);
     }, 300);
   };
+
+  useEffect(() => {
+    setSelectedText(descriptions[0]);
+  }, [i18n.language, descriptions]);
 
   return (
     <ImgContainer style={containerStyles}>
@@ -148,7 +154,10 @@ const ImageWithDots: React.FC<Props> = ({
               <Title style={titleTextStyles} mb={20} fw={400} c={'#222027'}>
                 {selectedText.title}
               </Title>
-              <Text style={descTextStyles}>{selectedText.description}</Text>
+              <Text
+                style={{ whiteSpace: 'pre-line', titleTextStyles }}
+                dangerouslySetInnerHTML={{ __html: selectedText.description }}
+              />
             </Box>
           )}
         </Transition>

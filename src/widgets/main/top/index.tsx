@@ -19,12 +19,12 @@ export const TopSection = () => {
           pt={isResponsive ? mobilePaddingFromHeader + 40 : 100}
         >
           <Text w={'100%'} className={styles.top__section_title}>
-            {t('lang.title')}
+            {t('lang.top.title')}
           </Text>
           <Title className={styles.top__section_title2} order={1}>
-            {t('lang.yourLifestyle')}
+            {t('lang.top.yourLifestyle')}
             <Text span inherit className={styles.top__section_word}>
-              {t('lang.limitless')}
+              {t('lang.top.limitless')}
             </Text>
           </Title>
         </Group>

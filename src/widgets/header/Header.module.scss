@@ -5,10 +5,22 @@
     display: flex;
     align-items: center;
     transition: all 0.3s;
+    padding: 0 20px 0 0;
     @media (min-width: 1025px) {
         margin: 20px 0 0;
         position: static;
         box-shadow: none;
+        padding: 0 20px 0 0;
+    }
+    &__lang {
+        font-size: 13px;
+        border: 2px solid  #222027;
+        border-radius: 17px;
+        padding: 5px;
+        width: 50px;
+        &:hover {
+            background-color: transparent;
+        }
     }
     &__mobile {
         height: 100%;
@@ -56,7 +68,7 @@
             transition: 0.2s;
             line-height: 1.2;
             @media (min-width: 1024px) {
-                width: 140px;
+                //width: 140px;
                 text-align: center;
             }
             &:hover {
@@ -72,12 +84,15 @@
         justify-content: flex-start;
         @media (min-width: 1025px) {
             display: flex;
-            gap: 35px;
+            gap: 11px;
             align-items: center;
             justify-content: center;
         }
+        @media (min-width: 1200px) {
+            gap: 35px;
+        }
         @media (min-width: 1300px) {
-            gap: 70px;
+            gap: 50px;
         }
         @media (min-width: 1550px) {
             gap: 100px;

@@ -3,12 +3,12 @@ import styles from '@/widgets/main/functionality/Functionality.module.scss';
 import { Container, Group, Title, Text, Image, Box } from '@mantine/core';
 import BackPack from '@/assets/functionality/Backpack.png';
 import ShoulderBag from '@/assets/functionality/Shoulder-bag.png';
-import Bag1 from '@/assets/functionality/Bild-1.png';
-import BagFull from '@/assets/functionality/BagFull.png';
+import Bag1 from '@/assets/functionality/Bild-eng.png';
+import BagFull from '@/assets/functionality/houts-bag.png';
 import ImageWithDots from '@/features/components/AnimatedCircle';
 import BagLug from '@/assets/functionality/BagLug.png';
-import BagArrow from '@/assets/functionality/bag-arrow.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
+import { useTranslation } from 'react-i18next';
 import FadeInSection from '@/features/components/FadeInSection';
 
 const AnimatedLine: React.FC = () => {
@@ -64,25 +64,22 @@ export default AnimatedLine;
 export const Functionality = () => {
   const isResponsive = useIsResponsive(1024);
   const isResponsive1300 = useIsResponsive(1300);
+  const { t } = useTranslation();
 
   const descriptions = [
     {
-      title: 'DOUBLE LAPTOP/TABLET POCKET',
-      description:
-        'No need for a separate laptop case! Our bag features a padded laptop pocket designed for dual use as both a backpack and a shoulder bag. ' +
-        'This integrated protection shields your laptop from external impacts, ensuring it stays safe and secure no matter how you carry it.'
+      title: `${t('lang.functionality.horizontalDesc.compact.title')}`,
+      description: `${t('lang.functionality.horizontalDesc.compact.desc')}`
     },
     {
-      title: 'DOUBLE LAPTOP/TABLET POCKET',
-      description:
-        'No need for a separate laptop case! Our bag features a padded laptop pocket designed for dual use as both a backpack and a shoulder bag. ' +
-        'This integrated protection shields your laptop from external impacts, ensuring it stays safe and secure no matter how you carry it.'
+      title: `${t('lang.functionality.horizontalDesc.versatile.title')}`,
+      description: `${t('lang.functionality.horizontalDesc.versatile.desc')}`
     }
   ];
 
   const circles = [
-    { top: '40%', right: '48%', animationDuration: '1.8s' },
-    { top: '63%', left: '8%', animationDuration: '2.5s' }
+    { top: '18%', right: '66%', animationDuration: '1.8s' },
+    { top: '80%', left: '18%', animationDuration: '2.5s' }
   ];
 
   const containerStyles: React.CSSProperties = {
@@ -116,14 +113,12 @@ export const Functionality = () => {
 
   const luggageDescriptions = [
     {
-      title: 'INSTANT VERTICAL LAPTOP ACCESS',
-      description:
-        'Our design allows you to quickly and effortlessly retrieve your laptop from a standing position without having to dig through other contents or lay the bag flat. Perfect for tight spaces like   security lines or busy coffee shops, this feature enhances convenience and saves time, making your travel and work transitions smoother and more efficient.'
+      title: `${t('lang.functionality.luggageDesc.instant.title')}`,
+      description: `${t('lang.functionality.luggageDesc.instant.desc')}`
     },
     {
-      title: 'LUGGAGE STRAP',
-      description:
-        'Our bag includes a durable luggage strap, making it easy to secure to your rolling suitcase. This convenient feature boosts mobility and simplifies travel, ensuring a seamless journey wherever you go.'
+      title: `${t('lang.functionality.luggageDesc.luggage.title')}`,
+      description: `${t('lang.functionality.luggageDesc.luggage.desc')}`
     }
   ];
 
@@ -172,7 +167,9 @@ export const Functionality = () => {
       <Container size="xl">
         <Group justify="center" className={styles.functionality__titles}>
           <FadeInSection>
-            <Title fw={400}>FUNCTIONALITY</Title>
+            <Title className={styles.functionality__title} fw={400}>
+              {t('lang.functionality.title')}
+            </Title>
           </FadeInSection>
           <FadeInSection>
             <Text
@@ -183,21 +180,21 @@ export const Functionality = () => {
               mt={10}
               ta={'center'}
             >
-              The modular bag 2-in-1 seamlessly transitions between a backpack
-              and a shoulder bag, offering unparalleled versatility for dynamic
-              lifestyles. Its innovative design allows easy conversion with
-              detachable straps and secure compartments, catering to both casual
-              and professional needs. This adaptable accessory ensures
-              practicality and style, making it ideal for active professionals,
-              travelers, and fashion-forward individuals.
+              {t('lang.functionality.desc')}
             </Text>
           </FadeInSection>
           <FadeInSection>
-            <Title size={'35px'} fw={400}>
-              TWO BAGS IN
-              <Text span inherit fz={35} fw={400} c={'#222027'}>
+            <Title size={isResponsive ? 17 : 35} fw={400}>
+              {t('lang.functionality.subtitle')}
+              <Text
+                span
+                inherit
+                fz={isResponsive ? 17 : 35}
+                fw={400}
+                c={'#222027'}
+              >
                 {' '}
-                ONE
+                {t('lang.functionality.subtitle2')}
               </Text>
             </Title>
           </FadeInSection>
@@ -228,10 +225,10 @@ export const Functionality = () => {
         >
           <FadeInSection>
             <Title size={'35px'} fw={400} ta={'center'}>
-              NOT ENOUGH? WE GOT YOU
+              {t('lang.functionality.title2')}
               <Text span inherit fz={35} fw={400} c={'#222027'}>
                 {' '}
-                COVERED
+                {t('lang.functionality.title3')}
               </Text>
             </Title>
           </FadeInSection>
@@ -243,13 +240,7 @@ export const Functionality = () => {
               mt={10}
               ta={'center'}
             >
-              The modular bag 2-in-1 seamlessly transitions between a backpack
-              and a shoulder bag, offering unparalleled versatility for dynamic
-              lifestyles. Its innovative design allows easy conversion with
-              detachable straps and secure compartments, catering to both casual
-              and professional needs. This adaptable accessory ensures
-              practicality and style, making it ideal for active professionals,
-              travelers, and fashion-forward individuals.
+              {t('lang.functionality.desc2')}
             </Text>
           </FadeInSection>
         </Group>
@@ -259,11 +250,6 @@ export const Functionality = () => {
               fit={'contain'}
               src={Bag1}
               className={styles.functionality__img_bag}
-            />
-            <Image
-              fit={'contain'}
-              src={BagArrow}
-              className={styles.functionality__img_arrow}
             />
           </Group>
         </FadeInSection>
