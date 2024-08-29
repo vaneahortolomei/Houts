@@ -43,27 +43,7 @@ export const Circle = styled.div<{ animationDuration: string }>`
   background-color: #222027;
   position: absolute;
   cursor: pointer;
-  @media (min-width: 768px) {
-    width: 30px;
-    height: 30px;
-  }
-
-  animation: pulse ${({ animationDuration }) => animationDuration} infinite;
-
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.5);
-      opacity: 0.5;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
+  transition: transform 0.3s ease-in-out;
 
   &::before {
     content: '';
@@ -81,33 +61,60 @@ export const Circle = styled.div<{ animationDuration: string }>`
     }
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  @media (min-width: 768px) {
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    background-color: #222027;
-    animation: wave ${({ animationDuration }) => animationDuration} infinite;
   }
 
-  @keyframes wave {
-    0% {
-      transform: translate(-50%, -50%) scale(1);
-      opacity: 0.6;
-    }
-    50% {
-      transform: translate(-50%, -50%) scale(1.5);
-      opacity: 0.3;
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(2);
-      opacity: 0;
-    }
+  &:hover {
+    transform: scale(1.5);
+    opacity: 0.8;
   }
+
+  // animation: pulse ${({ animationDuration }) => animationDuration} infinite;
+  //
+  // @keyframes pulse {
+  //   0% {
+  //     transform: scale(1);
+  //     opacity: 1;
+  //   }
+  //   50% {
+  //     transform: scale(1.5);
+  //     opacity: 0.5;
+  //   }
+  //   100% {
+  //     transform: scale(1);
+  //     opacity: 1;
+  //   }
+  // }
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   width: 30px;
+  //   height: 30px;
+  //   border-radius: 50%;
+  //   background-color: #222027;
+  //   animation: wave ${({ animationDuration }) => animationDuration} infinite;
+  // }
+
+  // @keyframes wave {
+  //   0% {
+  //     transform: translate(-50%, -50%) scale(1);
+  //     opacity: 0.6;
+  //   }
+  //   50% {
+  //     transform: translate(-50%, -50%) scale(1.5);
+  //     opacity: 0.3;
+  //   }
+  //   100% {
+  //     transform: translate(-50%, -50%) scale(2);
+  //     opacity: 0;
+  //   }
+  // }
 `;
 
 const ImageWithDots: React.FC<Props> = ({

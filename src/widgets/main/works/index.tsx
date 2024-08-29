@@ -8,8 +8,7 @@ import {
   Image,
   SimpleGrid,
   Flex,
-  BackgroundImage,
-  Tooltip
+  BackgroundImage
 } from '@mantine/core';
 import styles from '@/widgets/main/works/Works.module.scss';
 import IconWorks1 from '@/assets/works/Icon-1.svg';
@@ -97,57 +96,32 @@ export const Works = () => {
         className={styles.grid}
       >
         {lineItems.map((item) => (
-          <>
-            {isResponsive ? (
-              <Flex className={styles.grid__item} key={item.id}>
-                <Box className={styles.flexWithLine}>
-                  <Image
-                    className={styles.iconWrapper}
-                    src={item.img}
-                    w={isResponsive ? 58 : 117}
-                    h={isResponsive ? 58 : 117}
-                  />
+          <Flex className={styles.grid__item} key={item.id}>
+            <Box className={styles.flexWithLine}>
+              <Image
+                className={styles.iconWrapper}
+                src={item.img}
+                w={isResponsive ? 58 : 75}
+                h={isResponsive ? 58 : 75}
+              />
+            </Box>
+            <Box className={styles.grid__textWrapper}>
+              <FadeInSection>
+                <Box className={styles.grid__innerBlock}>
+                  <Title
+                    className={styles.grid__title}
+                    fw={300}
+                    fz={isResponsive ? 18 : 20}
+                    mb={20}
+                    mt={20}
+                  >
+                    {item.title}
+                  </Title>
+                  <Text className={styles.grid__text}>{item.text}</Text>
                 </Box>
-                <Box className={styles.grid__textWrapper}>
-                  <FadeInSection>
-                    <Title
-                      className={styles.grid__title}
-                      c={'#222027'}
-                      fw={300}
-                      fz={isResponsive ? 18 : 20}
-                      mb={20}
-                      mt={20}
-                    >
-                      {item.title}
-                    </Title>
-                    <Text className={styles.grid__text}>{item.text}</Text>
-                  </FadeInSection>
-                </Box>
-              </Flex>
-            ) : (
-              <Flex className={styles.grid__item} key={item.id}>
-                <Tooltip
-                  multiline
-                  w={200}
-                  withArrow
-                  openDelay={300}
-                  transitionProps={{ transition: 'fade', duration: 300 }}
-                  label={item.text}
-                  color={'#222027'}
-                >
-                  <Box className={styles.flexWithLine}>
-                    <Image
-                      className={styles.iconWrapper}
-                      src={item.img}
-                      w={isResponsive ? 58 : 74}
-                      h={isResponsive ? 58 : 74}
-                    />
-                  </Box>
-                </Tooltip>
-                <Box className={styles.grid__textWrapper} />
-              </Flex>
-            )}
-          </>
+              </FadeInSection>
+            </Box>
+          </Flex>
         ))}
       </SimpleGrid>
     </section>

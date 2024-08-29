@@ -1,6 +1,6 @@
 import styles from '@/widgets/header/Header.module.scss';
 import { Group, NavLink } from '@mantine/core';
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import Logo from '@/assets/Logo.svg';
 import { useState } from 'react';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
@@ -10,7 +10,9 @@ import { useTranslation } from 'react-i18next';
 
 export const NavLinks = () => {
   const [active, setActive] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const isResponsive = useIsResponsive(1024);
+  const isResponsive1100 = useIsResponsive(1100);
   const { setDrawerOpen } = useContext(DrawerContext);
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
@@ -51,6 +53,15 @@ export const NavLinks = () => {
     }
   };
 
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 180);
+
+    return () => clearTimeout(timer);
+  }, [currentLanguage]);
+
   const mainItems = mainLinks.map((item, index) => {
     if (item.image) {
       return (
@@ -73,23 +84,24 @@ export const NavLinks = () => {
       );
     } else if (item.target) {
       return (
-        <NavLink<'a'>
-          label={item.label}
-          href={item.link}
-          target="_blank"
-          key={item.id}
-          className={styles.header__links_target}
-          active={index === active}
-          variant="subtle"
-          onClick={() => setDrawerOpen(false)}
-          style={{
-            width: !isResponsive
-              ? currentLanguage === 'de'
-                ? 172
-                : 140
-              : 'auto'
-          }}
-        />
+        <>
+          {!isResponsive1100 && (
+            <NavLink<'a'>
+              label={isLoading ? '' : item.label}
+              href={item.link}
+              target="_blank"
+              key={item.id}
+              className={styles.header__links_target}
+              active={index === active}
+              variant="subtle"
+              onClick={() => setDrawerOpen(false)}
+              style={{
+                width: 172,
+                padding: currentLanguage === 'en' ? '5px 35px' : '5px 25px'
+              }}
+            />
+          )}
+        </>
       );
     } else {
       return (

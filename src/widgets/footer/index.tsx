@@ -7,11 +7,13 @@ import {
   Title,
   Anchor,
   Image,
-  Flex
+  Flex,
+  Box
 } from '@mantine/core';
 import Facebook from '@/assets/footer/Facebook.svg';
 import Instagram from '@/assets/footer/Instagram.svg';
 import Linkedin from '@/assets/footer/Linkedin.svg';
+import DesktopBag from '@/assets/top/top.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import { useTranslation } from 'react-i18next';
 
@@ -53,7 +55,7 @@ export const Footer = () => {
         <Group
           justify="center"
           pt={50}
-          pb={100}
+          // pb={100}
           style={{ flexDirection: 'column' }}
         >
           <Title fz={isResponsive ? 27 : 50} c={'#fff'} fw={400}>
@@ -69,9 +71,42 @@ export const Footer = () => {
               </Anchor>
             ))}
           </Flex>
-          <Text fz={16} c={'#fff'}>
-            © Houts | Impressum
-          </Text>
+          <Group c={'#fff'} gap={10}>
+            <Text fz={16}>© Houts</Text> |
+            <Anchor
+              fz={16}
+              href="https://mantine.dev/"
+              target="_blank"
+              style={{ color: '#fff' }}
+            >
+              Terms of service
+            </Anchor>{' '}
+            |
+            <Anchor
+              fz={16}
+              href="https://mantine.dev/"
+              target="_blank"
+              style={{ color: '#fff' }}
+            >
+              Privacy policy
+            </Anchor>
+          </Group>
+          <Box
+            style={{ position: 'relative', maxWidth: '350px', height: 'auto' }}
+          >
+            <Image maw={350} src={DesktopBag} style={{ display: 'block' }} />
+            <Box
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                backgroundColor: '#222027ba',
+                zIndex: 1
+              }}
+            />
+          </Box>
         </Group>
       </Container>
     </AppShell.Footer>

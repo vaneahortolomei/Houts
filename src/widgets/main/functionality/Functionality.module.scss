@@ -52,28 +52,37 @@
             }
         }
         &_f {
-            width: auto;
+            width: 100%;
             order: 1;
             flex: auto;
             filter: grayscale(75%);
+            height: 400px;
             @media(min-width: 768px){
+                height: 600px;
                 max-width: 49.8%;
                 order: 0;
+            }
+            @media(min-width: 1025px){
                 border-top-left-radius: 30px;
                 border-bottom-left-radius: 30px;
             }
         }
         &_s {
-            width: auto;
+            width: 100%;
             order: 0;
             flex: auto;
             filter: grayscale(75%);
+            height: 400px;
             @media(min-width: 768px){
+                height: 600px;
                 max-width: 50%;
                 order: 1;
+            }
+            @media(min-width: 1025px){
                 border-top-right-radius: 30px;
                 border-bottom-right-radius: 30px;
             }
+
         }
     }
     &__bagGroup {
@@ -97,7 +106,6 @@
             margin-left: 0;
             margin-right: 0;
         }
-
     }
     &__laptopsContainer {
         position: relative;

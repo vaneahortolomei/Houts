@@ -5,12 +5,10 @@
     display: flex;
     align-items: center;
     transition: all 0.3s;
-    padding: 0 20px 0 0;
     @media (min-width: 1025px) {
         margin: 20px 0 0;
         position: static;
         box-shadow: none;
-        padding: 0 20px 0 0;
     }
     &__lang {
         font-size: 13px;
@@ -18,6 +16,9 @@
         border-radius: 17px;
         padding: 5px;
         width: 50px;
+        @media(min-width: 1025px){
+            margin-left: 5px;
+        }
         &:hover {
             background-color: transparent;
         }
@@ -42,6 +43,7 @@
         color: #222027;
         font-size: 13px;
         font-weight: 500;
+        transition: 0.3s;
         @media (min-width: 1025px) {
             width: auto;
         }
@@ -54,8 +56,10 @@
             text-decoration: underline;
         }
         &_target{
-            padding: 5px 25px;
+            padding-top: 5px;
+            padding-bottom: 5px;
             display: flex;
+            height: 39px;
             justify-content: center;
             align-items: center;
             border-radius: 46px;
@@ -84,7 +88,7 @@
         justify-content: flex-start;
         @media (min-width: 1025px) {
             display: flex;
-            gap: 11px;
+            gap: 20px;
             align-items: center;
             justify-content: center;
         }
@@ -95,6 +99,9 @@
             gap: 50px;
         }
         @media (min-width: 1550px) {
+            gap: 80px;
+        }
+        @media (min-width: 1700px) {
             gap: 100px;
         }
     }
