@@ -99,7 +99,7 @@ export const Journey = () => {
           </FadeInSection>
         </Container>
       </section>
-      <section style={{ backgroundColor: '#fff' }}>
+      <section className={styles.bg}>
         <Container size="xl">
           <Box
             style={{

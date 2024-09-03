@@ -7,7 +7,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<BaseTemplate />} />
+        <Route path="/*" element={<BaseTemplate />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

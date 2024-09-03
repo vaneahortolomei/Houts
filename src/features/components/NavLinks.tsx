@@ -21,7 +21,7 @@ export const NavLinks = () => {
     { id: 0, link: 'about', label: `${t('lang.nav.about')}` },
     { id: 1, link: 'works', label: `${t('lang.nav.works')}` },
     { id: 2, link: 'functionality', label: `${t('lang.nav.functionality')}` },
-    { id: 3, link: '#', label: 'Logo', image: Logo },
+    { id: 3, link: '', label: 'Logo', image: Logo },
     { id: 4, link: 'journey', label: `${t('lang.nav.journey')}` },
     { id: 5, link: 'sustainability', label: `${t('lang.nav.sustainability')}` },
     {
@@ -68,7 +68,7 @@ export const NavLinks = () => {
         <>
           {!isResponsive && (
             <a
-              href={`/${item.link}`}
+              href={`/`}
               key={item.id}
               className={styles.header__links}
               onClick={() => setDrawerOpen(false)}
