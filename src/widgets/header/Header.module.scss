@@ -29,6 +29,7 @@
         padding: 20px;
         display: flex;
         align-items: center;
+        z-index: 9;
         &_logo {
             flex: 1;
             display: flex;
@@ -44,12 +45,16 @@
         font-size: 13px;
         font-weight: 500;
         transition: 0.3s;
+        z-index: 9;
         @media (min-width: 1025px) {
             width: auto;
         }
         &:hover {
             color: #222027d4;
             background-color: transparent;
+            @media(min-width: 1025px){
+                text-decoration: underline;
+            }
         }
 
         &[data-active] {
@@ -86,6 +91,7 @@
     }
     &__list {
         justify-content: flex-start;
+        z-index: 9;
         @media (min-width: 1025px) {
             display: flex;
             gap: 20px;

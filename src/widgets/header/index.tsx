@@ -16,14 +16,14 @@ export const Header = () => {
 
   const [scroll] = useWindowScroll();
   const { i18n } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = useState('de');
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
 
   useEffect(() => {
     i18n.changeLanguage(selectedLanguage);
   }, [selectedLanguage, i18n]);
 
   const toggleLanguage = () => {
-    const newLanguage = selectedLanguage === 'en' ? 'de' : 'en';
+    const newLanguage = selectedLanguage === 'de' ? 'en' : 'de';
     setSelectedLanguage(newLanguage);
   };
 
@@ -31,10 +31,11 @@ export const Header = () => {
     <AppShell.Header
       className={styles.header}
       style={{
-        boxShadow:
-          scroll.y > 10
+        boxShadow: isResponsive
+          ? scroll.y > 10
             ? '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)'
             : 'none'
+          : ''
       }}
     >
       {isResponsive && (
