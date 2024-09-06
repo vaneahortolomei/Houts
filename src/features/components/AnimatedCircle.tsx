@@ -19,6 +19,7 @@ interface CircleData {
 interface Props {
   descriptions: Description[];
   containerStyles: React.CSSProperties;
+  containerInsideGroupStyles?: React.CSSProperties;
   imgStyles: React.CSSProperties;
   descriptionStyles: React.CSSProperties;
   descTextStyles: React.CSSProperties;
@@ -120,6 +121,7 @@ export const Circle = styled.div<{ animationDuration: string }>`
 const ImageWithDots: React.FC<Props> = ({
   containerLuggageGroupStyles,
   containerGroupStyles,
+  containerInsideGroupStyles,
   descriptions,
   containerStyles,
   imgStyles,
@@ -174,7 +176,8 @@ const ImageWithDots: React.FC<Props> = ({
           position: 'relative',
           flex: 1,
           ...containerGroupStyles,
-          ...containerLuggageGroupStyles
+          ...containerLuggageGroupStyles,
+          ...containerInsideGroupStyles
         }}
       >
         <img src={img} alt={imgTitle} style={imgStyles} />
