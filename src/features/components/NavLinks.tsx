@@ -96,7 +96,7 @@ export const NavLinks = () => {
               variant="subtle"
               onClick={() => setDrawerOpen(false)}
               style={{
-                width: 172,
+                width: 175,
                 padding: currentLanguage === 'en' ? '5px 35px' : '5px 25px'
               }}
             />

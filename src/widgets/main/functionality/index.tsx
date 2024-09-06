@@ -14,6 +14,7 @@ import BackPack from '@/assets/functionality/Backpack.png';
 import ShoulderBag from '@/assets/functionality/Shoulder-bag.png';
 import Bag1 from '@/assets/functionality/Bild-eng.png';
 import BagFull from '@/assets/functionality/houts-bag.png';
+import BagInside from '@/assets/functionality/Inside.png';
 import ImageWithDots from '@/features/components/AnimatedCircle';
 import BagLug from '@/assets/functionality/BagLug.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
@@ -116,6 +117,46 @@ export const Functionality = () => {
     marginBottom: isResponsive ? '40px' : '100px',
     padding: '0 20px',
     order: isResponsive ? 1 : 0
+  };
+
+  /** Luggage Inside section styles */
+
+  const luggageInsideDescriptions = [
+    {
+      title: `${t('lang.functionality.luggageInside.inside.title')}`,
+      description: `${t('lang.functionality.luggageInside.inside.desc')}`
+    }
+  ];
+
+  const luggageInsideCircles = [
+    { top: '30%', left: '58%', animationDuration: '2.2s' }
+  ];
+
+  const containerInsideStyles: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: isResponsive ? 'column' : 'row',
+    alignItems: isResponsive ? 'baseline' : 'center',
+    justifyContent: 'flex-start'
+  };
+
+  const imgInsideStyles: React.CSSProperties = {
+    width: isResponsive ? 'auto' : '75%',
+    height: 'auto'
+  };
+
+  const descriptionInsideLuggageStyles: React.CSSProperties = {
+    flex: isResponsive ? 'none' : '0 1 70%',
+    marginRight: isResponsive ? '0' : '100px',
+    marginTop: isResponsive ? '50px' : '120px',
+    marginBottom: isResponsive ? '40px' : '100px',
+    padding: '0 20px',
+    alignSelf: 'center',
+    order: 1
+  };
+
+  const containerInsideGroupStyles: React.CSSProperties = {
+    width: isResponsive ? '70%' : 'auto',
+    flex: '0 1 100%'
   };
 
   /** Luggage section styles */
@@ -286,6 +327,23 @@ export const Functionality = () => {
             descTextStyles={descTextStyles}
             circles={circles}
             img={BagFull}
+            imgTitle={'Transformer'}
+          />
+        </Box>
+      </FadeInSection>
+
+      <FadeInSection>
+        <Box mt={100} mb={isResponsive ? 40 : 150}>
+          <ImageWithDots
+            descriptions={luggageInsideDescriptions}
+            containerStyles={containerInsideStyles}
+            descriptionStyles={descriptionInsideLuggageStyles}
+            containerInsideGroupStyles={containerInsideGroupStyles}
+            imgStyles={imgInsideStyles}
+            titleTextStyles={titleTextStyles}
+            descTextStyles={descTextStyles}
+            circles={luggageInsideCircles}
+            img={BagInside}
             imgTitle={'Transformer'}
           />
         </Box>

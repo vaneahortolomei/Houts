@@ -53,6 +53,12 @@
           "desc": "This carry case offers ample space for documents, tablets, and laptops.\n\nIts sturdy exterior, reinforced zippers, and durable padding inside the pockets provide reliable protection for your electronics and other belongings. Ideal for everyday use and travel."
         }
       },
+      "luggageInside": {
+        "inside": {
+          "title": "ORGANIZED AND READY TO GO",
+          "desc": "This travel suitcase part showcases a well-organized packing layout with neatly folded clothes. The compact design helps you maximize space while keeping your garments wrinkle-free and easily accessible. Featuring different compartments, it ensures every item has its place. \n\nPerfect for short trips or extended travel, this packing method saves time and minimizes hassle. The suitcase accommodates various clothing types and fits effortlessly into overhead compartments or car trunks."
+        }
+      },
       "luggageDesc": {
         "instant": {
           "title": "INSTANT VERTICAL LAPTOP ACCESS",

@@ -53,6 +53,12 @@
           "desc": "Diese Tragetasche bietet ausreichend Platz für Dokumente, Tablets und Laptops. Mit ihrem robusten äußeren, verstärkten Reißverschlüssen und strapazierfähiger Polsterung in den Taschen schützt sie Ihre Elektronik und andere Wertsachen zuverlässig. Perfekt für den täglichen Gebrauch und auf Reisen."
         }
       },
+      "luggageInside": {
+        "inside": {
+          "title": "ORGANISIERT UND ABFAHRBEREIT",
+          "desc": "Dieser Reisekoffer Seite zeigt ein gut organisiertes Packlayout mit ordentlich gefalteten Kleidungsstücken. Das kompakte Design hilft dabei, den Platz optimal zu nutzen, während Ihre Kleidung knitterfrei und leicht zugänglich bleibt. \n\nDank verschiedener Fächer findet jedes Teil s\neinen Platz. Ideal für Kurztrips oder längere Reisen spart diese Packmethode Zeit und reduziert unnötigen Aufwand. Der Koffer bietet Platz für verschiedene Kleidungsarten und passt problemlos in Handgepäckfächer oder Autokofferräume."
+        }
+      },
       "luggageDesc": {
         "instant": {
           "title": "DEIN LAPTOP IMMER GRIFFBEREIT",

@@ -17,67 +17,67 @@ export const Reviews = () => {
   const data = [
     {
       image: Alex,
-      text: '“I really like the medullary part of the bag “',
+      text: '“ I really like the modular part of the bag and also the sustainability concept. ”',
       title: 'ALEX BAUER',
       anchor: 'https://www.linkedin.com/in/alexander-bauer-538b87138/'
     },
     {
       image: David,
-      text: '“Business casual and modern, i like it “',
+      text: '“Saving 30 minutes every day with a well-designed bag adds up to days of extra productivity as a CEO over the year“',
       title: 'DAVID STRITTMATTER',
       anchor: 'https://www.linkedin.com/in/david-strittmatter/'
     },
     {
       image: Max,
-      text: '“ One of the most amazing modular Bag i’ve  ever seen “',
+      text: '“ Houts is all about making fashion stylish and sustainable. If you want to make a difference, than this bag is for you.”',
       title: 'DR. MAXIMILIAN BEICHERT',
       anchor: 'https://www.linkedin.com/in/maximilian-beichert/'
     },
     {
       image: John,
-      text: '“ Travel and work in one bag, exactly what i was looking for. Modern Design and sustainable”',
+      text: '“ Exceptional product design. I love it. ”',
       title: 'JOHN ACHIM HOLZHAUER',
       anchor: 'https://www.linkedin.com/in/john-achim-holzhauer/'
     },
     {
       image: Neeraj,
-      text: '“ Very modern Design and useful use cases. I’ve been already and must to say that for an apple leather bag  it looks pretty good, “',
+      text: '“ The perfect bag for all who dare to see big dreams ”',
       title: 'NEERAJ KUMAR',
       anchor: 'https://www.linkedin.com/in/neeraj-kumar-11852719/'
     },
     {
       image: Tudor,
-      text: '“ Never knew about apple vegan leathe and  have to say i got really impressed, well done! “',
+      text: '“ Never knew about apple vegan leather and have to say I’m really impressed. Well done!”',
       title: 'TUDOR BAIDOC',
       anchor: 'https://www.linkedin.com/in/baidoc/'
     },
     {
       image: David,
-      text: '“Business casual and modern, i like it “',
+      text: '“Saving 30 minutes every day with a well-designed bag adds up to days of extra productivity as a CEO over the year“',
       title: 'DAVID STRITTMATTER',
       anchor: 'https://www.linkedin.com/in/david-strittmatter/'
     },
     {
       image: Max,
-      text: '“ One of the most amazing modular Bag i’ve  ever seen “',
+      text: '“ Houts is all about making fashion stylish and sustainable. If you want to make a difference, than this bag is for you.”',
       title: 'DR. MAXIMILIAN BEICHERT',
       anchor: 'https://www.linkedin.com/in/maximilian-beichert/'
     },
     {
       image: John,
-      text: '“ Travel and work in one bag, exactly what i was looking for. Modern Design and sustainable”',
+      text: '“ Exceptional product design. I love it. ”',
       title: 'JOHN ACHIM HOLZHAUER',
       anchor: 'https://www.linkedin.com/in/john-achim-holzhauer/'
     },
     {
       image: Neeraj,
-      text: '“ Very modern Design and useful use cases. I’ve been already and must to say that for an apple leather bag  it looks pretty good, “',
+      text: '“ The perfect bag for all who dare to see big dreams ”',
       title: 'NEERAJ KUMAR',
       anchor: 'https://www.linkedin.com/in/neeraj-kumar-11852719/'
     },
     {
       image: Tudor,
-      text: '“ Never knew about apple vegan leathe and  have to say i got really impressed, well done! “',
+      text: '“ Never knew about apple vegan leather and have to say I’m really impressed. Well done!”',
       title: 'TUDOR BAIDOC',
       anchor: 'https://www.linkedin.com/in/baidoc/'
     }
