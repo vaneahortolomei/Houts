@@ -8,7 +8,11 @@ import { DrawerContext } from '@/features/components/DrawerContext';
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export const NavLinks = () => {
+interface MainPageType {
+  isMainPage?: boolean;
+}
+
+export const NavLinks: React.FC<MainPageType> = ({ isMainPage }) => {
   const [active, setActive] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const isResponsive = useIsResponsive(1024);
@@ -16,6 +20,16 @@ export const NavLinks = () => {
   const { setDrawerOpen } = useContext(DrawerContext);
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
+
+  const mainLinksForEmptyHeader = [
+    { id: 1, link: '', label: 'Logo', image: Logo },
+    {
+      id: 2,
+      link: 'https://forms.monday.com/forms/d78eb79b6a002fabefb77e0e504f2592?r=use1',
+      label: `${t('lang.nav.label')}`,
+      target: true
+    }
+  ];
 
   const mainLinks = [
     { id: 0, link: 'about', label: `${t('lang.nav.about')}` },
@@ -61,6 +75,48 @@ export const NavLinks = () => {
 
     return () => clearTimeout(timer);
   }, [currentLanguage]);
+
+  const mainEmptyLinks = mainLinksForEmptyHeader.map((item, index) => {
+    if (item.image) {
+      return (
+        <>
+          <a
+            href={`/`}
+            key={item.id}
+            className={styles.header__links}
+            onClick={() => setDrawerOpen(false)}
+          >
+            <img
+              src={item.image}
+              alt={item.label}
+              className={styles.header__logo}
+            />
+          </a>
+        </>
+      );
+    } else {
+      return (
+        <>
+          {!isResponsive1100 && (
+            <NavLink<'a'>
+              label={isLoading ? '' : item.label}
+              href={item.link}
+              target="_blank"
+              key={item.id}
+              className={styles.header__links_target}
+              active={index === active}
+              variant="subtle"
+              onClick={() => setDrawerOpen(false)}
+              style={{
+                width: 175,
+                padding: currentLanguage === 'en' ? '5px 35px' : '5px 25px'
+              }}
+            />
+          )}
+        </>
+      );
+    }
+  });
 
   const mainItems = mainLinks.map((item, index) => {
     if (item.image) {
@@ -122,7 +178,7 @@ export const NavLinks = () => {
 
   return (
     <Group justify="center" className={styles.header__list}>
-      {mainItems}
+      {isMainPage ? mainItems : mainEmptyLinks}
     </Group>
   );
 };
