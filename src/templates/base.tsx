@@ -45,7 +45,7 @@ export const BaseTemplate = () => {
       setIsLoading(true);
       const timer2 = setTimeout(() => {
         setIsOverlayVisible(false);
-      }, 100);
+      }, 110);
 
       return () => clearTimeout(timer2);
     }, 2000);
