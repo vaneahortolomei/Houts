@@ -19,12 +19,16 @@ import {
   mobileNavbar
 } from '@/shared/constants';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 
 export const BaseTemplate = () => {
   const [scroll, scrollTo] = useWindowScroll();
   const isResponsive = useIsResponsive(1024);
   const [isLoading, setIsLoading] = useState(true);
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
+  const [isMainPage, setIsMainPage] = useState(false);
+  const location = useLocation();
+
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
 
@@ -47,7 +51,18 @@ export const BaseTemplate = () => {
     }, 2000);
 
     return () => clearTimeout(timer1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setIsMainPage(true);
+    } else {
+      setIsMainPage(false);
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]);
 
   return (
     <>
@@ -105,8 +120,8 @@ export const BaseTemplate = () => {
           }}
           sx={{ overflow: isResponsive ? 'auto' : 'hidden' }}
         >
-          <Header />
-          <Navbar />
+          <Header isMainPage={isMainPage} />
+          <Navbar isMainPage={isMainPage} />
           <Main />
           <Footer />
           <Affix position={{ bottom: 20, right: 20 }} zIndex={99}>

@@ -6,7 +6,11 @@ import { NavLinks } from '@/features/components/NavLinks';
 import Logo from '@/assets/Logo.svg';
 import { headerMobileHeight } from '@/shared/constants';
 
-export const Navbar = () => {
+interface MainPageType {
+  isMainPage?: boolean;
+}
+
+export const Navbar: React.FC<MainPageType> = ({ isMainPage }) => {
   const { isDrawerOpen, setDrawerOpen } = useContext(DrawerContext);
   const isResponsive = useIsResponsive(1024);
 
@@ -48,7 +52,7 @@ export const Navbar = () => {
               }}
             >
               <AppShell.Section>
-                <NavLinks />
+                <NavLinks isMainPage={isMainPage} />
               </AppShell.Section>
             </ScrollArea>
           </AppShell.Navbar>

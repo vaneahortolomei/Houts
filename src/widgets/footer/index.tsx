@@ -10,7 +10,7 @@ import {
   Flex,
   Box
 } from '@mantine/core';
-import Facebook from '@/assets/footer/Facebook.svg';
+// import Facebook from '@/assets/footer/Facebook.svg';
 import Instagram from '@/assets/footer/Instagram.svg';
 import Linkedin from '@/assets/footer/Linkedin.svg';
 import DesktopBag from '@/assets/top/top.png';
@@ -22,17 +22,17 @@ export const Footer = () => {
   const { t } = useTranslation();
 
   const socialLinks = [
-    {
-      id: 1,
-      title: 'Facebook',
-      src: Facebook,
-      href: '#'
-    },
+    // {
+    //   id: 1,
+    //   title: 'Facebook',
+    //   src: Facebook,
+    //   href: '#'
+    // },
     {
       id: 2,
       title: 'Instagram',
       src: Instagram,
-      href: '#'
+      href: 'https://www.instagram.com/?next=%2F'
     },
     {
       id: 3,
@@ -73,22 +73,12 @@ export const Footer = () => {
           </Flex>
           <Group c={'#fff'} gap={10}>
             <Text fz={16}>© Houts</Text> |
-            <Anchor
-              fz={16}
-              href="https://mantine.dev/"
-              target="_blank"
-              style={{ color: '#fff' }}
-            >
-              Terms of service
+            <Anchor fz={16} href="/terms" style={{ color: '#fff' }}>
+              {t('lang.footer.links.terms')}
             </Anchor>{' '}
             |
-            <Anchor
-              fz={16}
-              href="https://mantine.dev/"
-              target="_blank"
-              style={{ color: '#fff' }}
-            >
-              Privacy policy
+            <Anchor fz={16} href="/policy" style={{ color: '#fff' }}>
+              {t('lang.footer.links.policy')}
             </Anchor>
           </Group>
           <Box

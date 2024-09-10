@@ -167,7 +167,11 @@
     },
     "footer": {
       "title": "SUPPORT US",
-      "desc": "on all Social Media platforms and follow the path to the launch of\n            Houts!"
+      "desc": "on all Social Media platforms and follow the path to the launch of\n            Houts!",
+      "links": {
+        "terms": "Terms of service",
+        "policy": "Privacy policy"
+      }
     },
     "nav": {
       "about": "ABOUT HOUTS",
@@ -180,6 +184,107 @@
     "affix": {
       "label": "JOIN THE WAITING LIST",
       "scroll": "SCROLL TO TOP"
+    },
+    "pages": {
+      "termsPage": {
+        "title": "TERMS OF SERVICE",
+        "information": {
+          "title": "INFORMATION ACCORDING TO § 5 TMG:\n\n",
+          "company": "Company: Houts Group OÜ",
+          "owner": "Owner: Alexandru Plecan",
+          "legalForm": "Legal form: A limited liability company (osaühing or OÜ) is a company whose share capital is divided into shares of the limited liability company.",
+          "office": "Registered office: Estonia"
+        },
+        "contact": {
+          "title": "CONTACT:",
+          "phone": "Phone: +49 15772098439",
+          "email": "Email: ap@houts.de",
+          "website": "Website: www.houts.de"
+        },
+        "registration": {
+          "title": "REGISTRATION ENTRY:",
+          "entry": "Entry in the commercial register.",
+          "court": "Register court: Tartu Maakohtu registriosakond",
+          "number": "Registration number: Ä 50201695"
+        },
+        "id": "VAT IDENTIFICATION NUMBER ACCORDING TO § 27 A OF THE VAT ACT: DE352471767",
+        "dispute": {
+          "title": "DISPUTE RESOLUTION:",
+          "text": "The European Commission provides a platform for online dispute resolution (ODR):\nhttps://ec.europa.eu/consumers/odr.\nOur email address can be found above in the legal notice.\nWe are neither willing nor obliged to participate in dispute resolution procedures before a consumer arbitration board."
+        },
+        "liabilityForContent": {
+          "title": "LIABILITY FOR CONTENT:",
+          "text": "As a service provider, we are responsible for our own content on these pages according to § 7 paragraph 1 TMG and general laws. However, according to §§ 8 to 10 TMG, we are not obliged as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.\nObligations to remove or block the use of information under general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific violation of the law. Upon becoming aware of such legal violations, we will remove these contents immediately."
+        },
+        "liabilityForLinks": {
+          "title": "LIABILITY FOR LINKS:",
+          "text": "Our offer contains links to external third-party websites, the content of which we have no influence over. Therefore, we cannot assume any responsibility for these external contents. The respective provider or operator of the linked sites is always responsible for their content. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. Permanent control of the linked pages' content is, however, unreasonable without specific indications of a legal violation. Upon becoming aware of legal violations, we will remove such links immediately."
+        },
+        "copyright": {
+          "title": "COPYRIGHT:",
+          "text": "The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any kind of utilization outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you still become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately."
+        }
+      },
+      "policyPage": {
+        "title": "PRIVACY POLICY",
+        "text": "Thank you for trusting Houts. The protection of your personal data is very important to us, and we are committed to safeguarding your information. This privacy policy explains how we collect, use, and protect your data when you visit our website https://www.houts.de (the “Website”).",
+        "data": {
+          "title": "DATA CONTROLLER FOR PROCESSING OF PERSONAL DATA",
+          "text": "Your personal data is processed by Creatorama SRL, the owner and operator of the website (“HOUTS”). This privacy policy complies with the requirements of the EU General Data Protection Regulation (GDPR) and relevant data protection laws."
+        },
+        "collectData": {
+          "title": "WHAT DATA DO WE COLLECT?",
+          "text": "Personal Data Provided by You: We collect personal data that you voluntarily provide when you register on our website, sign up for newsletters, participate in surveys, or contact customer support. This includes, but is not limited to, your name, address, email address, phone number, and payment information.",
+          "text1": "Technologically Collected Information: We collect data through cookies and similar technologies to enhance your browsing experience. This includes device information, IP addresses, geolocation data (if enabled), and your browsing behavior."
+        },
+        "useData": {
+          "title": "HOW DO WE USE YOUR DATA?",
+          "subtitle": "We use your personal data to:",
+          "list": {
+            "item": "Process orders and deliver products.",
+            "item1": "Respond to your inquiries and provide customer support.",
+            "item2": "Improve our services and personalize your shopping experience.",
+            "item3": "Prevent fraud and monitor security risks.",
+            "item4": "Comply with legal obligations."
+          }
+        },
+        "sharing": {
+          "title": "SHARING YOUR DATA\n\n",
+          "subtitle": "We may share your personal data with the following third parties:",
+          "list": {
+            "item": "Service Providers: Third-party providers who assist us with payment processing, order shipping, and data analysis (e.g., WooCommerce, Google Analytics, UPS, DHL).",
+            "item1": "Legal Obligations: We may disclose your data to comply with legal obligations, regulations, or legal processes.",
+            "item2": "Business Transfers: In the event of a merger, sale, or acquisition, your data may be transferred as part of the transaction."
+          }
+        },
+        "right": {
+          "title": "YOUR RIGHTS AND CHOICES",
+          "subtitle": "You have the right to:",
+          "list": {
+            "item": "Access, correct, or delete your personal data.",
+            "item1": "Opt-out of receiving marketing communications.",
+            "item2": "Request deactivation of your account.",
+            "item3": "Exercise your “right to be forgotten” by contacting us."
+          },
+          "footer": "To exercise any of these rights, please send an email to ap@houts.de.w"
+        },
+        "dataSecurity": {
+          "title": "DATA SECURITY",
+          "text": "We use industry-standard security measures, including SSL encryption, to protect your personal data. However, no security system is impenetrable, and we cannot guarantee the absolute security of your data."
+        },
+        "privacyProtection": {
+          "title": "CHILDREN'S PRIVACY PROTECTION",
+          "text": "Our website is intended for a general audience. We do not knowingly collect personal data from children under the age of 14. Users under the age of 18 should use the website only with the consent of a parent or guardian."
+        },
+        "changes": {
+          "title": "CHANGES TO THIS STATEMENT",
+          "text": "We may update this privacy policy at any time. Changes will take effect immediately upon being posted on our website. Please review this statement regularly to stay informed about any changes."
+        },
+        "contact": {
+          "title": "CONTACT",
+          "text": "If you have any questions or concerns about our privacy policy, please contact our Data Protection Officer at ap@houts.de."
+        }
+      }
     }
   }
 }

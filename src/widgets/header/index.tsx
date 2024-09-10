@@ -10,7 +10,11 @@ import Logo from '@/assets/Logo.svg';
 import { useWindowScroll } from '@mantine/hooks';
 import { useTranslation } from 'react-i18next';
 
-export const Header = () => {
+interface MainPageType {
+  isMainPage?: boolean;
+}
+
+export const Header: React.FC<MainPageType> = ({ isMainPage }) => {
   const { setDrawerOpen } = useContext(DrawerContext);
   const isResponsive = useIsResponsive(1024);
 
@@ -28,47 +32,64 @@ export const Header = () => {
   };
 
   return (
-    <AppShell.Header
-      className={styles.header}
-      style={{
-        boxShadow: isResponsive
-          ? scroll.y > 10
-            ? '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)'
-            : 'none'
-          : ''
-      }}
-    >
-      {isResponsive && (
-        <Box className={styles.header__mobile}>
-          <Button
-            variant="subtle"
-            className={styles.header__lang}
-            onClick={toggleLanguage}
-          >
-            {selectedLanguage === 'en' ? 'DE' : 'EN'}
-          </Button>
-          <Box className={styles.header__mobile_logo}>
-            <Image src={Logo} h={19} w={123} />
-          </Box>
-          <Burger
-            aria-label="Toggle navigation"
-            size="md"
-            onClick={() => setDrawerOpen(true)}
-          />
-        </Box>
+    <>
+      {isMainPage ? (
+        <AppShell.Header
+          className={styles.header}
+          style={{
+            boxShadow: isResponsive
+              ? scroll.y > 10
+                ? '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)'
+                : 'none'
+              : ''
+          }}
+        >
+          {isResponsive && (
+            <Box className={styles.header__mobile}>
+              <Button
+                variant="subtle"
+                className={styles.header__lang}
+                onClick={toggleLanguage}
+              >
+                {selectedLanguage === 'en' ? 'DE' : 'EN'}
+              </Button>
+              <Box className={styles.header__mobile_logo}>
+                <Image src={Logo} h={19} w={123} />
+              </Box>
+              <Burger
+                aria-label="Toggle navigation"
+                size="md"
+                onClick={() => setDrawerOpen(true)}
+              />
+            </Box>
+          )}
+          {!isResponsive && (
+            <Container fluid style={{ display: 'flex' }}>
+              <NavLinks isMainPage={isMainPage} />
+              <Button
+                variant="subtle"
+                className={styles.header__lang}
+                onClick={toggleLanguage}
+              >
+                {selectedLanguage === 'en' ? 'DE' : 'EN'}
+              </Button>
+            </Container>
+          )}
+        </AppShell.Header>
+      ) : (
+        <AppShell.Header className={styles.emptyHeader}>
+          <Container fluid maw={'1500px'} style={{ display: 'flex' }}>
+            <NavLinks isMainPage={isMainPage} />
+            <Button
+              variant="subtle"
+              className={styles.header__lang}
+              onClick={toggleLanguage}
+            >
+              {selectedLanguage === 'en' ? 'DE' : 'EN'}
+            </Button>
+          </Container>
+        </AppShell.Header>
       )}
-      {!isResponsive && (
-        <Container fluid style={{ display: 'flex' }}>
-          <NavLinks />
-          <Button
-            variant="subtle"
-            className={styles.header__lang}
-            onClick={toggleLanguage}
-          >
-            {selectedLanguage === 'en' ? 'DE' : 'EN'}
-          </Button>
-        </Container>
-      )}
-    </AppShell.Header>
+    </>
   );
 };
