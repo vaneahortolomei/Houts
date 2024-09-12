@@ -41,7 +41,8 @@ export const Footer = () => {
       style={{
         position: 'relative',
         backgroundColor: '#222027',
-        height: '100%'
+        height: '100%',
+        zIndex: 10
       }}
     >
       <Container size="xl">
@@ -89,9 +90,14 @@ export const Footer = () => {
       </Container>
       <Text
         c={'#fff'}
-        style={{ position: 'absolute', bottom: '20px', right: '20px' }}
+        style={{
+          position: 'absolute',
+          bottom: '20px',
+          left: '20px',
+          zIndex: 10
+        }}
       >
-        developed by{' '}
+        Developed by{' '}
         <Anchor
           target="_blank"
           fz={16}

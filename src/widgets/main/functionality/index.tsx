@@ -80,7 +80,7 @@ export default AnimatedLine;
 export const Functionality = () => {
   const isResponsive = useIsResponsive(1024);
   const isResponsive1300 = useIsResponsive(1300);
-  const autoplay = useRef(Autoplay({ delay: 4000 }));
+  const autoplay = useRef(Autoplay({ delay: 3500 }));
   const { t } = useTranslation();
 
   const descriptions = [
