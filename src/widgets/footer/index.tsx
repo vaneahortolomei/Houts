@@ -10,7 +10,6 @@ import {
   Flex,
   Box
 } from '@mantine/core';
-// import Facebook from '@/assets/footer/Facebook.svg';
 import Instagram from '@/assets/footer/Instagram.svg';
 import Linkedin from '@/assets/footer/Linkedin.svg';
 import DesktopBag from '@/assets/top/top.png';
@@ -22,17 +21,11 @@ export const Footer = () => {
   const { t } = useTranslation();
 
   const socialLinks = [
-    // {
-    //   id: 1,
-    //   title: 'Facebook',
-    //   src: Facebook,
-    //   href: '#'
-    // },
     {
       id: 2,
       title: 'Instagram',
       src: Instagram,
-      href: 'https://www.instagram.com/?next=%2F'
+      href: 'https://www.instagram.com/houts_bag?igsh=cGs1dGhlaTdmazVt'
     },
     {
       id: 3,
@@ -46,18 +39,13 @@ export const Footer = () => {
     <AppShell.Footer
       id="support"
       style={{
-        position: 'static',
+        position: 'relative',
         backgroundColor: '#222027',
         height: '100%'
       }}
     >
       <Container size="xl">
-        <Group
-          justify="center"
-          pt={50}
-          // pb={100}
-          style={{ flexDirection: 'column' }}
-        >
+        <Group justify="center" pt={50} style={{ flexDirection: 'column' }}>
           <Title fz={isResponsive ? 27 : 50} c={'#fff'} fw={400}>
             {t('lang.footer.title')}
           </Title>
@@ -99,6 +87,22 @@ export const Footer = () => {
           </Box>
         </Group>
       </Container>
+      <Text
+        c={'#fff'}
+        style={{ position: 'absolute', bottom: '20px', right: '20px' }}
+      >
+        developed by{' '}
+        <Anchor
+          target="_blank"
+          fz={16}
+          fw={700}
+          href="https://www.linkedin.com/in/ion-hortolomei-56aa921a6/"
+          style={{ color: '#5B5A5F' }}
+        >
+          {' '}
+          I.H.
+        </Anchor>
+      </Text>
     </AppShell.Footer>
   );
 };

@@ -20,7 +20,30 @@
             font-size: 20px;
         }
     }
+    &__carousel_desc {
+        flex: 1 1 100%;
+        padding: 30px 20px 0;
+        @media(min-width: 1025px){
+            padding: 30px 40px 0;
+        }
+    }
+    &__carousel_desc_text {
+        @media(min-width: 2000px){
+            width: 700px;
+        }
+    }
     &__img {
+        &_carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            @media(min-width: 1025px){
+                flex: 1 0 55%;
+            }
+            @media(min-width: 2000px){
+                flex: 1 0 40%;
+            }
+        }
         &_arrow {
             width: 130px;
             margin-left: -50px;

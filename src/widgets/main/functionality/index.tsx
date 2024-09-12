@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from '@/widgets/main/functionality/Functionality.module.scss';
 import {
   Container,
@@ -8,13 +8,19 @@ import {
   Image,
   Box,
   BackgroundImage,
-  Center
+  Center,
+  Flex
 } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import BackPack from '@/assets/functionality/Backpack.png';
 import ShoulderBag from '@/assets/functionality/Shoulder-bag.png';
 import Bag1 from '@/assets/functionality/Bild-eng.png';
+import BagClothes1 from '@/assets/functionality/1.png';
+import BagClothes2 from '@/assets/functionality/2.png';
+import BagClothes3 from '@/assets/functionality/3.png';
 import BagFull from '@/assets/functionality/houts-bag.png';
-import BagInside from '@/assets/functionality/Inside.png';
+import EmptyBag from '@/assets/functionality/EmptyBag.png';
 import ImageWithDots from '@/features/components/AnimatedCircle';
 import BagLug from '@/assets/functionality/BagLug.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
@@ -74,6 +80,7 @@ export default AnimatedLine;
 export const Functionality = () => {
   const isResponsive = useIsResponsive(1024);
   const isResponsive1300 = useIsResponsive(1300);
+  const autoplay = useRef(Autoplay({ delay: 4000 }));
   const { t } = useTranslation();
 
   const descriptions = [
@@ -106,7 +113,7 @@ export const Functionality = () => {
   };
 
   const containerGroupStyles: React.CSSProperties = {
-    width: isResponsive ? '70%' : 'auto',
+    width: isResponsive ? '85%' : 'auto',
     flex: '0 1 auto'
   };
 
@@ -117,46 +124,6 @@ export const Functionality = () => {
     marginBottom: isResponsive ? '40px' : '100px',
     padding: '0 20px',
     order: isResponsive ? 1 : 0
-  };
-
-  /** Luggage Inside section styles */
-
-  const luggageInsideDescriptions = [
-    {
-      title: `${t('lang.functionality.luggageInside.inside.title')}`,
-      description: `${t('lang.functionality.luggageInside.inside.desc')}`
-    }
-  ];
-
-  const luggageInsideCircles = [
-    { top: '30%', left: '58%', animationDuration: '2.2s' }
-  ];
-
-  const containerInsideStyles: React.CSSProperties = {
-    display: 'flex',
-    flexDirection: isResponsive ? 'column' : 'row',
-    alignItems: isResponsive ? 'baseline' : 'center',
-    justifyContent: 'flex-start'
-  };
-
-  const imgInsideStyles: React.CSSProperties = {
-    width: isResponsive ? 'auto' : '75%',
-    height: 'auto'
-  };
-
-  const descriptionInsideLuggageStyles: React.CSSProperties = {
-    flex: isResponsive ? 'none' : '0 1 70%',
-    marginRight: isResponsive ? '0' : '100px',
-    marginTop: isResponsive ? '50px' : '120px',
-    marginBottom: isResponsive ? '40px' : '100px',
-    padding: '0 20px',
-    alignSelf: 'center',
-    order: 1
-  };
-
-  const containerInsideGroupStyles: React.CSSProperties = {
-    width: isResponsive ? '70%' : 'auto',
-    flex: '0 1 100%'
   };
 
   /** Luggage section styles */
@@ -316,7 +283,7 @@ export const Functionality = () => {
       </Container>
 
       <FadeInSection>
-        <Box mt={100} mb={40}>
+        <Box mt={100} mb={isResponsive ? 0 : 40}>
           <ImageWithDots
             descriptions={descriptions}
             containerStyles={containerStyles}
@@ -333,22 +300,75 @@ export const Functionality = () => {
       </FadeInSection>
 
       <FadeInSection>
-        <Box mt={100} mb={isResponsive ? 40 : 150}>
-          <ImageWithDots
-            descriptions={luggageInsideDescriptions}
-            containerStyles={containerInsideStyles}
-            descriptionStyles={descriptionInsideLuggageStyles}
-            containerInsideGroupStyles={containerInsideGroupStyles}
-            imgStyles={imgInsideStyles}
-            titleTextStyles={titleTextStyles}
-            descTextStyles={descTextStyles}
-            circles={luggageInsideCircles}
-            img={BagInside}
-            imgTitle={'Transformer'}
-          />
+        <Box mt={isResponsive ? 40 : 100} mb={isResponsive ? 40 : 150}>
+          <Flex
+            className={styles.functionality__carousel_flex}
+            gap={isResponsive ? '30px' : '80px'}
+            align={isResponsive ? 'flex-start' : 'center'}
+            direction={isResponsive ? 'column' : 'row'}
+          >
+            <Box mx="auto" className={styles.functionality__img_carousel}>
+              <Image src={EmptyBag} />
+              <Box
+                style={{
+                  overflow: 'hidden',
+                  position: 'absolute',
+                  top: '20%',
+                  left: '6%',
+                  height: '70%',
+                  width: '85%'
+                }}
+              >
+                <Carousel
+                  loop
+                  withControls={false}
+                  slideSize="33.33%"
+                  onMouseEnter={autoplay.current.stop}
+                  onMouseLeave={autoplay.current.reset}
+                  orientation="vertical"
+                  plugins={[autoplay.current]}
+                  height="100%"
+                  style={{ flex: 1 }}
+                  styles={{
+                    root: {
+                      overflow: 'hidden',
+                      maxHeight: '600px',
+                      height: '100%'
+                    },
+                    viewport: {
+                      borderRadius: '20px'
+                    }
+                  }}
+                >
+                  <Carousel.Slide>
+                    <Image src={BagClothes3} />
+                  </Carousel.Slide>
+                  <Carousel.Slide>
+                    <Image src={BagClothes1} />
+                  </Carousel.Slide>
+                  <Carousel.Slide>
+                    <Image src={BagClothes2} />
+                  </Carousel.Slide>
+                </Carousel>
+              </Box>
+            </Box>
+            <Box className={styles.functionality__carousel_desc}>
+              <Title fz={isResponsive1300 ? 20 : 25} mb={20}>
+                {t('lang.functionality.carouselLuggage.title')}
+              </Title>
+              <Text
+                className={styles.functionality__carousel_desc_text}
+                mb={20}
+              >
+                {t('lang.functionality.carouselLuggage.text')}
+              </Text>
+              <Text className={styles.functionality__carousel_desc_text}>
+                {t('lang.functionality.carouselLuggage.text1')}
+              </Text>
+            </Box>
+          </Flex>
         </Box>
       </FadeInSection>
-
       <FadeInSection>
         <Box>
           <ImageWithDots
