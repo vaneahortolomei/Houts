@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Text, Title, Box, List } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 
 export const Policy = () => {
@@ -62,6 +62,45 @@ export const Policy = () => {
           {t('lang.pages.policyPage.dataSecurity.title')}
         </Title>
         <Text mb={20}>{t('lang.pages.policyPage.dataSecurity.text')}</Text>
+        <Title fz={20} mb={30}>
+          {t('lang.pages.policyPage.google.title')}
+        </Title>
+        <Text mb={20}>{t('lang.pages.policyPage.google.text')}</Text>
+        <Text mb={20}>{t('lang.pages.policyPage.google.text2')}</Text>
+        <Text mb={20}>{t('lang.pages.policyPage.google.text3')}</Text>
+        <Text mb={20}>
+          <Trans i18nKey="lang.pages.policyPage.google.text4">
+            If you would like to prevent Google Analytics from using your data,
+            you can install the
+            <a
+              href="https://tools.google.com/dlpage/gaoptout"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Analytics Opt-out Browser Add-on
+            </a>
+            .
+          </Trans>
+        </Text>
+        <Text mb={20}>
+          <Trans i18nKey="lang.pages.policyPage.google.text5">
+            For more information on how Google collects and processes data,
+            please review
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google’s Privacy Policy
+            </a>
+            .
+          </Trans>
+        </Text>
+        <Title fz={20} mb={30}>
+          {t('lang.pages.policyPage.cookie.title')}
+        </Title>
+        <Text mb={20}>{t('lang.pages.policyPage.cookie.text')}</Text>
+        <Text mb={20}>{t('lang.pages.policyPage.cookie.text1')}</Text>
         <Title fz={20} mb={30}>
           {t('lang.pages.policyPage.privacyProtection.title')}
         </Title>

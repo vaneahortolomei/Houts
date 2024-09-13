@@ -20,6 +20,7 @@ import {
 } from '@/shared/constants';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import CookieConsentBanner from '@/features/components/CookieConsentBanner';
 
 export const BaseTemplate = () => {
   const [scroll, scrollTo] = useWindowScroll();
@@ -48,7 +49,7 @@ export const BaseTemplate = () => {
       }, 110);
 
       return () => clearTimeout(timer2);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -192,6 +193,7 @@ export const BaseTemplate = () => {
               )}
             </Transition>
           </Affix>
+          <CookieConsentBanner />
         </AppShell>
       </DrawerProvider>
     </>
