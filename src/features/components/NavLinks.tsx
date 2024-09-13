@@ -20,7 +20,6 @@ export const NavLinks: React.FC<MainPageType> = ({ isMainPage }) => {
   const { setDrawerOpen } = useContext(DrawerContext);
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
-
   const mainLinksForEmptyHeader = [
     { id: 1, link: '', label: 'Logo', image: Logo },
     {
@@ -79,7 +78,7 @@ export const NavLinks: React.FC<MainPageType> = ({ isMainPage }) => {
   const mainEmptyLinks = mainLinksForEmptyHeader.map((item, index) => {
     if (item.image) {
       return (
-        <>
+        <React.Fragment key={item.id}>
           <a
             href={`/`}
             key={item.id}
@@ -92,11 +91,11 @@ export const NavLinks: React.FC<MainPageType> = ({ isMainPage }) => {
               className={styles.header__logo}
             />
           </a>
-        </>
+        </React.Fragment>
       );
     } else {
       return (
-        <>
+        <React.Fragment key={item.id}>
           {!isResponsive1100 && (
             <NavLink<'a'>
               label={isLoading ? '' : item.label}
@@ -113,7 +112,7 @@ export const NavLinks: React.FC<MainPageType> = ({ isMainPage }) => {
               }}
             />
           )}
-        </>
+        </React.Fragment>
       );
     }
   });
@@ -121,7 +120,7 @@ export const NavLinks: React.FC<MainPageType> = ({ isMainPage }) => {
   const mainItems = mainLinks.map((item, index) => {
     if (item.image) {
       return (
-        <>
+        <React.Fragment key={item.id}>
           {!isResponsive && (
             <a
               href={`/`}
@@ -136,11 +135,11 @@ export const NavLinks: React.FC<MainPageType> = ({ isMainPage }) => {
               />
             </a>
           )}
-        </>
+        </React.Fragment>
       );
     } else if (item.target) {
       return (
-        <>
+        <React.Fragment key={item.id}>
           {!isResponsive1100 && (
             <NavLink<'a'>
               label={isLoading ? '' : item.label}
@@ -157,7 +156,7 @@ export const NavLinks: React.FC<MainPageType> = ({ isMainPage }) => {
               }}
             />
           )}
-        </>
+        </React.Fragment>
       );
     } else {
       return (

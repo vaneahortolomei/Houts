@@ -1,5 +1,10 @@
 {
   "lang": {
+    "cookie": {
+      "text": "We use cookies for analytics. Please accept or decline the use of cookies.",
+      "accept": "Accept",
+      "decline": "Decline"
+    },
     "top": {
       "title": "WE SAY...",
       "yourLifestyle": "YOUR LIFESTYLE.",
@@ -271,11 +276,24 @@
             "item2": "Request deactivation of your account.",
             "item3": "Exercise your “right to be forgotten” by contacting us."
           },
-          "footer": "To exercise any of these rights, please send an email to ap@houts.de.w"
+          "footer": "To exercise any of these rights, please send an email to ap@houts.de"
         },
         "dataSecurity": {
           "title": "DATA SECURITY",
           "text": "We use industry-standard security measures, including SSL encryption, to protect your personal data. However, no security system is impenetrable, and we cannot guarantee the absolute security of your data."
+        },
+        "google": {
+          "title": "USE OF GOOGLE ANALYTICS AND COOKIES",
+          "text": "We use Google Analytics to gather information about how visitors use our Website. Google Analytics collects information such as how often users visit the Website, what pages they visit, and what other sites they used prior to coming to our Website. This helps us improve the content and functionality of the Website.",
+          "text2": "Google Analytics uses cookies to collect this data. Cookies are small data files that are stored on your device when you visit a website. These cookies do not collect personally identifiable information; however, they may collect IP addresses, geolocation data, and device information. The data collected through cookies is transmitted to and stored by Google on servers in the United States.",
+          "text3": "By using our Website, you consent to the use of cookies for analytical purposes. You can control or delete cookies through your browser settings at any time.",
+          "text4": "If you would like to prevent Google Analytics from using your data, you can install the  <1>Google Analytics Opt-out Browser Add-on</1>.",
+          "text5": "For more information on how Google collects and processes data, please review  <1>Google’s Privacy Policy</1>."
+        },
+        "cookie": {
+          "title": "USER CONSENT AND COOKIE MANAGEMENT",
+          "text": "Before any non-essential cookies, such as those used for analytics, are placed on your device, we will seek your explicit consent through a cookie banner that appears upon your first visit to the Website. You have the option to Accept or Decline the use of cookies. Your choice will be stored in your browser and can be changed at any time by managing your cookie preferences.",
+          "text1": "If you choose to decline the use of cookies, some features of the Website, such as analytics, may not be fully functional."
         },
         "privacyProtection": {
           "title": "CHILDREN'S PRIVACY PROTECTION",
@@ -287,7 +305,7 @@
         },
         "contact": {
           "title": "CONTACT",
-          "text": "If you have any questions or concerns about our privacy policy, please contact our Data Protection Officer at ap@houts.de."
+          "text": "If you have any questions or concerns about our privacy policy, please contact our Data Protection Officer at ap@houts.de"
         }
       }
     }

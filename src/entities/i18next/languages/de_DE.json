@@ -1,5 +1,10 @@
 {
   "lang": {
+    "cookie": {
+      "text": "Wir verwenden Cookies für Analysen. Bitte akzeptieren oder lehnen Sie die Verwendung von Cookies ab.",
+      "accept": "Akzeptieren",
+      "decline": "Ablehnen"
+    },
     "top": {
       "title": "WE SAY...",
       "yourLifestyle": "YOUR LIFESTYLE.",
@@ -271,11 +276,24 @@
             "item2": "Die Deaktivierung Ihres Kontos zu verlangen.",
             "item3": "Ihr „Recht auf Vergessenwerden“ auszuüben, indem Sie uns kontaktieren.\n"
           },
-          "footer": "Um eines dieser Rechte auszuüben, senden Sie bitte eine E-Mail an ap@houts.de."
+          "footer": "Um eines dieser Rechte auszuüben, senden Sie bitte eine E-Mail an ap@houts.de"
         },
         "dataSecurity": {
           "title": "DATENSICHERHEIT",
           "text": "Wir setzen branchenübliche Sicherheitsmaßnahmen, einschließlich SSL-Verschlüsselung, ein, um Ihre personenbezogenen Daten zu schützen. Allerdings ist kein Sicherheitssystem unüberwindbar, und wir können die absolute Sicherheit Ihrer Daten nicht garantieren."
+        },
+        "google": {
+          "title": "VERWENDUNG VON GOOGLE ANALYTICS UND COOKIES",
+          "text": "Wir verwenden Google Analytics, um Informationen darüber zu sammeln, wie Besucher unsere Website nutzen. Google Analytics sammelt Informationen wie die Häufigkeit der Besuche auf der Website, welche Seiten sie besuchen und welche anderen Websites sie vor dem Besuch unserer Website verwendet haben. Dies hilft uns, den Inhalt und die Funktionalität der Website zu verbessern.",
+          "text2": "Google Analytics verwendet Cookies, um diese Daten zu sammeln. Cookies sind kleine Datendateien, die auf Ihrem Gerät gespeichert werden, wenn Sie eine Website besuchen. Diese Cookies erfassen keine persönlich identifizierbaren Informationen; sie können jedoch IP-Adressen, Geolokalisierungsdaten und Geräteinformationen erfassen. Die über Cookies gesammelten Daten werden an Google übermittelt und auf Servern in den Vereinigten Staaten gespeichert.",
+          "text3": "Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies für analytische Zwecke zu. Sie können Cookies jederzeit über Ihre Browsereinstellungen steuern oder löschen.",
+          "text4": "Wenn Sie verhindern möchten, dass Google Analytics Ihre Daten verwendet, können Sie das <1>Google Analytics Opt-out Browser Add-on</1> installieren.",
+          "text5": "Weitere Informationen darüber, wie Google Daten sammelt und verarbeitet, finden Sie in der <1>Datenschutzerklärung von Google</1>."
+        },
+        "cookie": {
+          "title": "EINWILLIGUNG DES BENUTZERS UND COOKIE-VERWALTUNG",
+          "text": "Bevor nicht wesentliche Cookies, wie die für Analysen verwendeten, auf Ihrem Gerät platziert werden, holen wir Ihre ausdrückliche Zustimmung über ein Cookie-Banner ein, das bei Ihrem ersten Besuch auf der Website erscheint. Sie haben die Möglichkeit, die Verwendung von Cookies Akzeptieren oder Ablehnen. Ihre Wahl wird in Ihrem Browser gespeichert und kann jederzeit durch die Verwaltung Ihrer Cookie-Einstellungen geändert werden.",
+          "text1": "Wenn Sie die Verwendung von Cookies ablehnen, funktionieren möglicherweise einige Funktionen der Website, wie z. B. die Analytik, nicht vollständig.\n\n"
         },
         "privacyProtection": {
           "title": "SCHUTZ DER PRIVATSPHÄRE VON KINDERN",
@@ -287,7 +305,7 @@
         },
         "contact": {
           "title": "KONTAKT",
-          "text": "Wenn Sie Fragen oder Bedenken zu unserer Datenschutzerklärung haben, kontaktieren Sie bitte unseren Datenschutzbeauftragten unter ap@houts.de."
+          "text": "Wenn Sie Fragen oder Bedenken zu unserer Datenschutzerklärung haben, kontaktieren Sie bitte unseren Datenschutzbeauftragten unter ap@houts.de"
         }
       }
     }
