@@ -99,6 +99,7 @@ export const Works = () => {
           <Flex className={styles.grid__item} key={item.id}>
             <Box className={styles.flexWithLine}>
               <Image
+                alt={'icons'}
                 className={styles.iconWrapper}
                 src={item.img}
                 w={isResponsive ? 58 : 75}
