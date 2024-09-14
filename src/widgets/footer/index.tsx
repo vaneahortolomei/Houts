@@ -12,7 +12,8 @@ import {
 } from '@mantine/core';
 import Instagram from '@/assets/footer/Instagram.svg';
 import Linkedin from '@/assets/footer/Linkedin.svg';
-import DesktopBag from '@/assets/top/top.png';
+import DesktopBag from '@/assets/top/top.webp';
+import DesktopBagPng from '@/assets/top/top.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import { useTranslation } from 'react-i18next';
 
@@ -56,7 +57,13 @@ export const Footer = () => {
           <Flex gap="lg">
             {socialLinks.map((item) => (
               <Anchor href={item.href} target="_blank" key={item.id}>
-                <Image src={item.src} w={46} h={46} title={item.title} />
+                <Image
+                  src={item.src}
+                  w={46}
+                  h={46}
+                  title={item.title}
+                  alt={'social-links'}
+                />
               </Anchor>
             ))}
           </Flex>
@@ -73,7 +80,16 @@ export const Footer = () => {
           <Box
             style={{ position: 'relative', maxWidth: '350px', height: 'auto' }}
           >
-            <Image maw={350} src={DesktopBag} style={{ display: 'block' }} />
+            <picture>
+              <source srcSet={DesktopBag} type="image/webp" />
+              <source srcSet={DesktopBagPng} type="image/png" />
+              <Image
+                maw={350}
+                src={DesktopBag}
+                style={{ display: 'block' }}
+                alt={'footer-bag'}
+              />
+            </picture>
             <Box
               style={{
                 position: 'absolute',

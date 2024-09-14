@@ -45,6 +45,7 @@ export const SocialProof = () => {
                   className={styles.grid__group}
                 >
                   <Image
+                    alt={'proof'}
                     className={styles.grid__img}
                     src={ThincubatorOne}
                     h={'auto'}
@@ -94,6 +95,7 @@ export const SocialProof = () => {
                     className={styles.grid__group}
                   >
                     <Image
+                      alt={'proof-2'}
                       className={styles.grid__img}
                       src={ThincubatorTwo}
                       h={'auto'}
@@ -144,6 +146,7 @@ export const SocialProof = () => {
                     className={styles.grid__group}
                   >
                     <Image
+                      alt={'proof-3'}
                       className={styles.grid__img}
                       src={ThincubatorTwo}
                       h={'auto'}

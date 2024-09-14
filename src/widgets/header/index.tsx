@@ -54,7 +54,7 @@ export const Header: React.FC<MainPageType> = ({ isMainPage }) => {
                 {selectedLanguage === 'en' ? 'DE' : 'EN'}
               </Button>
               <Box className={styles.header__mobile_logo}>
-                <Image src={Logo} h={19} w={123} />
+                <Image src={Logo} h={19} w={123} alt={'Logo'} />
               </Box>
               <Burger
                 aria-label="Toggle navigation"
