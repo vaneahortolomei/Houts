@@ -33,7 +33,7 @@ export const BagOptions = () => {
             <FadeInSection>
               <Group justify={'center'} className={styles.options__col}>
                 <Flex align="center" gap={10} className={styles.options__head}>
-                  <Image src={First} w={45} h={45} />
+                  <Image src={First} w={45} h={45} alt={'icon-one'} />
                   <Title fz={20}>{t('lang.options.title')}</Title>
                 </Flex>
                 <Text className={styles.options__text} ta="center">
@@ -51,7 +51,7 @@ export const BagOptions = () => {
                   w={280}
                   className={styles.options__head}
                 >
-                  <Image src={Second} w={45} h={45} />
+                  <Image src={Second} w={45} h={45} alt={'icon-two'} />
                   <Title fz={20} style={{ lineHeight: '1.1' }}>
                     {t('lang.options.title1')}
                   </Title>
@@ -66,7 +66,7 @@ export const BagOptions = () => {
             <FadeInSection>
               <Group justify={'center'} className={styles.options__col}>
                 <Flex align="center" gap={10} className={styles.options__head}>
-                  <Image src={Third} w={45} h={45} />
+                  <Image src={Third} w={45} h={45} alt={'icon-third'} />
                   <Title fz={20}>{t('lang.options.title2')}</Title>
                 </Flex>
                 <Text className={styles.options__text} ta="center">

@@ -64,19 +64,25 @@ export const Sustainability = () => {
               w={220}
               mb={isResponsive ? 120 : 0}
             >
-              <Image w={100} h={'auto'} src={Bag} />
+              <Image w={100} h={'auto'} src={Bag} alt={'Bag'} />
               <Text fz={isResponsive ? 18 : 20} mt={10} fw={600} c={'#222027'}>
                 {t('lang.sustainability.imgText')}
               </Text>
             </Flex>
-            <Image src={Arrow} w={225} h={'auto'} className={styles.img} />
+            <Image
+              src={Arrow}
+              w={225}
+              h={'auto'}
+              className={styles.img}
+              alt={'Arrow'}
+            />
             <Flex
               justify={'space-between'}
               align={'center'}
               direction={'column'}
               mt={isResponsive ? 120 : 0}
             >
-              <Image src={Tree} w={70} h={'auto'} mt={15} />
+              <Image src={Tree} w={70} h={'auto'} mt={15} alt={'Tree'} />
               <Text fz={isResponsive ? 18 : 20} mt={10} fw={600} c={'#222027'}>
                 {t('lang.sustainability.imgText1')}
               </Text>

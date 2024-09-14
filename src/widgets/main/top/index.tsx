@@ -2,7 +2,8 @@ import { Container, Text, Title, Group, Box, Image } from '@mantine/core';
 import React from 'react';
 import styles from './TopSection.module.scss';
 import { useTranslation } from 'react-i18next';
-import DesktopBag from '@/assets/top/top.png';
+import DesktopBag from '@/assets/top/top.webp';
+import DesktopBagPng from '@/assets/top/top.png';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import { mobilePaddingFromHeader } from '@/shared/constants';
 import { useTypewriter } from 'react-simple-typewriter';
@@ -45,13 +46,26 @@ export const TopSection = () => {
             </Box>
           )}
         </Group>
-        <Box className={styles.top__section_img_wrapper}>
-          <Image
-            className={styles.top__section_img}
-            radius="md"
-            fit="contain"
-            src={DesktopBag}
-          />
+        <Box>
+          <picture className={styles.top__section_img_wrapper}>
+            <source
+              className={styles.top__section_img}
+              srcSet={DesktopBag}
+              type="image/webp"
+            />
+            <source
+              className={styles.top__section_img}
+              srcSet={DesktopBagPng}
+              type="image/png"
+            />
+            <Image
+              alt={'Top-bag'}
+              className={styles.top__section_img}
+              radius="md"
+              fit="contain"
+              src={DesktopBag}
+            />
+          </picture>
         </Box>
       </Container>
     </section>

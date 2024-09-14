@@ -276,6 +276,7 @@ export const Functionality = () => {
             <Image
               fit={'contain'}
               src={Bag1}
+              alt={'baggage'}
               className={styles.functionality__img_bag}
             />
           </Group>
@@ -308,7 +309,7 @@ export const Functionality = () => {
             direction={isResponsive ? 'column' : 'row'}
           >
             <Box mx="auto" className={styles.functionality__img_carousel}>
-              <Image src={EmptyBag} />
+              <Image src={EmptyBag} alt={'baggage'} />
               <Box
                 style={{
                   overflow: 'hidden',
@@ -341,13 +342,13 @@ export const Functionality = () => {
                   }}
                 >
                   <Carousel.Slide>
-                    <Image src={BagClothes3} />
+                    <Image src={BagClothes3} alt={'clothes'} />
                   </Carousel.Slide>
                   <Carousel.Slide>
-                    <Image src={BagClothes1} />
+                    <Image src={BagClothes1} alt={'clothes'} />
                   </Carousel.Slide>
                   <Carousel.Slide>
-                    <Image src={BagClothes2} />
+                    <Image src={BagClothes2} alt={'clothes'} />
                   </Carousel.Slide>
                 </Carousel>
               </Box>

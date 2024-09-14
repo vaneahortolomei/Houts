@@ -113,7 +113,7 @@ export const Journey = () => {
                 <Box className={styles.timeline_item} key={index}>
                   <>
                     <Box className={styles.timeline_icon}>
-                      <Image src={item.icon} w={50} h={50} />
+                      <Image src={item.icon} w={50} h={50} alt={'icon'} />
                     </Box>
                     <FadeInSection>
                       <div style={{ display: 'flex', gap: '120px' }}>
@@ -146,10 +146,10 @@ export const Journey = () => {
                         {!isResponsive && (
                           <Group className={styles.timeline__photos}>
                             <Box className={styles.timeline__photos_item}>
-                              <Image src={imgData[index].img} />
+                              <Image src={imgData[index].img} alt={'img'} />
                             </Box>
                             <Box className={styles.timeline__photos_item}>
-                              <Image src={imgData[index].img2} />
+                              <Image src={imgData[index].img2} alt={'img'} />
                             </Box>
                           </Group>
                         )}

@@ -25,7 +25,7 @@ export const Navbar: React.FC<MainPageType> = ({ isMainPage }) => {
           position="right"
           size="xs"
           opened={isDrawerOpen}
-          title={<Image src={Logo} h={21} w={123} />}
+          title={<Image src={Logo} h={21} w={123} alt={'Logo'} />}
           onClose={onClose}
           withCloseButton={true}
           transitionProps={{ duration: 155, timingFunction: 'linear' }}

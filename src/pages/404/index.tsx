@@ -29,7 +29,13 @@ const NotFound = () => {
           <Text className={styles.text} fz={isResponsive ? 100 : 500} fw={900}>
             404
           </Text>
-          <Image src={Bag} maw={600} h={'auto'} style={{ zIndex: 1 }} />
+          <Image
+            src={Bag}
+            maw={600}
+            h={'auto'}
+            style={{ zIndex: 1 }}
+            alt={'404'}
+          />
           <Button
             mt={20}
             maw={200}
