@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 declare global {
   interface Window {
     dataLayer: any[];
+    gtag: (...args: any[]) => void;
   }
 }
 
@@ -30,27 +31,23 @@ const CookieConsentBanner = () => {
     script.async = true;
     document.head.appendChild(script);
 
-    script.onload = () => {
+    const inlineScript = document.createElement('script');
+    inlineScript.innerHTML = `
       window.dataLayer = window.dataLayer || [];
-
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
+      function gtag() {
+        window.dataLayer.push(arguments);
       }
       gtag('js', new Date());
       gtag('config', 'G-63FE6MW790');
-    };
+    `;
+    document.head.appendChild(inlineScript);
   };
 
   useEffect(() => {
     const consent = localStorage.getItem('cookieConsent');
     if (!consent) {
       setIsOpen(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent');
-    if (consent === 'accepted') {
+    } else if (consent === 'accepted') {
       loadGoogleAnalytics();
     }
   }, []);
