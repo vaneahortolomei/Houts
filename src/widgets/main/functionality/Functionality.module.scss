@@ -80,6 +80,13 @@
             flex: auto;
             filter: grayscale(75%);
             height: 400px;
+            background-image: url('/src/assets/functionality/Backpack.png');
+            background-image: image-set(
+                    url('/src/assets/functionality/Backpack.webp') type('image/webp'),
+                    url('/src/assets/functionality/Backpack.png') type('image/png')
+            );
+            background-size: cover;
+            background-position: center;
             @media(min-width: 768px){
                 height: 600px;
                 max-width: 49.8%;
@@ -96,6 +103,13 @@
             flex: auto;
             filter: grayscale(75%);
             height: 400px;
+            background-image: url('/src/assets/functionality/Shoulder-bag.png');
+            background-image: image-set(
+                    url('/src/assets/functionality/Shoulder-bag.webp') type('image/webp') 1x,
+                    url('/src/assets/functionality/Shoulder-bag.png') type('image/png') 1x
+            );
+            background-size: cover;
+            background-position: center;
             @media(min-width: 768px){
                 height: 600px;
                 max-width: 50%;

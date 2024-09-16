@@ -1,5 +1,6 @@
 import React from 'react';
-import Bag from '@/assets/Bags.png';
+import BagPng from '@/assets/about/Bags.png';
+import Bag from '@/assets/about/Bags.webp';
 import { Container, Box, Image, Button, Text, Group } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
@@ -29,13 +30,17 @@ const NotFound = () => {
           <Text className={styles.text} fz={isResponsive ? 100 : 500} fw={900}>
             404
           </Text>
-          <Image
-            src={Bag}
-            maw={600}
-            h={'auto'}
-            style={{ zIndex: 1 }}
-            alt={'404'}
-          />
+          <picture style={{ zIndex: 1 }}>
+            <source srcSet={Bag} type="image/webp" />
+            <source srcSet={BagPng} type="image/png" />
+            <Image
+              src={Bag}
+              maw={600}
+              h={'auto'}
+              style={{ zIndex: 1 }}
+              alt={'404'}
+            />
+          </picture>
           <Button
             mt={20}
             maw={200}

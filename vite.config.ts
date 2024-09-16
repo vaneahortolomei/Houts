@@ -13,9 +13,7 @@ export default defineConfig({
       scopeBehaviour: 'local'
     },
     preprocessorOptions: {
-      scss: {
-        additionalData: `@import "./src/_mantine";`
-      }
+      scss: {}
     }
   },
   server: {

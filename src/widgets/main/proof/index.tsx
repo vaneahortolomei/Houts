@@ -8,8 +8,10 @@ import {
   Image,
   Anchor
 } from '@mantine/core';
-import ThincubatorOne from '@/assets/think.png';
-import ThincubatorTwo from '@/assets/think2.png';
+import ThincubatorOnePng from '@/assets/think.png';
+import ThincubatorOne from '@/assets/think.webp';
+import ThincubatorTwoPng from '@/assets/think2.png';
+import ThincubatorTwo from '@/assets/think2.webp';
 import styles from '@/widgets/main/proof/Social.module.scss';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import FadeInSection from '@/features/components/FadeInSection';
@@ -44,12 +46,24 @@ export const SocialProof = () => {
                   justify={isResponsive ? 'center' : 'left'}
                   className={styles.grid__group}
                 >
-                  <Image
-                    alt={'proof'}
-                    className={styles.grid__img}
-                    src={ThincubatorOne}
-                    h={'auto'}
-                  />
+                  <picture style={{ width: '100%', display: 'contents' }}>
+                    <source
+                      className={styles.grid__img}
+                      srcSet={ThincubatorOne}
+                      type="image/webp"
+                    />
+                    <source
+                      className={styles.grid__img}
+                      srcSet={ThincubatorOnePng}
+                      type="image/png"
+                    />
+                    <Image
+                      alt={'proof'}
+                      className={styles.grid__img}
+                      src={ThincubatorOne}
+                      h={'auto'}
+                    />
+                  </picture>
                 </Group>
               </FadeInSection>
             </Grid.Col>
@@ -94,12 +108,24 @@ export const SocialProof = () => {
                     justify={isResponsive ? 'center' : 'left'}
                     className={styles.grid__group}
                   >
-                    <Image
-                      alt={'proof-2'}
-                      className={styles.grid__img}
-                      src={ThincubatorTwo}
-                      h={'auto'}
-                    />
+                    <picture style={{ width: '100%', display: 'contents' }}>
+                      <source
+                        className={styles.grid__img}
+                        srcSet={ThincubatorTwo}
+                        type="image/webp"
+                      />
+                      <source
+                        className={styles.grid__img}
+                        srcSet={ThincubatorTwoPng}
+                        type="image/png"
+                      />
+                      <Image
+                        alt={'proof-2'}
+                        className={styles.grid__img}
+                        src={ThincubatorTwo}
+                        h={'auto'}
+                      />
+                    </picture>
                   </Group>
                 </FadeInSection>
               </Grid.Col>
@@ -145,12 +171,24 @@ export const SocialProof = () => {
                     justify={isResponsive ? 'center' : 'left'}
                     className={styles.grid__group}
                   >
-                    <Image
-                      alt={'proof-3'}
-                      className={styles.grid__img}
-                      src={ThincubatorTwo}
-                      h={'auto'}
-                    />
+                    <picture style={{ width: '100%', display: 'contents' }}>
+                      <source
+                        className={styles.grid__img}
+                        srcSet={ThincubatorTwo}
+                        type="image/webp"
+                      />
+                      <source
+                        className={styles.grid__img}
+                        srcSet={ThincubatorTwoPng}
+                        type="image/png"
+                      />
+                      <Image
+                        alt={'proof-2'}
+                        className={styles.grid__img}
+                        src={ThincubatorTwo}
+                        h={'auto'}
+                      />
+                    </picture>
                   </Group>
                 </FadeInSection>
               </Grid.Col>
