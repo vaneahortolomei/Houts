@@ -1,5 +1,5 @@
-User-agent: *
-Crawl-delay: 10
-Disallow:
+user-agent: *
+crawl-delay: 10
+disallow:
 
-Sitemap: https://www.houts.de/sitemap.xml
+sitemap: https://www.houts.de/sitemap.xml
