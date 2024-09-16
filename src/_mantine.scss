@@ -9,10 +9,10 @@ img {
 }
 
 
-$primary-color: #222027;
-$text-color: #222027;
-$third-color: #A4A4A4;
-$fourth-color: #e4e4e499;
+//$primary-color: #222027;
+//$text-color: #222027;
+//$third-color: #A4A4A4;
+//$fourth-color: #e4e4e499;
 
 body, html {
     -webkit-font-smoothing: antialiased;
@@ -37,5 +37,5 @@ p {
 }
 
 * {
-    color: $text-color;
+    color: #222027;
 }

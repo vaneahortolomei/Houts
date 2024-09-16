@@ -7,22 +7,34 @@ import {
   Text,
   Image,
   Box,
-  BackgroundImage,
   Center,
   Flex
 } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import BackPack from '@/assets/functionality/Backpack.png';
-import ShoulderBag from '@/assets/functionality/Shoulder-bag.png';
-import Bag1 from '@/assets/functionality/Bild-eng.png';
-import BagClothes1 from '@/assets/functionality/1.png';
-import BagClothes2 from '@/assets/functionality/2.png';
-import BagClothes3 from '@/assets/functionality/3.png';
-import BagFull from '@/assets/functionality/houts-bag.png';
-import EmptyBag from '@/assets/functionality/EmptyBag.png';
+import BagEngPng from '@/assets/functionality/Bild-eng.png';
+import BagEng1 from '@/assets/functionality/Bild-eng.webp';
+import BagDePng from '@/assets/functionality/Bild-de.png';
+import BagDe1 from '@/assets/functionality/Bild-de.webp';
+
+import BagClothesPng1 from '@/assets/functionality/1.png';
+import BagClothes1 from '@/assets/functionality/1.webp';
+import BagClothesPng2 from '@/assets/functionality/2.png';
+import BagClothes2 from '@/assets/functionality/2.webp';
+import BagClothesPng3 from '@/assets/functionality/3.png';
+import BagClothes3 from '@/assets/functionality/3.webp';
+
+import BagFullPng from '@/assets/functionality/houts-bag.png';
+import BagFull from '@/assets/functionality/houts-bag.webp';
+
+import EmptyBagPng from '@/assets/functionality/EmptyBag.png';
+import EmptyBag from '@/assets/functionality/EmptyBag.webp';
+
 import ImageWithDots from '@/features/components/AnimatedCircle';
-import BagLug from '@/assets/functionality/BagLug.png';
+
+import BagLugPng from '@/assets/functionality/BagLug.png';
+import BagLug from '@/assets/functionality/BagLug.webp';
+
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import { useTranslation } from 'react-i18next';
 import FadeInSection from '@/features/components/FadeInSection';
@@ -81,7 +93,8 @@ export const Functionality = () => {
   const isResponsive = useIsResponsive(1024);
   const isResponsive1300 = useIsResponsive(1300);
   const autoplay = useRef(Autoplay({ delay: 3500 }));
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   const descriptions = [
     {
@@ -163,7 +176,8 @@ export const Functionality = () => {
 
   const imgLuggageStyles: React.CSSProperties = {
     width: 'auto',
-    height: 'auto'
+    height: 'auto',
+    marginBottom: !isResponsive ? '-8px' : ''
   };
 
   const containerLuggageGroupStyles: React.CSSProperties = {
@@ -222,27 +236,20 @@ export const Functionality = () => {
             gap={0}
             className={styles.functionality__img_container}
           >
-            <BackgroundImage
-              mr={'-1px'}
-              src={BackPack}
-              className={styles.functionality__img_f}
-            >
+            <div className={styles.functionality__img_f}>
               <Center p="md" h={'100%'}>
                 <Text c="white" fz={36}>
                   {t('lang.functionality.img')}
                 </Text>
               </Center>
-            </BackgroundImage>
-            <BackgroundImage
-              src={ShoulderBag}
-              className={styles.functionality__img_s}
-            >
+            </div>
+            <div className={styles.functionality__img_s}>
               <Center p="md" h={'100%'}>
                 <Text c="white" fz={36}>
                   {t('lang.functionality.img1')}
                 </Text>
               </Center>
-            </BackgroundImage>
+            </div>
           </Group>
         </FadeInSection>
         <Group
@@ -273,12 +280,24 @@ export const Functionality = () => {
         </Group>
         <FadeInSection>
           <Group className={styles.functionality__bagGroup} gap={0}>
-            <Image
-              fit={'contain'}
-              src={Bag1}
-              alt={'baggage'}
-              className={styles.functionality__img_bag}
-            />
+            <picture>
+              <source
+                srcSet={currentLanguage === 'en' ? BagEng1 : BagDe1}
+                className={styles.functionality__img_bag}
+                type="image/webp"
+              />
+              <source
+                srcSet={currentLanguage === 'en' ? BagEngPng : BagDePng}
+                className={styles.functionality__img_bag}
+                type="image/png"
+              />
+              <Image
+                fit={'contain'}
+                src={currentLanguage === 'en' ? BagEng1 : BagDe1}
+                alt={'baggage'}
+                className={styles.functionality__img_bag}
+              />
+            </picture>
           </Group>
         </FadeInSection>
       </Container>
@@ -294,6 +313,7 @@ export const Functionality = () => {
             titleTextStyles={titleTextStyles}
             descTextStyles={descTextStyles}
             circles={circles}
+            imgPng={BagFullPng}
             img={BagFull}
             imgTitle={'Transformer'}
           />
@@ -309,7 +329,11 @@ export const Functionality = () => {
             direction={isResponsive ? 'column' : 'row'}
           >
             <Box mx="auto" className={styles.functionality__img_carousel}>
-              <Image src={EmptyBag} alt={'baggage'} />
+              <picture>
+                <source srcSet={EmptyBag} type="image/webp" />
+                <source srcSet={EmptyBagPng} type="image/png" />
+                <Image src={EmptyBag} alt={'baggage'} />
+              </picture>
               <Box
                 style={{
                   overflow: 'hidden',
@@ -342,13 +366,25 @@ export const Functionality = () => {
                   }}
                 >
                   <Carousel.Slide>
-                    <Image src={BagClothes3} alt={'clothes'} />
+                    <picture>
+                      <source srcSet={BagClothes3} type="image/webp" />
+                      <source srcSet={BagClothesPng3} type="image/png" />
+                      <Image src={BagClothes3} alt={'clothes'} />
+                    </picture>
                   </Carousel.Slide>
                   <Carousel.Slide>
-                    <Image src={BagClothes1} alt={'clothes'} />
+                    <picture>
+                      <source srcSet={BagClothes1} type="image/webp" />
+                      <source srcSet={BagClothesPng1} type="image/png" />
+                      <Image src={BagClothes1} alt={'clothes'} />
+                    </picture>
                   </Carousel.Slide>
                   <Carousel.Slide>
-                    <Image src={BagClothes2} alt={'clothes'} />
+                    <picture>
+                      <source srcSet={BagClothes2} type="image/webp" />
+                      <source srcSet={BagClothesPng2} type="image/png" />
+                      <Image src={BagClothes2} alt={'clothes'} />
+                    </picture>
                   </Carousel.Slide>
                 </Carousel>
               </Box>
@@ -381,6 +417,7 @@ export const Functionality = () => {
             titleTextStyles={titleTextStyles}
             descTextStyles={descTextStyles}
             circles={luggageCircles}
+            imgPng={BagLugPng}
             img={BagLug}
             imgTitle={'Luggage'}
           />

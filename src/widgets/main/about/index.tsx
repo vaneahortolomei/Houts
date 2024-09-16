@@ -3,7 +3,8 @@ import { Container, Text, Title, Group, Box } from '@mantine/core';
 import styles from './About.module.scss';
 import ImageWithDots from '@/features/components/AnimatedCircle';
 import FadeInSection from '@/features/components/FadeInSection';
-import Bags from '@/assets/Bags.png';
+import BagsPng from '@/assets/about/Bags.png';
+import Bags from '@/assets/about/Bags.webp';
 import { useIsResponsive } from '@/hooks/use-is-responsive';
 import { useTranslation } from 'react-i18next';
 
@@ -128,6 +129,7 @@ export const About = () => {
               descTextStyles={descTextStyles}
               circles={circles}
               img={Bags}
+              imgPng={BagsPng}
               imgTitle={'BACKSIDE & FRONT'}
             />
           </Box>

@@ -28,6 +28,7 @@ interface Props {
   containerLuggageGroupStyles?: React.CSSProperties;
   circles: CircleData[];
   img: string;
+  imgPng?: string;
   imgTitle: string;
 }
 
@@ -85,7 +86,7 @@ const ImageWithDots: React.FC<Props> = ({
   descTextStyles,
   titleTextStyles,
   img,
-
+  imgPng,
   imgTitle
 }) => {
   const [selectedText, setSelectedText] = useState(descriptions[0]);
@@ -135,7 +136,11 @@ const ImageWithDots: React.FC<Props> = ({
           ...containerInsideGroupStyles
         }}
       >
-        <img src={img} alt={imgTitle} style={imgStyles} />
+        <picture>
+          <source srcSet={img} style={imgStyles} type="image/webp" />
+          <source srcSet={imgPng} style={imgStyles} type="image/png" />
+          <img src={img} alt={imgTitle} style={imgStyles} />
+        </picture>
         {circles.map((circle, index: number) => (
           <Circle
             key={index}
