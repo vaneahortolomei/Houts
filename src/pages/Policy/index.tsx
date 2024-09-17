@@ -9,7 +9,7 @@ export const Policy = () => {
 
   return (
     <Container maw={'1500px'}>
-      <Box mb={100} mt={isResponsive ? 30 : 70}>
+      <Box mb={100} mt={70}>
         <Title
           order={1}
           fz={isResponsive ? 30 : 50}

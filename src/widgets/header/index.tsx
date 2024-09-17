@@ -37,11 +37,10 @@ export const Header: React.FC<MainPageType> = ({ isMainPage }) => {
         <AppShell.Header
           className={styles.header}
           style={{
-            boxShadow: isResponsive
-              ? scroll.y > 10
+            boxShadow:
+              scroll.y > 10
                 ? '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)'
                 : 'none'
-              : ''
           }}
         >
           {isResponsive && (
@@ -77,7 +76,15 @@ export const Header: React.FC<MainPageType> = ({ isMainPage }) => {
           )}
         </AppShell.Header>
       ) : (
-        <AppShell.Header className={styles.emptyHeader}>
+        <AppShell.Header
+          className={styles.emptyHeader}
+          style={{
+            boxShadow:
+              scroll.y > 10
+                ? '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)'
+                : 'none'
+          }}
+        >
           <Container fluid maw={'1500px'} style={{ display: 'flex' }}>
             <NavLinks isMainPage={isMainPage} />
             <Button

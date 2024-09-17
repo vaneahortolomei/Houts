@@ -1,21 +1,13 @@
 .emptyHeader {
     background-color: #ffffff;
-    margin: 20px 0 0;
-    position: static;
-    box-shadow: none;
+    padding: 10px 0;
 }
 .header {
     background-color: #ffffff;
     top: 0;
-    position: fixed;
     display: flex;
     align-items: center;
-    transition: all 0.3s;
-    @media (min-width: 1025px) {
-        margin: 20px 0 0;
-        position: static;
-        box-shadow: none;
-    }
+    transition: all 0.2s;
     &__lang {
         font-size: 13px;
         border: 2px solid  #222027;
